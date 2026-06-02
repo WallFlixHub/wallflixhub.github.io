@@ -775,7 +775,7 @@ try{const app=getApps().length?getApp():initializeApp(firebaseConfig);fbAuth=get
   function addSuggestions(){
     const wrap=document.querySelector('#home .search-floating'); if(!wrap || $id('wfhSuggests')) return;
     const box=document.createElement('div'); box.id='wfhSuggests'; box.className='wfh-suggests';
-    ['Anime','Cars','Nature','AMOLED','Live','Cyberpunk','Sports','Technology'].forEach(q=>{const b=document.createElement('button'); b.type='button'; b.textContent=q; b.onclick=()=>{const inp=$id('searchInput'); if(inp) inp.value=q; if(q==='Live'){try{go('live')}catch(e){}}else if(typeof search==='function') search(q);}; box.appendChild(b)});
+    ['Anime','Cars','Nature','AMOLED','Live','Cyberpunk','Sports','Technology','Space'].forEach(q=>{const b=document.createElement('button'); b.type='button'; b.textContent=q; b.onclick=()=>{const inp=$id('searchInput'); if(inp) inp.value=q; if(q==='Live'){try{go('live')}catch(e){}}else if(typeof search==='function') search(q);}; box.appendChild(b)});
     wrap.insertAdjacentElement('afterend',box);
   }
 
