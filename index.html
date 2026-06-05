@@ -5541,6 +5541,24 @@ const WFH_FIREBASE_CONFIG = {
   document.addEventListener('DOMContentLoaded',function(){setTimeout(renderAmoledBoost,400);setTimeout(renderAmoledBoost,1200)});
   setTimeout(renderAmoledBoost,1000);
 })();
+// Force related wallpapers
+function forceRelatedWallpapers(){
+  const related=document.getElementById('related');
+  if(!related)return;
+
+  related.innerHTML='';
+
+  wallpapers
+    .filter(x=>x.type==='static')
+    .slice(0,5)
+    .forEach(w=>{
+      related.innerHTML+=`
+        <img src="${w.url}" onclick="openViewer(${w.id})">
+      `;
+    });
+}
+
+setTimeout(forceRelatedWallpapers,1000);
 </script>
 
 </body>
