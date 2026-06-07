@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WallFlixHub - 4K Mobile Wallpapers</title>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHWGTYQHGL"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QHWGTYQHGL');
+</script>
+
+<!-- Adsense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5441356604998904" crossorigin="anonymous"></script>
+
+<!-- Firebase Config -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDLv0FWvThD7h6EnHMb-l9Tn0pfOLfbvGE",
+  authDomain: "wallflixhub.firebaseapp.com",
+  databaseURL: "https://wallflixhub-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "wallflixhub",
+  storageBucket: "wallflixhub.firebasestorage.app",
+  messagingSenderId: "621224536171",
+  appId: "1:621224536171:web:dc3884c7d5c9026463692e",
+  measurementId: "G-T6QZ6N8DDJ"
+};
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getDatabase();
+
+// Featured Wallpapers listener
+const featuredRef = ref(db, 'wallpapers');
+function renderFeatured(items) {
+    const grid = document.getElementById('featuredGrid');
+    grid.innerHTML = '';
+    items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <img src="${item.url}" alt="${item.title}">
+            <div class="card-stats">
+                <button onclick="likeItem('${item.id}')">❤️ <span>${item.likes||0}</span></button>
+                <button onclick="downloadItem('${item.url}')">⬇️</button>
+                <button onclick="shareItem('${item.url}')">🔗</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+onValue(featuredRef, snapshot => {
+    const items = [];
+    snapshot.forEach(child => {
+        const data = child.val();
+        if(data.featured) items.push({ id: child.key, ...data });
+    });
+    renderFeatured(items);
+});
+
+function likeItem(id){alert('Like clicked: '+id);}
+function downloadItem(url){const a=document.createElement('a');a.href=url;a.download='wallpaper.jpg';a.click();}
+function shareItem(url){navigator.clipboard.writeText(url);alert('Link copied to clipboard!');}
+</script>
+
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#000;color:#fff}
+header{padding:12px;background:#111;display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:18px}
+.grid{display:flex;flex-wrap:wrap;gap:10px;padding:10px}
+.card{width:calc(50% - 10px);border:1px solid #222;border-radius:12px;overflow:hidden;position:relative}
+.card img{width:100%;display:block}
+.card-stats{display:flex;justify-content:space-around;padding:6px;background:rgba(0,0,0,0.6)}
+button{background:none;border:none;color:#fff;font-size:14px;cursor:pointer}
+</style>
+</head>
+<body>
+<header><h1>WallFlixHub</h1></header>
+<section>
+<h2>Featured by Admin</h2>
+<div class="grid" id="featuredGrid"></div>
+</section>
+
+<section>
+<h2>Trending Today</h2>
+<div class="grid" id="trendingGrid">
+<!-- Example static items -->
+<div class="card">
+<img src="https://res.cloudinary.com/demo/image/upload/w_400,h_600,c_fill/sample.jpg" alt="Sample">
+<div class="card-stats">
+<button onclick="likeItem('sample1')">❤️ <span>10</span></button>
+<button onclick="downloadItem('https://res.cloudinary.com/demo/image/upload/w_400,h_600,c_fill/sample.jpg')">⬇️</button>
+<button onclick="shareItem('https://res.cloudinary.com/demo/image/upload/w_400,h_600,c_fill/sample.jpg')">🔗</button>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Categories</h2>
+<div class="grid" id="categoriesGrid">
+<button onclick="alert('AMOLED')">AMOLED</button>
+<button onclick="alert('Anime')">Anime</button>
+<button onclick="alert('Cars')">Cars</button>
+<button onclick="alert('Nature')">Nature</button>
+</div>
+</section>
+</body>
+</html>
