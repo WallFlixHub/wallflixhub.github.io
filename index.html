@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#050506" />
+<title>WallFlixHub - Mobile Wallpapers</title>
+<style>
+:root{--bg:#050506;--card:#111114;--card2:#17151c;--text:#fff;--muted:#aaa;--line:#242229;--pink:#ff00b8;--purple:#a018ff;--violet:#c44cff;--orange:#ff7a3d;--yellow:#ffd400;--blue:#19a7ff;--green:#22d67a;--radius:16px;--shadow:0 20px 50px rgba(0,0,0,.65)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;height:100%;background:#000;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow:hidden;touch-action:manipulation}button,input{font:inherit}button{border:0;background:none;color:inherit;cursor:pointer}.desktop-lock{display:none}.app{width:100%;max-width:430px;height:100dvh;margin:auto;background:radial-gradient(circle at 70% 0%,rgba(144,0,255,.22),transparent 28%),#050506;position:relative;overflow:hidden}.status{height:26px;padding:6px 18px 0;display:flex;justify-content:space-between;font-size:12px;color:#eee;opacity:.85}.top-badge{position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:8;background:linear-gradient(135deg,#8b3cff,#d662ff);padding:5px 18px;border-radius:7px;font-weight:900;font-size:13px;letter-spacing:.3px;box-shadow:0 0 18px rgba(190,55,255,.4)}.header{height:58px;display:flex;align-items:center;gap:12px;padding:12px 18px 8px;position:relative;z-index:5}.hamb{font-size:26px}.brand{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:900;flex:1}.logo{width:28px;height:28px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#350050,#111);border:1px solid #c000ff;color:#f000ff;box-shadow:0 0 16px rgba(217,0,255,.5);font-weight:1000}.brand span b{color:#c400ff}.head-btn{font-size:22px;width:34px;height:34px;display:grid;place-items:center}.content{height:calc(100dvh - 26px - 58px - 76px);overflow:auto;padding:0 18px 16px;scrollbar-width:none}.content::-webkit-scrollbar{display:none}.page{display:none;animation:fade .2s ease}.page.active{display:block}@keyframes fade{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}.hero{height:250px;border-radius:18px;overflow:hidden;position:relative;background:#111;box-shadow:var(--shadow);margin-top:2px}.hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.7);transform:scale(1.05);transition:opacity .45s ease,transform 5s ease}.hero img.hero-zoom{transform:scale(1.18) translateX(-10px)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.15),rgba(0,0,0,.55))}.hero-text{position:absolute;left:18px;top:36px;width:66%;z-index:3}.pill{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--purple),var(--pink));padding:7px 13px;border-radius:999px;font-size:11px;font-weight:900}.hero h1{font-size:25px;line-height:1.02;margin:11px 0 6px}.grad{background:linear-gradient(90deg,#ff00e6,#9f38ff);-webkit-background-clip:text;color:transparent}.hero p{font-size:12px;line-height:1.32;color:#eee;margin:0}.cta{margin-top:10px;background:linear-gradient(135deg,var(--pink),var(--orange));height:38px;border-radius:14px;padding:0 17px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;position:relative;z-index:4;box-shadow:0 10px 22px rgba(255,0,184,.28)}.dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:1}.dot{width:6px;height:6px;border-radius:99px;background:#fff5}.dot.on{background:#fff}.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 20px}.quick button,.cat-card,.more-card{background:linear-gradient(180deg,#151519,#0c0c0e);border:1px solid #19171f;border-radius:14px;min-height:74px;display:grid;place-items:center;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}.qicon{font-size:24px;margin-bottom:6px}.qname{font-size:11px;color:#eee}.section-title{display:flex;justify-content:space-between;align-items:center;margin:12px 0 10px;font-weight:900}.section-title button{color:#e000ff;font-size:13px;font-weight:800}.hcats{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.small-cat{height:80px;border-radius:12px;background:#111;position:relative;overflow:hidden;text-align:center;padding-top:8px}.small-cat img{width:48px;height:42px;object-fit:cover;border-radius:9px}.small-cat b{display:block;font-size:10px}.small-cat small{font-size:9px;color:#ddd}.tabs,.chips{display:flex;gap:8px;overflow:auto;padding:4px 0 10px;scrollbar-width:none}.tabs button,.chips button{height:28px;border-radius:999px;background:#111116;color:#bbb;min-width:82px;padding:0 14px;font-size:12px;font-weight:800}.tabs button.active,.chips button.active{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.wall-card{height:157px;border-radius:11px;background:#111;overflow:hidden;position:relative;border:1px solid #232027}.wall-card.tall{height:166px}.wall-card img{width:100%;height:100%;object-fit:cover}.wall-card .tag4k{position:absolute;top:6px;left:6px;background:#0009;border-radius:7px;padding:2px 6px;font-size:11px;font-weight:900}.heart{position:absolute;right:6px;bottom:6px;font-size:18px;text-shadow:0 2px 6px #000}.heart.on{color:#ff1aa8}.animated:before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent,#d000ff55,transparent,#0befff55,transparent);animation:spin 5s linear infinite;mix-blend-mode:screen}.animated img{position:relative;z-index:1;opacity:.9}@keyframes spin{to{transform:rotate(360deg)}}.ring-list{display:grid;gap:10px}.ring{height:64px;background:linear-gradient(180deg,#161619,#0c0c0e);border-radius:12px;border:1px solid #201d25;display:flex;align-items:center;padding:8px 12px;gap:12px}.music{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:22px;background:linear-gradient(135deg,#7414ff33,#ff006633);border:1px solid #ff00c855}.ring-info{flex:1}.ring-info b{font-size:14px}.ring-info small{display:block;color:#aaa;font-size:11px;margin-top:2px}.ring button{font-size:20px;width:28px;height:28px}.cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding-top:4px}.cat-card{height:112px;padding:10px}.cat-card img{width:56px;height:46px;object-fit:cover;border-radius:50%;box-shadow:0 0 18px #c000ff55}.cat-card b{font-size:12px}.cat-card small{font-size:10px;color:#bbb}.profile-box{height:78px;background:linear-gradient(135deg,#17151f,#130a24);border-radius:15px;display:flex;align-items:center;gap:12px;padding:13px;margin:5px 0 14px;border:1px solid #21152e}.avatar{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:2px solid #e000ff;font-size:28px;background:#222}.profile-box div{flex:1}.profile-box b{display:block}.profile-box small{color:#bbb}.login{background:linear-gradient(135deg,var(--pink),var(--orange));height:36px;border-radius:14px;padding:0 16px;font-weight:800}.more-list{display:grid;gap:8px}.more-card{height:58px;display:flex;justify-content:space-between;align-items:center;padding:0 14px;text-align:left}.more-left{display:flex;align-items:center;gap:13px}.more-ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#ff006622;font-size:20px}.more-left b{font-size:14px}.more-left small{display:block;color:#aaa;font-size:10px}.bottom{height:76px;position:absolute;bottom:0;left:14px;right:14px;background:rgba(15,15,17,.92);backdrop-filter:blur(18px);border:1px solid #17171b;border-radius:22px 22px 0 0;display:grid;grid-template-columns:repeat(5,1fr);z-index:6;padding-bottom:8px}.nav{display:grid;place-items:center;color:#aaa;font-size:10px;padding-top:9px}.nav .ico{font-size:22px}.nav.active{color:#d500ff;font-weight:900}.drawer{position:absolute;inset:0;z-index:20;pointer-events:none}.drawer.show{pointer-events:auto}.shade{position:absolute;inset:0;background:#0008;opacity:0;transition:.25s}.drawer.show .shade{opacity:1}.panel{width:78%;height:100%;background:linear-gradient(90deg,#111114,#0b0b0d);transform:translateX(-105%);transition:.25s;padding:42px 18px;box-shadow:30px 0 60px #000;position:relative}.drawer.show .panel{transform:none}.side-brand{display:flex;gap:12px;align-items:center;margin-bottom:28px}.side-brand .logo{width:54px;height:54px;border-radius:16px;font-size:32px}.side-link{height:48px;border-radius:12px;display:flex;align-items:center;gap:14px;padding:0 16px;color:#eee;font-weight:800}.side-link.active{background:#1a1a1f;color:#e000ff}.side-sep{height:1px;background:#242228;margin:16px 0}.search-box{position:absolute;left:18px;right:18px;top:88px;background:#111;border:1px solid #333;border-radius:15px;height:50px;display:none;align-items:center;padding:0 12px;z-index:15;box-shadow:var(--shadow)}.search-box.show{display:flex}.search-box input{flex:1;background:transparent;border:0;outline:0;color:#fff;font-size:15px}.toast{position:absolute;bottom:95px;left:50%;transform:translateX(-50%) translateY(30px);background:#1b1b20;border:1px solid #333;color:#fff;border-radius:999px;padding:10px 16px;font-size:13px;opacity:0;transition:.25s;z-index:40}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.viewer{position:absolute;inset:0;background:#050506;z-index:30;display:none;flex-direction:column}.viewer.show{display:flex}.view-top{height:58px;display:flex;align-items:center;padding:14px;gap:12px}.view-top button{font-size:26px}.view-img{flex:1;margin:0 18px 12px;border-radius:20px;overflow:hidden;background:#111}.view-img img{width:100%;height:100%;object-fit:cover}.view-actions{height:82px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 18px 18px}.view-actions button{background:linear-gradient(180deg,#17171b,#0d0d0f);border:1px solid #232228;border-radius:16px;font-weight:800}.hidden{display:none!important}@media (min-width:700px){body{display:grid;place-items:center}.app{display:none}.desktop-lock{display:block;color:#fff;text-align:center;padding:30px;max-width:420px}.desktop-lock b{color:#d000ff}}
+</style>
+</head>
+<body>
+<div class="desktop-lock"><h2>WallFlixHub is mobile only</h2><p>Open this page on a phone or resize your browser to mobile width.</p></div>
+<main class="app" id="app">
+  <div class="status"><span id="time">1:07</span><span>▮▮▮  Wi‑Fi  🔋85%</span></div>
+  <div class="top-badge" id="pageBadge">HOME</div>
+  <header class="header"><button class="hamb" id="openMenu">☰</button><div class="brand"><span class="logo">W</span><span>WallFlix<b>Hub</b></span></div><button class="head-btn" id="searchBtn">⌕</button><button class="head-btn" id="themeBtn">☾</button></header>
+  <div class="search-box" id="searchBox"><input id="searchInput" placeholder="Search wallpapers, ringtones..."/><button id="closeSearch">✕</button></div>
+  <section class="content">
+    <div class="page active" id="home">
+      <div class="hero"><img id="premiumHeroImg" class="hero-zoom" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"><div class="hero-text"><span class="pill">PREMIUM COLLECTION</span><h1>4K Mobile <span class="grad">Wallpapers</span></h1><p>Premium AMOLED, Anime, Nature, Gaming and more wallpapers for your mobile.</p><button class="cta" onclick="go('wallpapers')">Explore Now →</button></div><div class="dots" id="premiumDots"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></div>
+      <div class="quick"><button onclick="go('wallpapers')"><div class="qicon" style="color:#b100ff">▧</div><div class="qname">Wallpapers</div></button><button onclick="go('ringtones')"><div class="qicon" style="color:#ff0088">♫</div><div class="qname">Ringtones</div></button><button onclick="go('categories')"><div class="qicon" style="color:#ffe000">▦</div><div class="qname">Categories</div></button><button onclick="toast('Premium coming soon')"><div class="qicon" style="color:#ffe000">♕</div><div class="qname">Premium</div></button></div>
+      <div class="section-title"><span>Popular Categories</span><button onclick="go('categories')">View All</button></div><div class="hcats" id="homeCats"></div>
+      <div class="section-title"><span>Trending • Curated</span><button onclick="go('wallpapers')">View All</button></div><div class="grid" id="homeGrid"></div>
+    </div>
+    <div class="page" id="wallpapers"><div class="tabs"><button class="active">Latest</button><button>Popular</button><button>Random</button><button>Trending</button></div><div class="chips" id="chips"></div><div class="grid" id="wallGrid"></div></div>
+    <div class="page" id="ringtones"><div class="tabs"><button class="active">Ringtones</button><button>Notification</button><button>Alarm</button><button>Trending</button></div><div class="chips"><button class="active">All</button><button>Popular</button><button>Latest</button><button>Music</button><button>Remix</button></div><div class="ring-list" id="ringList"></div></div>
+    <div class="page" id="categories"><div class="cats-grid" id="catGrid"></div></div>
+    <div class="page" id="more"><div class="profile-box"><div class="avatar">☻</div><div><b>Welcome Back!</b><small>Guest User<br>Login to sync your favorites</small></div><button class="login" onclick="toast('Login demo ready')">Login →</button></div><div class="more-list" id="moreList"></div></div>
+  </section>
+  <nav class="bottom"><button class="nav active" data-page="home"><span class="ico">⌂</span><span>Home</span></button><button class="nav" data-page="wallpapers"><span class="ico">▧</span><span>Wallpapers</span></button><button class="nav" data-page="ringtones"><span class="ico">♫</span><span>Ringtones</span></button><button class="nav" data-page="categories"><span class="ico">▦</span><span>Categories</span></button><button class="nav" data-page="more"><span class="ico">•••</span><span>More</span></button></nav>
+  <aside class="drawer" id="drawer"><div class="shade" id="closeMenu"></div><div class="panel"><div class="side-brand"><span class="logo">W</span><div><b>WallFlix<span style="color:#d000ff">Hub</span></b><br><small style="color:#aaa">Premium 4K Wallpapers</small></div></div><div id="sideLinks"></div></div></aside>
+  <div class="viewer" id="viewer"><div class="view-top"><button onclick="closeViewer()">←</button><b id="viewTitle">Wallpaper</b></div><div class="view-img"><img id="viewImage"></div><div class="view-actions"><button onclick="downloadCurrent()">↓ Download</button><button onclick="favCurrent()">♡ Like</button><button onclick="shareCurrent()">↗ Share</button></div></div>
+  <div class="toast" id="toast"></div>
+</main>
+<script>
+const cats=[['AMOLED','1250+','https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=300&q=80'],['Anime','2480+','https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=300&q=80'],['Cars','2880+','https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=300&q=80'],['Nature','2150+','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=300&q=80'],['Gaming','1650+','https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=300&q=80'],['Space','1450+','https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=300&q=80'],['Minimal','980+','https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=300&q=80'],['Sports','1150+','https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=300&q=80'],['Technology','1050+','https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80'],['Abstract','900+','https://images.unsplash.com/photo-1550684376-efcbd6e3f031?auto=format&fit=crop&w=300&q=80'],['Dark','1200+','https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=300&q=80'],['More','Explore','https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=300&q=80']];
+const walls=['https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80','https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&w=500&q=80'];
+
+// PREMIUM COLLECTION wallpapers - replace these links with your own Cloudinary/GitHub image URLs later.
+const premiumHeroWallpapers=[
+  'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80'
+];
+let premiumIndex=0;
+function startPremiumCollection(){
+  const img=$('premiumHeroImg'), dots=document.querySelectorAll('#premiumDots .dot');
+  if(!img)return;
+  setInterval(()=>{
+    premiumIndex=(premiumIndex+1)%premiumHeroWallpapers.length;
+    img.style.opacity='0';
+    setTimeout(()=>{
+      img.src=premiumHeroWallpapers[premiumIndex];
+      img.classList.toggle('hero-zoom');
+      dots.forEach((d,i)=>d.classList.toggle('on',i===premiumIndex));
+      img.style.opacity='1';
+    },260);
+  },3500);
+}
+
+const rings=[['iPhone Remix','00:30 • 320 KB'],['Night Vibes','00:28 • 450 KB'],['Anime Intro','00:29 • 410 KB'],['Game On','00:24 • 390 KB'],['Galaxy Tone','00:27 • 500 KB'],['Cyberpunk','00:26 • 480 KB'],['Epic Battle','00:31 • 520 KB'],['Sunrise','00:25 • 430 KB']];
+const pages={home:'HOME',wallpapers:'WALLPAPERS',ringtones:'RINGTONES',categories:'CATEGORIES',more:'MORE'};let currentWall=null;function $(id){return document.getElementById(id)}function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1700)}function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));$(p).classList.add('active');$('pageBadge').textContent=pages[p];document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.page==p));document.querySelectorAll('.side-link').forEach(n=>n.classList.toggle('active',n.dataset.page==p));$('drawer').classList.remove('show')}
+document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>go(n.dataset.page));$('openMenu').onclick=()=>$('drawer').classList.add('show');$('closeMenu').onclick=()=>$('drawer').classList.remove('show');$('searchBtn').onclick=()=>$('searchBox').classList.add('show');$('closeSearch').onclick=()=>$('searchBox').classList.remove('show');$('themeBtn').onclick=()=>toast('Dark AMOLED theme active');
+function makeWall(src,i,animated=false){const d=document.createElement('div');d.className='wall-card '+(animated?'animated':'');d.innerHTML=`<img src="${src}"><span class="tag4k">4K</span><button class="heart">♡</button>`;d.onclick=e=>{if(e.target.className.includes('heart')){e.target.classList.toggle('on');e.target.textContent=e.target.classList.contains('on')?'♥':'♡';toast('Saved to favorites')}else openViewer(src,'4K Wallpaper')};return d}
+function openViewer(src,title){currentWall=src;$('viewImage').src=src;$('viewTitle').textContent=title;$('viewer').classList.add('show')}function closeViewer(){$('viewer').classList.remove('show')}function downloadCurrent(){if(!currentWall)return;const a=document.createElement('a');a.href=currentWall;a.download='wallflixhub-wallpaper.jpg';a.target='_blank';a.click();toast('Download started')}function favCurrent(){toast('Added to favorites')}async function shareCurrent(){try{await navigator.share({title:'WallFlixHub Wallpaper',url:currentWall});}catch(e){toast('Share copied')}}
+function render(){$('homeCats').innerHTML=cats.slice(0,5).map(c=>`<div class="small-cat"><img src="${c[2]}"><b>${c[0]}</b><small>${c[1]}</small></div>`).join('');walls.slice(0,6).forEach((w,i)=>$('homeGrid').appendChild(makeWall(w,i,i<3)));$('chips').innerHTML=['All','AMOLED','Anime','Cars','Nature','Gaming'].map((c,i)=>`<button class="${i?'':'active'}">${c}</button>`).join('');walls.forEach((w,i)=>$('wallGrid').appendChild(makeWall(w,i,i%5==0)));$('ringList').innerHTML=rings.map((r,i)=>`<div class="ring"><div class="music" style="color:${['#ff00a8','#d000ff','#ff0055','#ffd400','#19a7ff','#a85cff','#22d67a','#d4ff00'][i]}">♫</div><div class="ring-info"><b>${r[0]}</b><small>${r[1]}</small></div><button onclick="toast('Playing ${r[0]}')">♡</button><button onclick="toast('Ringtone download started')">⇩</button></div>`).join('');$('catGrid').innerHTML=cats.map(c=>`<button class="cat-card" onclick="go('wallpapers')"><img src="${c[2]}"><b>${c[0]}</b><small>${c[1]} • Wallpapers</small></button>`).join('');let more=[['❤️','Favorites','View your favorite wallpapers & ringtones'],['⇩','Downloads','View your downloaded items'],['◷','History','Recently viewed wallpapers'],['⚙','Settings','Customize your experience'],['↗','Share App','Share WallFlixHub with your friends'],['☆','Rate Us','Rate WallFlixHub on Play Store'],['▣','Privacy Policy','Read our privacy policy'],['▤','Terms & Conditions','Read our terms and conditions']];$('moreList').innerHTML=more.map(m=>`<button class="more-card" onclick="toast('${m[1]}')"><span class="more-left"><span class="more-ico">${m[0]}</span><span><b>${m[1]}</b><small>${m[2]}</small></span></span><span>›</span></button>`).join('');$('sideLinks').innerHTML=[['⌂','Home','home'],['▧','Wallpapers','wallpapers'],['♫','Ringtones','ringtones'],['▦','Categories','categories'],['♕','Premium','home'],['⇩','Downloads','more'],['♡','Favorites','more'],['◷','History','more'],['⚙','Settings','more'],['↗','Share App','more'],['☆','Rate Us','more']].map((x,i)=>`${i==5?'<div class="side-sep"></div>':''}<button class="side-link ${i==0?'active':''}" data-page="${x[2]}" onclick="go('${x[2]}')"><span>${x[0]}</span>${x[1]}</button>`).join('')}
+$('searchInput').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('.wall-card').forEach((c,i)=>c.style.display=(!q||['anime','cars','nature','gaming','space','dark'][i%6].includes(q))?'block':'none')});setInterval(()=>{$('time').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})},1000);render();startPremiumCollection();
+</script>
+</body>
+</html>
+
+<script>
+// ===== DARK/LIGHT MODE =====
+let darkMode = true; // default
+const themeBtn = document.getElementById('themeBtn');
+themeBtn.onclick = () => {
+    darkMode = !darkMode;
+    if(darkMode){
+        document.documentElement.style.setProperty('--bg','#050506');
+        document.documentElement.style.setProperty('--card','#111114');
+        document.documentElement.style.setProperty('--card2','#17151c');
+        document.documentElement.style.setProperty('--text','#fff');
+        document.documentElement.style.setProperty('--muted','#aaa');
+        document.documentElement.style.setProperty('--line','#242229');
+        themeBtn.textContent = '☾';
+        toast('Dark AMOLED theme active');
+    } else {
+        document.documentElement.style.setProperty('--bg','#f5f5f5');
+        document.documentElement.style.setProperty('--card','#ffffff');
+        document.documentElement.style.setProperty('--card2','#f0f0f0');
+        document.documentElement.style.setProperty('--text','#111');
+        document.documentElement.style.setProperty('--muted','#555');
+        document.documentElement.style.setProperty('--line','#ddd');
+        themeBtn.textContent = '☀';
+        toast('Light theme active');
+    }
+}
+
+// ===== LOGIN / LOGOUT =====
+const loginBtn = document.querySelector('.login');
+const profileBox = document.querySelector('.profile-box');
+
+function updateLoginUI(){
+    const user = localStorage.getItem('wfUser');
+    if(user){
+        profileBox.querySelector('b').textContent = `Welcome Back, ${user}!`;
+        profileBox.querySelector('small').textContent = 'You are logged in';
+        loginBtn.textContent = 'Logout →';
+    } else {
+        profileBox.querySelector('b').textContent = 'Welcome Back!';
+        profileBox.querySelector('small').textContent = 'Guest User\nLogin to sync your favorites';
+        loginBtn.textContent = 'Login →';
+    }
+}
+
+loginBtn.onclick = () => {
+    const user = localStorage.getItem('wfUser');
+    if(user){
+        localStorage.removeItem('wfUser');
+        toast('Logged out');
+        updateLoginUI();
+    } else {
+        const username = prompt('Enter your name to login:');
+        if(username){
+            localStorage.setItem('wfUser', username);
+            toast(`Logged in as ${username}`);
+            updateLoginUI();
+        } else {
+            toast('Login cancelled');
+        }
+    }
+}
+
+updateLoginUI();
+</script>
