@@ -89,7 +89,7 @@
 
   <!-- 404 Page -->
   <url>
-    <loc>https://wallflixhub.github.io/404</loc>
+    <loc>https://wallflixhub.github.io/#notfound</loc>
     <priority>0.3</priority>
   </url>
 
