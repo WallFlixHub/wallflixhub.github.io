@@ -402,6 +402,21 @@ setTimeout(function(){
   const home = document.getElementById('home');
   if(home) home.classList.add('active');
 }, 2500);
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  document.body.style.visibility = "visible";
+  document.body.style.opacity = "1";
+
+  const loader = document.getElementById("wfhPremiumLoader");
+  if(loader) loader.remove();
+
+  const skeleton = document.getElementById("wfhSkeletonOverlay");
+  if(skeleton) skeleton.remove();
+
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  const home = document.getElementById("home");
+  if(home) home.classList.add("active");
+});
 </script>
 </body>
 </html>
