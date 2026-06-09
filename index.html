@@ -392,16 +392,6 @@
 <script src="js/module-06.js" type="module"></script>
 <script src="js/module-07.js" type="module"></script>
 <script src="js/data.js"></script><script src="js/app.js">
- 
-setTimeout(function(){
-  const loader = document.getElementById('wfhPremiumLoader');
-  const skeleton = document.getElementById('wfhSkeletonOverlay');
-  if(loader) loader.style.display = 'none';
-  if(skeleton) skeleton.style.display = 'none';
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  const home = document.getElementById('home');
-  if(home) home.classList.add('active');
-}, 2500);
 <script>
 document.addEventListener("DOMContentLoaded", function(){
   document.body.style.visibility = "visible";
