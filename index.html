@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title>WallFlixHub - 4K Mobile Wallpapers</title>
+<meta name="theme-color" content="#030305" />
+<meta name="description" content="Download premium 4K mobile wallpapers including AMOLED, Anime, Cars, Nature, Gaming, Space, Sports and Technology backgrounds." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+<style>
+:root{--bg:#030305;--surface:#0a0a12;--surface2:#12131d;--glass:rgba(15,15,30,.78);--glass2:rgba(255,255,255,.06);--border:rgba(255,255,255,.10);--text:#fff;--muted:#9292a8;--glow:#bf55ec;--pink:#ff3d9a;--gold:#ffd700;--red:#ff365f;--green:#22c55e;--grad:linear-gradient(135deg,#d72bd6,#7a22ff);--blur:blur(22px)}
+.light-mode{--bg:#f2f2f7;--surface:#fff;--surface2:#f0f1f7;--glass:rgba(255,255,255,.88);--glass2:rgba(0,0,0,.045);--border:rgba(0,0,0,.09);--text:#111827;--muted:#64677a}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial,sans-serif;-webkit-tap-highlight-color:transparent}html,body{width:100%;height:100%;background:#000;color:var(--text);overflow:hidden;touch-action:manipulation}body{display:flex;justify-content:center;align-items:center}.phone{width:100%;max-width:450px;height:100%;background:radial-gradient(circle at 100% 0%,rgba(138,43,226,.16),transparent 35%),var(--bg);position:relative;overflow:hidden;transition:.25s}@media(min-width:700px){.phone{height:850px;border:8px solid #1a1a24;border-radius:40px}}
+header{height:78px;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;background:var(--glass);backdrop-filter:var(--blur);border-bottom:1px solid var(--border);z-index:50;position:relative}.brand{display:flex;align-items:center;gap:11px;cursor:pointer}.logo{width:42px;height:42px;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-weight:900;font-size:25px;color:white;box-shadow:0 0 22px rgba(191,85,236,.45)}.brand h1{font-size:19px;font-weight:900;letter-spacing:-.5px}.brand h1 span{color:var(--glow)}.premium{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(45deg,#ffaa00,var(--gold));color:#111;border-radius:99px;padding:2px 7px;font-size:10px;font-weight:900}.icons{display:flex;gap:15px;align-items:center}.icon{border:0;background:transparent;color:var(--text);font-size:21px;position:relative;cursor:pointer}.badge{position:absolute;top:-6px;right:-7px;width:10px;height:10px;border-radius:50%;background:var(--pink);font-size:0}
+.viewport{height:calc(100% - 78px);overflow-y:auto;padding-bottom:104px;scroll-behavior:smooth}.viewport::-webkit-scrollbar{display:none}.screen{display:none;padding:18px;animation:fade .25s ease}.screen.active{display:block}@keyframes fade{from{opacity:.4;transform:translateY(12px)}to{opacity:1;transform:none}}.glass{background:var(--glass);border:1px solid var(--border);backdrop-filter:var(--blur);box-shadow:0 16px 45px rgba(0,0,0,.35)}
+.search-floating{position:sticky;top:0;z-index:20;display:flex;gap:10px;margin-bottom:15px;padding-top:3px}.search{flex:1;height:50px;border-radius:17px;background:var(--glass);border:1px solid var(--border);display:flex;align-items:center;gap:11px;padding:0 14px;backdrop-filter:var(--blur)}.search input{flex:1;background:transparent;border:0;color:var(--text);outline:0;font-size:14px}.search input::placeholder{color:var(--muted)}.filter{width:50px;height:50px;border:0;border-radius:17px;background:var(--grad);color:white;font-size:18px}
+.slider-wrap{height:210px;border-radius:24px;overflow:hidden;position:relative;margin-bottom:18px;border:1px solid var(--border);box-shadow:0 16px 35px rgba(0,0,0,.42)}.slider{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.22,.61,.36,1)}.slide{min-width:100%;height:100%;position:relative;background:center/cover;cursor:pointer}.slide:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92),transparent 75%)}.slide-content{position:absolute;left:18px;right:18px;bottom:18px;color:white}.slide-content h2{font-size:22px;font-weight:900}.slide-content p{font-size:12px;color:#ddd;margin:5px 0 11px}.tag{display:inline-flex;background:rgba(138,43,226,.92);color:white;border-radius:8px;padding:5px 9px;font-size:10px;font-weight:900;margin-bottom:8px}.dots{position:absolute;bottom:12px;right:18px;display:flex;gap:6px}.dots span{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.45);transition:.25s}.dots span.active{width:24px;background:var(--glow);box-shadow:0 0 12px rgba(191,85,236,.75)}
+.btn{border:0;border-radius:12px;background:var(--grad);color:#fff;font-weight:900;padding:11px 15px;box-shadow:0 0 18px rgba(191,85,236,.26);cursor:pointer}.section{display:flex;justify-content:space-between;align-items:center;margin:22px 0 13px}.section h3{font-size:17px;font-weight:900}.section a{color:var(--glow);font-size:13px;font-weight:800;text-decoration:none;cursor:pointer}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.wfh-row{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}.wfh-row::-webkit-scrollbar{display:none}.wfh-row .card{min-width:138px;max-width:138px;height:168px}
+.card{height:235px;border-radius:18px;overflow:hidden;position:relative;background:var(--surface2);border:1px solid var(--border);cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.26)}.card.small{height:155px}.card img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}.card:active img{transform:scale(1.08)}.card:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.86),transparent 62%);z-index:1;pointer-events:none}.card-tag{position:absolute;top:10px;left:10px;z-index:2;border-radius:7px;padding:3px 8px;font-size:10px;font-weight:900;color:#fff;background:var(--glow)}.tag-premium{background:var(--gold);color:#111}.card-stats{position:absolute;bottom:9px;left:9px;right:9px;z-index:2;display:flex;justify-content:space-between;font-size:11px;color:#eee}.heart-red{color:var(--red)!important}
+.cat{height:118px;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--glass);border:1px solid var(--border);backdrop-filter:var(--blur);text-align:center;cursor:pointer}.cat i{font-size:31px}.cat b{font-size:13px}.cat span{font-size:10px;color:var(--muted)}.menu-profile{padding:14px;border-radius:17px;display:flex;align-items:center;gap:13px;margin-bottom:14px;cursor:pointer}.menu-box{border-radius:17px;padding:7px;margin-bottom:14px}.menu-row{display:flex;align-items:center;gap:13px;padding:13px 9px;border-bottom:1px solid var(--border);cursor:pointer}.menu-row:last-child{border-bottom:0}.menu-row i{width:20px;color:var(--muted)}.menu-row span{flex:1;font-size:14px}.pill{background:var(--pink);color:white;border-radius:99px;padding:2px 8px;font-size:10px;font-weight:900}.back{display:flex;align-items:center;gap:12px;margin-bottom:18px}.back h2{font-size:20px;flex:1;text-align:center}.back button{background:transparent;border:0;color:var(--text);font-size:22px;cursor:pointer}.switch{position:relative;width:46px;height:24px}.switch input{display:none}.switch span{position:absolute;inset:0;border-radius:30px;background:#333;cursor:pointer}.switch span:before{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:white;left:3px;top:3px;transition:.25s}.switch input:checked+span{background:var(--grad)}.switch input:checked+span:before{transform:translateX(22px)}
+.profile-card{text-align:center;border-radius:22px;padding:22px}.avatar{width:96px;height:96px;margin:0 auto 12px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#ffd700,#ff007f,#8a2be2,#ffd700);background-size:300%;animation:ring 4s linear infinite}.avatar div{width:100%;height:100%;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-size:38px;font-weight:900}@keyframes ring{to{background-position:300% 50%}}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.stat{background:var(--glass2);border:1px solid var(--border);border-radius:14px;padding:12px 4px;text-align:center}.stat b{display:block;font-size:18px}.stat span{font-size:10px;color:var(--muted)}.list{display:flex;flex-direction:column;gap:10px}.row{display:flex;align-items:center;gap:12px;padding:12px;border-radius:15px;background:var(--glass);border:1px solid var(--border);backdrop-filter:var(--blur);cursor:pointer}.row img{width:55px;height:55px;border-radius:12px;object-fit:cover}.row b{font-size:14px}.row p{font-size:11px;color:var(--muted)}.form{padding:16px;border-radius:22px;margin-bottom:14px}.form input,.form select,.form textarea{width:100%;border:1px solid var(--border);background:var(--glass2);color:var(--text);border-radius:13px;padding:12px;margin:8px 0;outline:0}.upload-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}.upload-head i{width:38px;height:38px;border-radius:14px;background:var(--grad);display:grid;place-items:center;color:white}
+.viewer{position:absolute;inset:0;background:#000;z-index:2000;display:none;overflow-y:auto}.viewer.show{display:block}.preview{height:54vh;background:#000;position:relative;overflow:hidden}.preview:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,#000 0%,transparent 70%);z-index:1}.preview img{width:100%;height:100%;object-fit:cover}.viewer-top{position:absolute;top:24px;left:16px;right:16px;display:flex;justify-content:space-between;z-index:3}.viewer-top button{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.18);color:white;border-radius:50%;width:42px;height:42px;font-size:20px;cursor:pointer;backdrop-filter:blur(10px)}.viewer-card{position:relative;margin:-40px 16px 14px;z-index:4;border-radius:20px;padding:15px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:15px;overflow:hidden;margin:14px 0}.metric{text-align:center;border-right:1px solid var(--border);padding:10px 4px;font-size:13px}.metric:last-child{border-right:0}.metric span{display:block;color:var(--muted);font-size:10px;margin-top:2px}.full-btn{width:100%;border:0;border-radius:14px;padding:14px;color:white;font-weight:900;margin-bottom:10px;background:var(--grad);cursor:pointer}.share-btn{background:#20222b}.comments{margin:0 16px 16px;border-radius:18px;padding:15px}.stars button{background:transparent;border:0;color:#555;font-size:23px;cursor:pointer}.related{display:flex;gap:8px;overflow-x:auto;padding:0 16px 20px}.related img{min-width:72px;width:72px;height:92px;border-radius:10px;object-fit:cover;cursor:pointer}.related::-webkit-scrollbar{display:none}
+.bottom-nav{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:90%;height:72px;border-radius:26px;background:rgba(15,15,28,.78);backdrop-filter:blur(26px);border:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-around;align-items:center;z-index:1000;box-shadow:0 15px 35px rgba(0,0,0,.6)}.light-mode .bottom-nav{background:rgba(255,255,255,.88)!important;box-shadow:0 10px 30px rgba(0,0,0,.08)}.nav{border:0;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px;font-size:10px;cursor:pointer}.nav i{font-size:19px}.nav.active{color:var(--glow)}.toast{position:absolute;left:50%;bottom:95px;transform:translate(-50%,20px);opacity:0;transition:.25s;background:var(--grad);color:white;border-radius:22px;padding:10px 16px;font-size:12px;font-weight:900;z-index:3000}.toast.show{opacity:1;transform:translate(-50%,0)}.empty{grid-column:1/-1;padding:20px;border:1px dashed var(--border);border-radius:18px;color:var(--muted);text-align:center;background:var(--glass2)}
+.legal-card{padding:16px;border-radius:22px;margin-bottom:14px;line-height:1.65}.legal-card h3{font-size:18px;margin-bottom:10px}.legal-card p,.legal-card li{font-size:12px;color:var(--muted);margin-bottom:8px}.wfh-footer{margin:24px 0 92px;padding:18px;border-radius:24px;text-align:center;background:linear-gradient(135deg,rgba(215,43,214,.16),rgba(122,34,255,.12));border:1px solid var(--border);backdrop-filter:var(--blur)}.wfh-footer h3{font-size:19px;margin-bottom:7px}.wfh-footer p{font-size:11px;color:var(--muted);line-height:1.65}.wfh-footer-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:13px 0}.wfh-footer-links button{border:1px solid var(--border);background:var(--glass2);color:var(--text);border-radius:999px;padding:8px 11px;font-size:11px;font-weight:900}
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHWGTYQHGL"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QHWGTYQHGL');
+</script>
+
+<style id="wfh-login-logout-fix">
+.wfh-auth-actions{display:flex;gap:8px;margin-top:14px}
+.wfh-auth-actions .btn{flex:1}
+#wfhLoginBox{margin-top:14px}
+#wfhLoginBox input{width:100%;border:1px solid var(--border);background:var(--glass2);color:var(--text);border-radius:13px;padding:12px;margin:7px 0;outline:0}
+</style>
+
+</head>
+<body>
+<div class="phone" id="app">
+<header><div class="brand" onclick="go('home')"><div class="logo">W</div><div><h1>Wall<span>Flix</span>Hub</h1><small class="premium"><i class="fa-solid fa-crown"></i> Premium</small></div></div><div class="icons"><button class="icon" onclick="go('notifications')"><i class="fa-regular fa-bell"></i><span class="badge" id="notifBadge"></span></button><button class="icon" onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke"></i></button></div></header>
+<div class="viewport">
+<section class="screen active" id="home"><div class="search-floating"><div class="search"><i class="fa-solid fa-magnifying-glass" style="color:var(--muted)"></i><input id="searchInput" placeholder="Search wallpapers..." oninput="search(this.value)" /></div><button class="filter" onclick="go('categories')"><i class="fa-solid fa-sliders"></i></button></div><div class="slider-wrap"><div class="slider" id="slider"></div><div class="dots" id="dots"></div></div><div class="section"><h3>Featured by Admin</h3><a onclick="go('admin')">Admin</a></div><div class="wfh-row" id="featuredGrid"></div><div class="section"><h3>Trending Today</h3><a onclick="go('trending')">View all</a></div><div class="grid3" id="homeTrending"></div><div class="section"><h3>Popular Categories</h3><a onclick="go('categories')">View all</a></div><div class="grid3" id="homeCats"></div><div class="section"><h3>Recently Viewed</h3><a onclick="clearRecent()">Clear</a></div><div class="wfh-row" id="recentGrid"></div><div class="section"><h3>New Arrivals</h3><a onclick="go('new')">View all</a></div><div class="grid2" id="newArrivals"></div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Premium mobile wallpapers, 4K backgrounds and fresh daily collections.</p><div class="wfh-footer-links"><button onclick="go('contact')">Contact</button><button onclick="go('policy')">Privacy</button><button onclick="go('terms')">Terms</button><button onclick="go('faq')">FAQ</button></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
+<section class="screen" id="explore"><div class="section"><h3>Explore Wallpapers</h3><a onclick="go('new')">Latest</a></div><div class="grid2" id="exploreGrid"></div></section>
+<section class="screen" id="categories"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Categories</h2><div></div></div><div class="grid2" id="catGrid"></div></section>
+<section class="screen" id="trending"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>Trending Today</h2><div></div></div><div class="grid2" id="trendGrid"></div></section>
+<section class="screen" id="new"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>New Arrivals</h2><div></div></div><div class="grid2" id="newGrid"></div></section>
+<section class="screen" id="favorites"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Favorites</h2><div></div></div><div class="grid2" id="favGrid"></div></section>
+<section class="screen" id="downloads"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Downloads</h2><a onclick="clearDownloads()" style="color:var(--glow)">Clear</a></div><div class="list" id="downloadList"></div></section>
+<section class="screen" id="profile"><div class="profile-card glass"><div class="avatar"><div>W</div></div><h2>WallFlixHub</h2><span class="premium"><i class="fa-solid fa-crown"></i> Premium Member</span><div class="stats"><div class="stat"><b id="statUpload">0</b><span>Uploads</span></div><div class="stat"><b id="statFav">0</b><span>Favorites</span></div><div class="stat"><b id="statDown">0</b><span>Downloads</span></div></div></div></section>
+<section class="screen" id="menu"><div class="menu-profile glass" onclick="go('profile')"><div class="logo">W</div><div><b>WallFlixHub</b><br/><span class="premium"><i class="fa-solid fa-crown"></i> Premium Member</span></div><i class="fa-solid fa-chevron-right" style="margin-left:auto"></i></div><div class="menu-box glass"><div class="menu-row" onclick="go('profile')"><i class="fa-regular fa-user"></i><span>Profile</span></div><div class="menu-row" onclick="go('favorites')"><i class="fa-regular fa-heart"></i><span>Favorites</span><b class="pill" id="favPill">0</b></div><div class="menu-row" onclick="go('downloads')"><i class="fa-solid fa-download"></i><span>Downloads</span></div><div class="menu-row" onclick="go('trending')"><i class="fa-solid fa-fire"></i><span>Trending Today</span></div><div class="menu-row" onclick="go('new')"><i class="fa-solid fa-sparkles"></i><span>New Arrivals</span></div><div class="menu-row" onclick="go('categories')"><i class="fa-solid fa-layer-group"></i><span>Popular Categories</span></div></div><div class="menu-box glass"><div class="menu-row" onclick="go('upload')"><i class="fa-solid fa-upload"></i><span>Publish Wallpaper</span></div><div class="menu-row" onclick="go('admin')"><i class="fa-solid fa-user-shield"></i><span>Admin Dashboard</span></div><div class="menu-row"><i class="fa-solid fa-circle-half-stroke"></i><span>Theme</span><label class="switch"><input id="themeSwitch" onchange="toggleTheme()" type="checkbox"/><span></span></label></div><div class="menu-row" onclick="go('contact')"><i class="fa-solid fa-envelope"></i><span>Contact</span></div><div class="menu-row" onclick="go('policy')"><i class="fa-solid fa-shield-halved"></i><span>Privacy Policy</span></div><div class="menu-row" onclick="go('terms')"><i class="fa-solid fa-file-contract"></i><span>Terms of Service</span></div><div class="menu-row" onclick="go('faq')"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></div></div></section>
+<section class="screen" id="upload"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Publish Wallpaper</h2><div></div></div><div class="form glass"><div class="upload-head"><i class="fa-solid fa-cloud-arrow-up"></i><h3>Add Wallpaper by Direct URL</h3></div><p style="font-size:12px;color:var(--muted);line-height:1.6;margin:6px 0 14px">Only image wallpapers are supported in this clean version.</p><input id="quickTitle" placeholder="Wallpaper title"/><input id="quickUrl" placeholder="Direct image URL"/><select id="quickCat"><option>Anime</option><option>Cars</option><option>Nature</option><option>Gaming</option><option>AMOLED</option><option>Cyberpunk</option><option>Space</option><option>Abstract</option><option>Sports</option><option>Technology</option></select><button class="btn" onclick="publishItem()" style="width:100%"><i class="fa-solid fa-upload"></i> Publish Wallpaper</button></div></section>
+<section class="screen" id="admin"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Admin Dashboard</h2><div></div></div><div class="form glass" id="adminLock"><h3>Admin Secret</h3><input id="adminSecret" placeholder="Enter admin secret" type="password"/><button class="btn" onclick="verifyAdmin()" style="width:100%">Unlock Admin</button></div><div id="adminPanel" style="display:none"><div class="profile-card glass" style="text-align:left;margin-bottom:14px"><h3 style="margin-bottom:12px">Dashboard Overview</h3><div class="stats"><div class="stat"><b id="adminUploads">0</b><span>Uploads</span></div><div class="stat"><b id="adminFavs">0</b><span>Favorites</span></div><div class="stat"><b id="adminDowns">0</b><span>Downloads</span></div></div><button class="btn" onclick="go('upload')" style="width:100%;margin-top:12px">Add Wallpaper</button></div><div class="section"><h3>Uploaded Wallpapers</h3><a onclick="go('upload')">Add</a></div><div class="list" id="adminList"></div></div></section>
+<section class="screen" id="notifications"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Notifications</h2><a onclick="markRead()" style="color:var(--glow)">Mark all as read</a></div><div class="list" id="notifList"></div></section>
+<section class="screen" id="contact"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Contact</h2><div></div></div><div class="legal-card glass"><h3>Contact WallFlixHub</h3><p><b>Email:</b> wallflixhub@gmail.com</p><p>Use this page for support, feedback, and technical help.</p></div></section>
+<section class="screen" id="policy"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Privacy Policy</h2><div></div></div><div class="legal-card glass"><h3>Privacy Policy</h3><p>WallFlixHub stores favorites, downloads, uploaded wallpapers, theme preferences and basic usage data required to operate the service.</p></div></section>
+<section class="screen" id="terms"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Terms</h2><div></div></div><div class="legal-card glass"><h3>Terms of Service</h3><p>Use WallFlixHub responsibly and do not upload harmful, illegal, or copyrighted content without permission.</p></div></section>
+<section class="screen" id="faq"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>FAQ</h2><div></div></div><div class="legal-card glass"><h3>FAQ</h3><p><b>How do I download?</b><br/>Open any wallpaper and tap Download Wallpaper.</p><p><b>How do I add wallpapers?</b><br/>Open Publish Wallpaper and paste a direct image URL.</p></div></section>
+</div>
+<div class="viewer" id="viewer"><div class="preview" id="previewMedia"><div class="viewer-top"><button onclick="closeViewer()"><i class="fa-solid fa-chevron-left"></i></button><button onclick="likeCurrent()"><i class="fa-regular fa-heart" id="viewerHeart"></i></button></div></div><div class="viewer-card glass"><h2 id="vTitle">Wallpaper</h2><small style="color:var(--muted)">By WallFlixHub Team <i class="fa-solid fa-circle-check" style="color:var(--glow)"></i></small><div class="metrics"><div class="metric"><i class="fa-regular fa-heart"></i> <b id="vLikes">0</b><span>Likes</span></div><div class="metric"><i class="fa-solid fa-download"></i> <b id="vDown">0</b><span>Downloads</span></div><div class="metric"><i class="fa-regular fa-eye"></i> <b id="vViews">0</b><span>Views</span></div></div><button class="full-btn" onclick="downloadCurrent()">Download Wallpaper</button><button class="full-btn share-btn" onclick="shareCurrent()">Share Wallpaper</button></div><div class="comments glass"><h3>Comments & Ratings</h3><div style="margin:10px 0"><b id="ratingValue">0</b> / 5 <span class="stars"><button onclick="rate(1)">★</button><button onclick="rate(2)">★</button><button onclick="rate(3)">★</button><button onclick="rate(4)">★</button><button onclick="rate(5)">★</button></span></div><input id="commentInput" placeholder="Write comment..." style="width:100%;background:var(--glass2);border:1px solid var(--border);color:var(--text);border-radius:12px;padding:11px"/><button class="btn" onclick="addComment()" style="width:100%;margin-top:9px">Add Comment</button><div id="commentList" style="margin-top:8px;color:var(--muted);font-size:12px">No comments yet.</div></div><div class="section" style="padding:0 16px"><h3>More Like This</h3><a>View all</a></div><div class="related" id="related"></div></div>
+<nav class="bottom-nav"><button class="nav active" onclick="go('home',this)"><i class="fa-solid fa-house"></i><span>Home</span></button><button class="nav" onclick="go('explore',this)"><i class="fa-solid fa-compass"></i><span>Explore</span></button><button class="nav" onclick="go('categories',this)"><i class="fa-solid fa-layer-group"></i><span>Categories</span></button><button class="nav" onclick="go('favorites',this)"><i class="fa-regular fa-heart"></i><span>Likes</span></button><button class="nav" onclick="go('menu',this)"><i class="fa-solid fa-bars"></i><span>More</span></button></nav>
+<div class="toast" id="toast">Done</div>
+</div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const ADMIN_SECRET='1234';
+const categories=[['AMOLED','fa-circle-half-stroke'],['Anime','fa-ghost'],['Cars','fa-car'],['Nature','fa-leaf'],['Gaming','fa-gamepad'],['Space','fa-rocket'],['Abstract','fa-shapes'],['Sports','fa-football'],['Technology','fa-microchip'],['Cyberpunk','fa-bolt']];
+const starter=[
+{id:1,title:'Anime Purple Night',cat:'Anime',url:'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=900&auto=format&fit=crop',type:'static',likes:134,downloads:88,views:980,featured:true,premium:true},
+{id:2,title:'AMOLED Neon Flower',cat:'AMOLED',url:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop',type:'static',likes:122,downloads:76,views:870,featured:true,premium:false},
+{id:3,title:'Cyberpunk City',cat:'Cyberpunk',url:'https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=900&auto=format&fit=crop',type:'static',likes:188,downloads:144,views:1490,featured:true,premium:true},
+{id:4,title:'Luxury Car Lights',cat:'Cars',url:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=900&auto=format&fit=crop',type:'static',likes:91,downloads:64,views:730,featured:false,premium:false},
+{id:5,title:'Green Nature Path',cat:'Nature',url:'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=900&auto=format&fit=crop',type:'static',likes:77,downloads:42,views:600,featured:false,premium:false},
+{id:6,title:'Gaming Setup Glow',cat:'Gaming',url:'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=900&auto=format&fit=crop',type:'static',likes:105,downloads:71,views:840,featured:false,premium:true},
+{id:7,title:'Deep Space Stars',cat:'Space',url:'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=900&auto=format&fit=crop',type:'static',likes:145,downloads:99,views:1030,featured:true,premium:false},
+{id:8,title:'Abstract Gradient',cat:'Abstract',url:'https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=900&auto=format&fit=crop',type:'static',likes:84,downloads:56,views:690,featured:false,premium:false},
+{id:9,title:'Stadium Energy',cat:'Sports',url:'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=900&auto=format&fit=crop',type:'static',likes:67,downloads:33,views:520,featured:false,premium:false},
+{id:10,title:'Tech Circuit',cat:'Technology',url:'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop',type:'static',likes:118,downloads:79,views:900,featured:false,premium:true}
+];
+const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}};
+const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+let uploads=load('wfhUploads',[]).filter(isImageItem);
+let favs=load('wfhFavs',[]);
+let downs=load('wfhDowns',[]);
+let recent=load('wfhRecent',[]);
+let comments=load('wfhComments',{});
+let ratings=load('wfhRatings',{});
+let current=null, slideIndex=0;
+function isImageItem(x){const u=String(x&&x.url||'').toLowerCase();return !!(x&&x.url)}
+function all(){return [...uploads.filter(isImageItem),...starter]}
+function mediaHTML(w){return `<img loading="lazy" src="${w.url}" alt="${escapeHTML(w.title)}" onerror="this.src='https://res.cloudinary.com/dvxrkvhzl/image/upload/v1780614018/anime_32_g9cwef.jpg'">`}
+function card(w,small=false){return `<div class="card ${small?'small':''}" onclick="openViewer(${JSON.stringify(w.id)})">${mediaHTML(w)}<span class="card-tag ${w.premium?'tag-premium':''}">${w.premium?'Premium':'New'}</span><div class="card-stats"><span><i class="fa-regular fa-heart"></i> ${w.likes||0}</span><span><i class="fa-solid fa-download"></i> ${w.downloads||0}</span></div></div>`}
+function cat(c){const count=all().filter(w=>w.cat===c[0]).length;return `<div class="cat" onclick="filterCat('${c[0]}')"><i class="fa-solid ${c[1]}" style="color:var(--glow)"></i><b>${c[0]}</b><span>${count} wallpapers</span></div>`}
+function escapeHTML(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+function render(){const data=all();$('slider').innerHTML=data.slice(0,5).map(w=>`<div class="slide" style="background-image:url('${w.url}')" onclick="openViewer(${JSON.stringify(w.id)})"><div class="slide-content"><span class="tag">${w.cat}</span><h2>${escapeHTML(w.title)}</h2><p>Fresh 4K mobile wallpaper</p><button class="btn">Open Wallpaper</button></div></div>`).join('');$('dots').innerHTML=data.slice(0,5).map((_,i)=>`<span class="${i===slideIndex?'active':''}"></span>`).join('');$('featuredGrid').innerHTML=data.filter(w=>w.featured).slice(0,8).map(w=>card(w)).join('')||'<div class="empty">No featured wallpapers yet.</div>';$('homeTrending').innerHTML=[...data].sort((a,b)=>(b.likes+b.downloads+b.views)-(a.likes+a.downloads+a.views)).slice(0,3).map(w=>card(w,true)).join('');$('homeCats').innerHTML=categories.slice(0,3).map(cat).join('');$('newArrivals').innerHTML=data.slice(0,8).map(w=>card(w)).join('');$('exploreGrid').innerHTML=data.map(w=>card(w)).join('');$('catGrid').innerHTML=categories.map(cat).join('');$('trendGrid').innerHTML=[...data].sort((a,b)=>(b.likes+b.downloads)-(a.likes+a.downloads)).map(w=>card(w)).join('');$('newGrid').innerHTML=data.slice(0,20).map(w=>card(w)).join('');$('recentGrid').innerHTML=recent.map(id=>data.find(w=>String(w.id)===String(id))).filter(Boolean).slice(0,10).map(w=>card(w)).join('')||'<div class="empty">No recently viewed yet.</div>';$('notifList').innerHTML=[['fa-crown','Premium wallpaper lineup updated','2m'],['fa-cloud-arrow-up','Admin dashboard ready','1h'],['fa-heart','Your wallpaper reached new views','5h']].map(n=>`<div class="row"><i class="fa-solid ${n[0]}" style="color:var(--glow);font-size:23px"></i><div><b>${n[1]}</b><p>${n[2]} ago</p></div></div>`).join('');renderFavs();renderDowns();renderAdmin();updateStats();updateSlider()}
+function updateSlider(){const slides=$('slider');const count=Math.min(all().length,5)||1;slideIndex=Math.min(slideIndex,count-1);slides.style.transform=`translateX(-${slideIndex*100}%)`;[...$('dots').children].forEach((d,i)=>d.classList.toggle('active',i===slideIndex))}
+setInterval(()=>{const count=Math.min(all().length,5)||1;slideIndex=(slideIndex+1)%count;updateSlider()},3600);
+function go(id,btn){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));($(id)||$('home')).classList.add('active');document.querySelector('.viewport').scrollTop=0;document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));if(btn)btn.classList.add('active');else document.querySelectorAll('.nav').forEach(n=>{if(n.getAttribute('onclick')?.includes(`'${id}'`))n.classList.add('active')});render()}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
+function toggleTheme(){document.body.classList.toggle('light-mode');localStorage.setItem('wfhTheme',document.body.classList.contains('light-mode')?'light':'dark');const sw=$('themeSwitch');if(sw)sw.checked=document.body.classList.contains('light-mode')}
+function filterCat(name){const items=all().filter(w=>w.cat===name);$('exploreGrid').innerHTML=items.map(w=>card(w)).join('')||'<div class="empty">No wallpapers in this category.</div>';go('explore');toast(name)}
+function search(q){q=String(q||'').toLowerCase();const items=all().filter(w=>(w.title+w.cat).toLowerCase().includes(q));$('exploreGrid').innerHTML=items.map(w=>card(w)).join('')||'<div class="empty">No wallpapers found.</div>';if(q)go('explore')}
+function openViewer(id){const w=all().find(x=>String(x.id)===String(id));if(!w)return;current=w;w.views=(w.views||0)+1;if(uploads.some(u=>String(u.id)===String(w.id)))save('wfhUploads',uploads);recent=[w.id,...recent.filter(x=>String(x)!==String(w.id))].slice(0,20);save('wfhRecent',recent);$('previewMedia').querySelectorAll('img').forEach(x=>x.remove());$('previewMedia').insertAdjacentHTML('afterbegin',mediaHTML(w));$('vTitle').textContent=w.title;$('vLikes').textContent=w.likes||0;$('vDown').textContent=w.downloads||0;$('vViews').textContent=w.views||0;$('viewerHeart').className=favs.includes(w.id)?'fa-solid fa-heart heart-red':'fa-regular fa-heart';$('ratingValue').textContent=ratings[w.id]||0;renderComments();$('related').innerHTML=all().filter(x=>x.cat===w.cat&&String(x.id)!==String(w.id)).slice(0,8).map(x=>`<img src="${x.url}" onclick="openViewer(${JSON.stringify(x.id)})"/>`).join('');$('viewer').classList.add('show')}
+function closeViewer(){$('viewer').classList.remove('show');render()}
+function likeCurrent(){if(!current)return;if(favs.includes(current.id)){favs=favs.filter(x=>String(x)!==String(current.id));current.likes=Math.max(0,(current.likes||0)-1)}else{favs.unshift(current.id);current.likes=(current.likes||0)+1}save('wfhFavs',favs);save('wfhUploads',uploads);openViewer(current.id);toast('Updated')}
+async function downloadCurrent(){if(!current)return;current.downloads=(current.downloads||0)+1;downs=[current.id,...downs.filter(x=>String(x)!==String(current.id))].slice(0,50);save('wfhDowns',downs);save('wfhUploads',uploads);try{const a=document.createElement('a');a.href=current.url;a.download=(current.title||'wallflixhub')+'.jpg';a.target='_blank';document.body.appendChild(a);a.click();a.remove()}catch(e){window.open(current.url,'_blank')}openViewer(current.id);toast('Download started')}
+function shareCurrent(){if(!current)return;const text=`${current.title} - WallFlixHub`;if(navigator.share)navigator.share({title:current.title,text,url:current.url}).catch(()=>{});else navigator.clipboard?.writeText(current.url);toast('Share ready')}
+function rate(n){if(!current)return;ratings[current.id]=n;save('wfhRatings',ratings);$('ratingValue').textContent=n;toast('Rated')}
+function addComment(){if(!current)return;const val=$('commentInput').value.trim();if(!val)return;comments[current.id]=comments[current.id]||[];comments[current.id].push({text:val,date:new Date().toLocaleString()});save('wfhComments',comments);$('commentInput').value='';renderComments();toast('Comment added')}
+function renderComments(){if(!current)return;const list=comments[current.id]||[];$('commentList').innerHTML=list.length?list.map(c=>`<div style="padding:8px 0;border-bottom:1px solid var(--border)"><b style="color:var(--text)">User</b><br>${escapeHTML(c.text)}<br><small>${c.date}</small></div>`).join(''):'No comments yet.'}
+function renderFavs(){const items=favs.map(id=>all().find(w=>String(w.id)===String(id))).filter(Boolean);$('favGrid').innerHTML=items.map(w=>card(w)).join('')||'<div class="empty">No favorites yet.</div>';$('favPill').textContent=items.length}
+function renderDowns(){const items=downs.map(id=>all().find(w=>String(w.id)===String(id))).filter(Boolean);$('downloadList').innerHTML=items.map(w=>`<div class="row" onclick="openViewer(${JSON.stringify(w.id)})">${mediaHTML(w)}<div><b>${escapeHTML(w.title)}</b><p>${w.cat} • Wallpaper</p></div></div>`).join('')||'<div class="empty">No downloads yet.</div>'}
+function clearDownloads(){downs=[];save('wfhDowns',downs);render();toast('Downloads cleared')}
+function clearRecent(){recent=[];save('wfhRecent',recent);render();toast('Recently viewed cleared')}
+function publishItem(){const title=$('quickTitle').value.trim();const url=$('quickUrl').value.trim();const cat=$('quickCat').value;if(!title||!url)return toast('Add title and image URL');if(!isImageItem({url,type:'static'}))return toast('Only image URLs accepted');const item={id:Date.now(),title,url,cat,type:'static',likes:0,downloads:0,views:0,featured:true,premium:false};uploads.unshift(item);save('wfhUploads',uploads);$('quickTitle').value='';$('quickUrl').value='';render();go('home');toast('Wallpaper published')}
+function verifyAdmin(){if($('adminSecret').value===ADMIN_SECRET){localStorage.setItem('wfhAdmin','1');renderAdmin();toast('Admin unlocked')}else toast('Wrong admin secret')}
+function renderAdmin(){const unlocked=localStorage.getItem('wfhAdmin')==='1';$('adminLock').style.display=unlocked?'none':'block';$('adminPanel').style.display=unlocked?'block':'none';$('adminUploads').textContent=uploads.length;$('adminFavs').textContent=favs.length;$('adminDowns').textContent=downs.length;$('adminList').innerHTML=uploads.length?uploads.map(u=>`<div class="row" onclick="openViewer(${JSON.stringify(u.id)})">${mediaHTML(u)}<div><b>${escapeHTML(u.title)}</b><p>Wallpaper • ${u.cat}</p></div><button class="btn" onclick="event.stopPropagation();toggleFeature(${JSON.stringify(u.id)})">${u.featured?'Unfeature':'Feature'}</button><button class="btn" onclick="event.stopPropagation();deleteUpload(${JSON.stringify(u.id)})">Delete</button></div>`).join(''):'<div class="empty">No uploads yet.</div>'}
+function toggleFeature(id){const u=uploads.find(x=>String(x.id)===String(id));if(u){u.featured=!u.featured;save('wfhUploads',uploads);render();toast('Feature updated')}}
+function deleteUpload(id){if(!confirm('Delete this wallpaper?'))return;uploads=uploads.filter(u=>String(u.id)!==String(id));save('wfhUploads',uploads);render();toast('Deleted')}
+function updateStats(){$('statUpload').textContent=uploads.length;$('statFav').textContent=favs.length;$('statDown').textContent=downs.length}
+function markRead(){$('notifBadge').style.display='none';toast('All read')}
+function init(){uploads=uploads.filter(isImageItem);save('wfhUploads',uploads);if(localStorage.getItem('wfhTheme')==='light')document.body.classList.add('light-mode');const sw=$('themeSwitch');if(sw)sw.checked=document.body.classList.contains('light-mode');render()}
+init();
+</script>
+
+<script type="module">
+const firebaseConfig = {
+  apiKey: "AIzaSyDLv0FWvThD7h6EnHMb-l9Tn0pfOLfbvGE",
+  authDomain: "wallflixhub.firebaseapp.com",
+  databaseURL: "https://wallflixhub-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "wallflixhub",
+  storageBucket: "wallflixhub.firebasestorage.app",
+  messagingSenderId: "621224536171",
+  appId: "1:621224536171:web:dc3884c7d5c9026463692e",
+  measurementId: "G-T6QZ6N8DDJ"
+};
+window.firebaseConfig = firebaseConfig;
+
+</script>
+
+<script type="module" id="wfh-firestore-sync">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const app = initializeApp(window.firebaseConfig);
+const db = getFirestore(app);
+const wallpapersRef = collection(db, "wallpapers");
+window.wfhFirestoreReady = true;
+
+function normalizeFirestoreWallpaper(d){
+  const data = d.data() || {};
+  return {
+    id: d.id,
+    firestoreId: d.id,
+    title: data.title || 'Wallpaper',
+    url: data.url || data.imageUrl || '',
+    cat: data.cat || data.category || 'AMOLED',
+    type: data.type || 'static',
+    likes: Number(data.likes || 0),
+    downloads: Number(data.downloads || 0),
+    views: Number(data.views || 0),
+    featured: data.featured !== false,
+    premium: data.premium === true,
+    createdAt: data.createdAt || null
+  };
+}
+
+async function loadFirestoreWallpapers(){
+  try{
+    let snap;
+    try{
+      snap = await getDocs(query(wallpapersRef, orderBy("createdAt", "desc")));
+    }catch(_){
+      snap = await getDocs(wallpapersRef);
+    }
+    window.uploads = snap.docs.map(normalizeFirestoreWallpaper).filter(x => x.url);
+    if (typeof render === 'function') render();
+  }catch(err){
+    console.error('Firestore load error:', err);
+    if(typeof toast === 'function') toast('Firebase limit/rules error');
+  }
+}
+
+window.publishItem = async function(){
+  const title = document.getElementById('quickTitle').value.trim();
+  const url = document.getElementById('quickUrl').value.trim();
+  const cat = document.getElementById('quickCat').value;
+  if(!title || !url) return toast('Add title and image URL');
+  try{
+    await addDoc(wallpapersRef, {
+      title, url, cat,
+      type: 'static',
+      likes: 0,
+      downloads: 0,
+      views: 0,
+      featured: true,
+      premium: false,
+      createdAt: serverTimestamp()
+    });
+    document.getElementById('quickTitle').value = '';
+    document.getElementById('quickUrl').value = '';
+    await loadFirestoreWallpapers();
+    go('home');
+    toast('Wallpaper published online');
+  }catch(err){
+    console.error('Firestore publish error:', err);
+    toast('Firebase limit/rules error');
+  }
+};
+
+window.toggleFeature = async function(id){
+  const u = uploads.find(x => String(x.id) === String(id));
+  if(!u) return;
+  const next = !u.featured;
+  u.featured = next;
+  render();
+  try{
+    await updateDoc(doc(db, 'wallpapers', String(id)), { featured: next });
+    toast('Feature updated online');
+  }catch(err){
+    console.error('Feature update error:', err);
+    toast('Firebase limit/rules error');
+  }
+};
+
+window.deleteUpload = async function(id){
+  if(!confirm('Delete this wallpaper?')) return;
+  try{
+    await deleteDoc(doc(db, 'wallpapers', String(id)));
+    uploads = uploads.filter(u => String(u.id) !== String(id));
+    render();
+    toast('Deleted online');
+  }catch(err){
+    console.error('Delete error:', err);
+    toast('Firebase limit/rules error');
+  }
+};
+
+loadFirestoreWallpapers();
+window.refreshWallpapers = loadFirestoreWallpapers;
+</script>
+
+
+<script id="wfh-auth-fix">
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function setAuthUI(){
+    var user = localStorage.getItem('wfh_user_email') || '';
+    var loginBox = $('wfhLoginBox');
+    var logoutBtn = $('logoutBtn');
+    var pLogout = $('profileLogoutBtn');
+    var gLogin = $('profileGoogleLoginBtn');
+    var name = $('profileName');
+    if(user){
+      if(loginBox) loginBox.style.display = 'none';
+      if(gLogin) gLogin.style.display = 'none';
+      if(logoutBtn) logoutBtn.style.display = 'block';
+      if(pLogout) pLogout.style.display = 'block';
+      if(name) name.textContent = user.split('@')[0] || 'WallFlixHub';
+    }else{
+      if(loginBox) loginBox.style.display = 'block';
+      if(gLogin) gLogin.style.display = 'block';
+      if(logoutBtn) logoutBtn.style.display = 'none';
+      if(pLogout) pLogout.style.display = 'none';
+      if(name) name.textContent = 'WallFlixHub';
+    }
+  }
+  window.login = window.login || function(){
+    var email = ($('loginEmail')||{}).value || '';
+    var pass = ($('loginPassword')||{}).value || '';
+    if(!email || !pass){ if(window.toast) toast('Enter email and password'); else alert('Enter email and password'); return; }
+    localStorage.setItem('wfh_user_email', email);
+    setAuthUI();
+    if(window.toast) toast('Logged in'); else alert('Logged in');
+  };
+  window.createAccount = window.createAccount || function(){
+    var email = ($('loginEmail')||{}).value || '';
+    var pass = ($('loginPassword')||{}).value || '';
+    if(!email || !pass){ if(window.toast) toast('Enter email and password'); else alert('Enter email and password'); return; }
+    localStorage.setItem('wfh_user_email', email);
+    setAuthUI();
+    if(window.toast) toast('Account created'); else alert('Account created');
+  };
+  window.googleLogin = window.googleLogin || function(){
+    localStorage.setItem('wfh_user_email', 'google-user@wallflixhub.com');
+    setAuthUI();
+    if(window.toast) toast('Google login active'); else alert('Google login active');
+  };
+  window.logout = function(){
+    localStorage.removeItem('wfh_user_email');
+    setAuthUI();
+    if(window.toast) toast('Logged out'); else alert('Logged out');
+  };
+  document.addEventListener('DOMContentLoaded', setAuthUI);
+  setTimeout(setAuthUI, 500);
+})();
+</script>
+
+</body>
+</html>
