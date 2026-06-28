@@ -1200,6 +1200,7 @@ gtag('config', 'G-QHWGTYQHGL');
 
 
 <!-- Schema.org FAQPage -->
+<!-- Schema.org FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1210,15 +1211,15 @@ gtag('config', 'G-QHWGTYQHGL');
       "name": "How do I download a wallpaper?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open any wallpaper on WallFlixHub and tap Download Wallpaper."
+        "text": "Open any wallpaper in the WallFlixHub viewer and tap Download Wallpaper. Downloads are intended for personal device use only."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I request copyright removal?",
+      "name": "Are the wallpapers free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the DMCA / Copyright page and contact WallFlixHub with the wallpaper link and proof of ownership."
+        "text": "Most wallpapers can be browsed and downloaded for personal use. Some reward-based items may require points inside the website experience."
       }
     },
     {
@@ -1226,7 +1227,39 @@ gtag('config', 'G-QHWGTYQHGL');
       "name": "Who can publish wallpapers on WallFlixHub?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only the site owner/admin can publish wallpapers on WallFlixHub. Regular users cannot upload, publish, or submit wallpapers."
+        "text": "Only the site owner/admin can publish wallpapers on WallFlixHub. Regular users cannot upload, publish, or submit wallpapers through the website."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are wallpapers organized?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wallpapers are grouped into categories such as AMOLED, Anime, Cars, Nature, Gaming, Cyberpunk, Space, Abstract, Sports, and Technology."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use wallpapers commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Wallpapers are provided for personal, non-commercial use only unless you have permission from the rights holder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I request copyright removal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the DMCA / Copyright page or contact wallflixhub@gmail.com with proof of ownership, the wallpaper URL, and a clear removal request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are ads not showing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ads may not appear while the site is under AdSense review, when no ad is available, or when a browser blocks ads."
       }
     }
   ]
@@ -1327,7 +1360,7 @@ body[data-screen="faq"] .viewport{
     <li><b>Use the right mood.</b> Calm nature images are good for daily use, gaming and cyberpunk designs feel energetic, and minimal abstract styles keep the screen clean.</li>
     <li><b>Preview before downloading.</b> Open the wallpaper in the viewer, check the crop, and then download the image for personal use.</li>
   </ul>
-</div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links"><a href="/contact.html" onclick="event.preventDefault();go('contact')">Contact</a><a href="/privacy.html" onclick="event.preventDefault();go('policy')">Privacy</a><a href="/terms.html" onclick="event.preventDefault();go('terms')">Terms</a><a href="/dmca.html">DMCA / Copyright</a><a href="/faq.html" onclick="event.preventDefault();go('faq')">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
+</div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links"><a href="/contact.html" onclick="event.preventDefault();go('contact')">Contact</a><a href="/privacy.html" onclick="event.preventDefault();go('policy')">Privacy</a><a href="/terms.html" onclick="event.preventDefault();go('terms')">Terms</a><a href="/dmca.html" onclick="event.preventDefault();go('dmca')">DMCA / Copyright</a><a href="/faq.html" onclick="event.preventDefault();go('faq')">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
 <section class="screen" id="explore"><div class="section"><h3>Explore Wallpapers</h3><a href="/explore.html" onclick="event.preventDefault();activeExploreCategory=null;wfhExplorePage=1;go('explore')">Latest</a></div><div id="wfhExploreChips" class="wfh-chipbar"></div><div class="grid2" id="exploreGrid"></div><div class="wfh-loading-more" id="wfhExploreLoader"><span>Loading more</span><span class="spinner"></span></div><div id="wfhExploreSeo"></div></section>
 <section class="screen" id="categories"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Categories</h2><div></div></div><div class="grid2" id="catGrid"></div><div class="wfh-seo-block" id="wfhCategorySeo"></div></section>
 <section class="screen" id="trending"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>Trending Today</h2><div></div></div><div class="grid2" id="trendGrid"></div></section>
@@ -1335,11 +1368,11 @@ body[data-screen="faq"] .viewport{
 <section class="screen" id="favorites"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Favorites</h2><div></div></div><div class="grid2" id="favGrid"></div></section>
 <section class="screen" id="downloads"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Downloads</h2><button type="button" id="downloadsClearBtn" class="link-btn" onclick="clearDownloads()" style="color:var(--glow)">Clear</button></div><div class="list" id="downloadList"></div></section>
 <section class="screen" id="profile"><div class="profile-card glass"><div class="avatar"><div>W</div></div><h2 id="profileName">WallFlixHub</h2><small class="profile-subtitle">Mobile Wallpapers</small><div class="stats"><div class="stat"><b id="statUpload">0</b><span>Uploads</span></div><div class="stat"><b id="statFav">0</b><span>Favorites</span></div><div class="stat"><b id="statDown">0</b><span>Downloads</span></div></div><div id="wfhLoginBox" class="form glass" style="margin-top:14px;text-align:left"><h3 style="margin-bottom:8px">Login</h3><input id="loginEmail" type="email" placeholder="Email"/><input id="loginPassword" type="password" placeholder="Password"/><div class="wfh-auth-actions"><button class="btn" onclick="login()">Login</button><button class="btn" onclick="createAccount()">Create</button></div></div><div class="wfh-auth-actions"><button id="profileGoogleLoginBtn" class="btn" onclick="googleLogin()">✅ Sign in with Google</button><button id="profileLogoutBtn" class="btn" onclick="logout()" style="display:none;background:#20222b">Logout</button></div></div></section>
-<section class="screen" id="menu"><div class="menu-profile glass" onclick="go('profile')"><div class="logo">W</div><div><b>WallFlixHub</b><br/><small class="menu-subtitle">Mobile Wallpapers</small></div><i class="fa-solid fa-chevron-right" style="margin-left:auto"></i></div><div class="menu-box glass"><div class="menu-row" onclick="go('profile')"><i class="fa-regular fa-user"></i><span>Profile</span></div><div class="menu-row" id="logoutBtn" onclick="logout()" style="display:none"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></div><div class="menu-row" onclick="go('favorites')"><i class="fa-regular fa-heart"></i><span>Favorites</span><b class="pill" id="favPill">0</b></div><div class="menu-row" onclick="go('downloads')"><i class="fa-solid fa-download"></i><span>Downloads</span></div><div class="menu-row" onclick="go('trending')"><i class="fa-solid fa-fire"></i><span>Trending Today</span></div><div class="menu-row" onclick="go('new')"><i class="fa-solid fa-sparkles"></i><span>New Arrivals</span></div><div class="menu-row" onclick="go('categories')"><i class="fa-solid fa-layer-group"></i><span>Popular Categories</span></div></div><div class="menu-box glass"><div class="menu-row" id="wfhPublishMenuRow" onclick="go('upload')" style="display:none"><i class="fa-solid fa-upload"></i><span>Publish Wallpaper <small style="color:var(--muted);font-weight:800">(Admin only)</small></span></div><div class="menu-row" id="wfhAdminMenuRow" onclick="go('admin')" style="display:none"><i class="fa-solid fa-user-shield"></i><span>Admin Dashboard <small style="color:var(--muted);font-weight:800">(Owner)</small></span></div><div class="menu-row"><i class="fa-solid fa-circle-half-stroke"></i><span>Theme</span><label class="switch"><input id="themeSwitch" onchange="toggleTheme()" type="checkbox"/><span></span></label></div><div class="menu-row" onclick="go('contact')"><i class="fa-solid fa-envelope"></i><span>Contact</span></div><div class="menu-row" onclick="go('policy')"><i class="fa-solid fa-shield-halved"></i><span>Privacy Policy</span></div><div class="menu-row" onclick="go('terms')"><i class="fa-solid fa-file-contract"></i><span>Terms of Service</span></div><a class="menu-row" href="/dmca.html" style="text-decoration:none;color:inherit"><i class="fa-solid fa-scale-balanced"></i><span>DMCA / Copyright</span></a><div class="menu-row" onclick="go('faq')"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></div></div></section>
+<section class="screen" id="menu"><div class="menu-profile glass" onclick="go('profile')"><div class="logo">W</div><div><b>WallFlixHub</b><br/><small class="menu-subtitle">Mobile Wallpapers</small></div><i class="fa-solid fa-chevron-right" style="margin-left:auto"></i></div><div class="menu-box glass"><div class="menu-row" onclick="go('profile')"><i class="fa-regular fa-user"></i><span>Profile</span></div><div class="menu-row" id="logoutBtn" onclick="logout()" style="display:none"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></div><div class="menu-row" onclick="go('favorites')"><i class="fa-regular fa-heart"></i><span>Favorites</span><b class="pill" id="favPill">0</b></div><div class="menu-row" onclick="go('downloads')"><i class="fa-solid fa-download"></i><span>Downloads</span></div><div class="menu-row" onclick="go('trending')"><i class="fa-solid fa-fire"></i><span>Trending Today</span></div><div class="menu-row" onclick="go('new')"><i class="fa-solid fa-sparkles"></i><span>New Arrivals</span></div><div class="menu-row" onclick="go('categories')"><i class="fa-solid fa-layer-group"></i><span>Popular Categories</span></div></div><div class="menu-box glass"><div class="menu-row" id="wfhPublishMenuRow" onclick="go('upload')" style="display:none"><i class="fa-solid fa-upload"></i><span>Publish Wallpaper <small style="color:var(--muted);font-weight:800">(Admin only)</small></span></div><div class="menu-row" id="wfhAdminMenuRow" onclick="go('admin')" style="display:none"><i class="fa-solid fa-user-shield"></i><span>Admin Dashboard <small style="color:var(--muted);font-weight:800">(Owner)</small></span></div><div class="menu-row"><i class="fa-solid fa-circle-half-stroke"></i><span>Theme</span><label class="switch"><input id="themeSwitch" onchange="toggleTheme()" type="checkbox"/><span></span></label></div><div class="menu-row" onclick="go('contact')"><i class="fa-solid fa-envelope"></i><span>Contact</span></div><div class="menu-row" onclick="go('policy')"><i class="fa-solid fa-shield-halved"></i><span>Privacy Policy</span></div><div class="menu-row" onclick="go('terms')"><i class="fa-solid fa-file-contract"></i><span>Terms of Service</span></div><div class="menu-row" onclick="go('dmca')"><i class="fa-solid fa-scale-balanced"></i><span>DMCA / Copyright</span></div><div class="menu-row" onclick="go('faq')"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></div></div></section>
 <section class="screen" id="upload"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Publish Wallpaper</h2><div></div></div><div class="form glass"><div class="upload-head"><i class="fa-solid fa-cloud-arrow-up"></i><h3>Add Wallpaper by Direct URL</h3></div><p style="font-size:12px;color:var(--muted);line-height:1.6;margin:6px 0 14px">Admin-only publishing. Only image wallpapers are supported. Do not upload copyrighted, adult, violent, misleading or unsafe content.</p><input id="quickTitle" placeholder="Wallpaper title"/><input id="quickUrl" placeholder="Direct image URL"/><textarea id="quickDescription" placeholder="Wallpaper description"></textarea><select id="quickCat"><option>Anime</option><option>Cars</option><option>Nature</option><option>Gaming</option><option>AMOLED</option><option>Cyberpunk</option><option>Space</option><option>Abstract</option><option>Sports</option><option>Technology</option></select><select id="quickQuality"><option>Editor Pick</option><option>Full HD</option><option>4K</option></select><button class="btn" onclick="publishItem()" style="width:100%"><i class="fa-solid fa-upload"></i> Publish Wallpaper</button></div></section>
 <section class="screen" id="admin"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Admin Dashboard</h2><div></div></div><div class="form glass" id="adminLock"><h3>Admin Secret</h3><input id="adminSecret" placeholder="Enter admin secret" type="password"/><button class="btn" onclick="verifyAdmin()" style="width:100%">Unlock Admin</button></div><div id="adminPanel" style="display:none"><div class="profile-card glass" style="text-align:left;margin-bottom:14px"><h3 style="margin-bottom:12px">Dashboard Overview</h3><div class="stats"><div class="stat"><b id="adminUploads">0</b><span>Uploads</span></div><div class="stat"><b id="adminFavs">0</b><span>Favorites</span></div><div class="stat"><b id="adminDowns">0</b><span>Downloads</span></div></div><button class="btn" onclick="go('upload')" style="width:100%;margin-top:12px">Add Wallpaper</button></div><div class="section"><h3>Uploaded Wallpapers</h3><a href="/publish.html" onclick="event.preventDefault();go('upload')">Add</a></div><div class="list" id="adminList"></div></div></section>
 <section class="screen" id="notifications"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Notifications</h2><button type="button" class="link-btn" onclick="markRead()" style="color:var(--glow)">Mark all as read</button></div><div class="list" id="notifList"></div></section>
-<section class="screen" id="contact"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Contact</h2><div></div></div><div class="legal-card glass"><h3>Contact WallFlixHub</h3><p><b>Email:</b> wallflixhub@gmail.com</p><p>Use this page for support, feedback, and technical help.</p></div></section>
+<section class="screen" id="contact"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Contact</h2><div></div></div><div class="legal-card glass"><h3>Contact WallFlixHub</h3><p>Need help with downloads, wallpaper requests, copyright questions, advertising concerns, or technical issues? Contact the WallFlixHub team using the email below.</p><p><b>Email:</b> wallflixhub@gmail.com</p><h3>What You Can Contact Us About</h3><ul><li>Wallpaper download problems or broken image links</li><li>Copyright, credit, or DMCA removal requests</li><li>Bug reports, loading issues, or mobile display problems</li><li>Suggestions for new wallpaper categories or features</li><li>Privacy, terms, or advertising-related questions</li></ul><h3>Response Time</h3><p>We try to review messages within 24-72 hours. Copyright or safety requests may be prioritized when enough information is provided.</p><h3>Helpful Details to Include</h3><p>Please include the wallpaper title, page URL, screenshot, device/browser name, and a short explanation of the issue so we can understand and fix it faster.</p></div><div class="legal-card glass"><h3>About WallFlixHub</h3><p>WallFlixHub is a mobile-first wallpaper website focused on curated 4K backgrounds for smartphones. The site organizes wallpapers into clear categories such as AMOLED, Anime, Cars, Nature, Gaming, Cyberpunk, Space, Abstract, Sports, and Technology.</p><p>Our goal is to make wallpaper browsing simple, fast, and useful on phones, with clean previews, direct downloads, favorites, categories, and clear legal pages for users and rights holders.</p></div></section>
 
 <section class="screen" id="policy"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Privacy Policy</h2><div></div></div><div class="legal-card glass"><h3>Privacy Policy</h3>
 
@@ -1433,7 +1466,7 @@ body[data-screen="faq"] .viewport{
 
 
 <section class="screen" id="dmca">
-<div class="back"><button onclick="location.href='/'"><i class="fa-solid fa-chevron-left"></i></button><h2>DMCA / Copyright</h2><div></div></div>
+<div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>DMCA / Copyright</h2><div></div></div>
 <div class="legal-card glass">
 <h3>DMCA / Copyright Policy</h3>
 <p>WallFlixHub respects the intellectual property rights of creators, artists, photographers, and copyright owners.</p>
@@ -1462,12 +1495,12 @@ body[data-screen="faq"] .viewport{
 
 <h3>Website</h3>
 <p>Main website: <a href="https://wallflixhub.github.io/" style="color:#d98cff;font-weight:900">https://wallflixhub.github.io/</a></p>
-<p>DMCA page: <a href="https://wallflixhub.github.io/dmca.html" style="color:#d98cff;font-weight:900">https://wallflixhub.github.io/dmca.html</a></p>
+<p>DMCA page: <a href="/dmca.html" onclick="event.preventDefault();go('dmca')" style="color:#d98cff;font-weight:900">DMCA / Copyright page</a></p>
 </div>
 </section>
 
 <section class="screen" id="faq">
-<div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>FAQ</h2><div></div></div><div class="legal-card glass"><h3>FAQ</h3><p><b>How do I download?</b><br/>Open any wallpaper and tap Download Wallpaper.</p><p><b>How do I add wallpapers?</b><br/>Publishing is reserved for the site owner/admin. Regular users cannot upload, publish, or submit wallpapers.</p><p><b>How can I request copyright removal?</b><br/>Open DMCA / Copyright and contact us with proof of ownership.</p></div></section>
+<div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>FAQ</h2><div></div></div><div class="legal-card glass"><h3>Frequently Asked Questions</h3><p><b>How do I download a wallpaper?</b><br/>Open any wallpaper in the viewer and tap Download Wallpaper. Downloads are intended for personal device use only.</p><p><b>Are the wallpapers free?</b><br/>Most wallpapers can be browsed and downloaded for personal use. Some reward-based items may require points inside the website experience.</p><p><b>Can users upload wallpapers?</b><br/>No. Publishing is reserved for the site owner/admin. Regular users cannot upload, publish, or submit wallpapers through the website.</p><p><b>How are wallpapers organized?</b><br/>Wallpapers are grouped into categories such as AMOLED, Anime, Cars, Nature, Gaming, Cyberpunk, Space, Abstract, Sports, and Technology to make browsing easier.</p><p><b>Can I use wallpapers commercially?</b><br/>No. Wallpapers are provided for personal, non-commercial use only unless you have permission from the rights holder.</p><p><b>How can I request copyright removal?</b><br/>Open DMCA / Copyright or contact us at wallflixhub@gmail.com with proof of ownership, the wallpaper URL, and a clear removal request.</p><p><b>Why are ads not showing?</b><br/>Ads may not appear while the site is under AdSense review, when no ad is available, or when a browser blocks ads. Auto Ads and ads.txt should still remain correctly configured.</p></div></section>
 
 <noscript><p style="text-align:center;padding:12px"><a href="/dmca.html">DMCA / Copyright Policy</a></p></noscript>
 </main>
@@ -1744,7 +1777,7 @@ function wfhOpenCurrentRoute(){
   go(id,null,false);
 }
 window.addEventListener('popstate',wfhOpenCurrentRoute);
-function go(id,btn,push=true){if(id==='dmca'){location.href='/dmca.html';return;}document.body.dataset.screen=id;document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));($(id)||$('home')).classList.add('active');document.querySelector('.viewport').scrollTop=0;document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));if(btn)btn.classList.add('active');else document.querySelectorAll('.nav').forEach(n=>{if(n.getAttribute('onclick')?.includes(`'${id}'`))n.classList.add('active')});if(push)wfhUpdateUrl(id);else wfhSeoTitle(id);render();if(id==='notifications'&&typeof wfhSyncSwNotifications==='function'){wfhSyncSwNotifications().then(()=>window.wfhRenderNotifications&&window.wfhRenderNotifications()).catch(()=>{});}}
+function go(id,btn,push=true){document.body.dataset.screen=id;document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));($(id)||$('home')).classList.add('active');document.querySelector('.viewport').scrollTop=0;document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));if(btn)btn.classList.add('active');else document.querySelectorAll('.nav').forEach(n=>{if(n.getAttribute('onclick')?.includes(`'${id}'`))n.classList.add('active')});if(push)wfhUpdateUrl(id);else wfhSeoTitle(id);render();if(id==='notifications'&&typeof wfhSyncSwNotifications==='function'){wfhSyncSwNotifications().then(()=>window.wfhRenderNotifications&&window.wfhRenderNotifications()).catch(()=>{});}}
 function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
 function toggleTheme(){document.body.classList.toggle('light-mode');localStorage.setItem('wfhTheme',document.body.classList.contains('light-mode')?'light':'dark');const sw=$('themeSwitch');if(sw)sw.checked=document.body.classList.contains('light-mode')}
 function filterCat(name){
@@ -2965,5 +2998,16 @@ window.wfhIsAdmin = isRealAdmin;
 })();
 </script>
 
+
+<script id="wfh-dmca-spa-fix">
+/* Keep DMCA / Copyright inside this single index.html file so mobile browsers do not open a missing /dmca.html file. */
+document.addEventListener('click', function(e){
+  const a = e.target.closest && e.target.closest('a[href$="/dmca.html"],a[href="/dmca.html"]');
+  if(a && typeof go === 'function'){
+    e.preventDefault();
+    go('dmca');
+  }
+});
+</script>
 </body>
 </html>
