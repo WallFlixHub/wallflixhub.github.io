@@ -8,8 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 <title>WallFlixHub - 4K Mobile Wallpapers for Phones</title>
 <meta name="description" content="WallFlixHub is a mobile-first 4K wallpaper website for phones. Browse AMOLED, Anime, Gaming, Cyberpunk, Nature, Space, Cars, Sports and Abstract wallpapers with direct download, favorites and clean mobile previews." />
-<link rel="icon" href="https://wallflixhub.github.io/images/logo.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://wallflixhub.github.io/images/logo.png">
+<!-- WallFlixHub Logo / Icons -->
+<link rel="icon" type="image/png" sizes="512x512" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+<meta name="msapplication-TileImage" content="/images/logo.png">
+<meta name="theme-color" content="#030305">
 
 <link rel="manifest" href="/manifest.json">
 <meta name="google-site-verification" content="_-QlsUlbLbtb1Bns53tpCTdYGR6FgEmR5qQro5YuWTc" />
@@ -1154,7 +1158,7 @@ gtag('config', 'G-QHWGTYQHGL');
 <meta property="og:description" content="Browse WallFlixHub, a mobile-first wallpaper website for clean 4K phone backgrounds organized by category.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wallflixhub.github.io/">
-<meta property="og:image" content="https://wallflixhub.github.io/preview.jpg">
+<meta property="og:image" content="https://wallflixhub.github.io/preview.jpg?v=20260629">
 <meta property="og:image:alt" content="WallFlixHub 4K mobile wallpapers preview">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -1164,7 +1168,7 @@ gtag('config', 'G-QHWGTYQHGL');
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="WallFlixHub - 4K Mobile Wallpapers for Phones">
 <meta name="twitter:description" content="Browse WallFlixHub, a mobile-first wallpaper website for clean 4K phone backgrounds organized by category.">
-<meta name="twitter:image" content="https://wallflixhub.github.io/preview.jpg">
+<meta name="twitter:image" content="https://wallflixhub.github.io/preview.jpg?v=20260629">
 <meta name="twitter:site" content="@WallFlixHub">
 
 <!-- DNS Prefetch / Preconnect -->
@@ -1183,7 +1187,7 @@ gtag('config', 'G-QHWGTYQHGL');
       "url": "https://wallflixhub.github.io/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://wallflixhub.github.io/images/logo.png",
+        "url": "https://wallflixhub.github.io/images/logo.png?v=20260629",
         "width": 512,
         "height": 512
       },
@@ -1214,9 +1218,9 @@ gtag('config', 'G-QHWGTYQHGL');
       "about": {"@id": "https://wallflixhub.github.io/#imagegallery"},
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://wallflixhub.github.io/preview.jpg"
+        "url": "https://wallflixhub.github.io/preview.jpg?v=20260629"
       },
-      "dateModified": "2026-06-29",
+      "dateModified": "2025-06-29",
       "inLanguage": "en",
       "description": "Browse curated 4K wallpapers for phone home screens, lock screens and AMOLED displays. WallFlixHub works directly in the browser with no app installation required."
     },
@@ -1519,7 +1523,6 @@ body[data-screen="faq"] .viewport{
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
-const ADMIN_SECRET='wallflix2026';
 const categories=[['AMOLED','fa-circle-half-stroke'],['Anime','fa-ghost'],['Cars','fa-car'],['Nature','fa-leaf'],['Gaming','fa-gamepad'],['Space','fa-rocket'],['Abstract','fa-shapes'],['Sports','fa-football'],['Technology','fa-microchip'],['Cyberpunk','fa-bolt']];
 function wfhNormalizeCategory(value, item){
   const raw = String(value || item?.category || item?.cat || '').trim().toLowerCase();
