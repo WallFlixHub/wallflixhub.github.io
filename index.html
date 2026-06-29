@@ -1156,6 +1156,8 @@ gtag('config', 'G-QHWGTYQHGL');
 <meta property="og:url" content="https://wallflixhub.github.io/">
 <meta property="og:image" content="https://wallflixhub.github.io/preview.jpg">
 <meta property="og:image:alt" content="WallFlixHub 4K mobile wallpapers preview">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="WallFlixHub">
 
 <!-- Twitter Cards -->
@@ -1163,122 +1165,98 @@ gtag('config', 'G-QHWGTYQHGL');
 <meta name="twitter:title" content="WallFlixHub - 4K Mobile Wallpapers for Phones">
 <meta name="twitter:description" content="Browse WallFlixHub, a mobile-first wallpaper website for clean 4K phone backgrounds organized by category.">
 <meta name="twitter:image" content="https://wallflixhub.github.io/preview.jpg">
+<meta name="twitter:site" content="@WallFlixHub">
 
 <!-- DNS Prefetch / Preconnect -->
 <link rel="dns-prefetch" href="//res.cloudinary.com">
 <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
 
-<!-- Schema.org WebSite -->
+<!-- WallFlixHub structured data: WebSite + Organization + ImageGallery + FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "WallFlixHub",
-  "url": "https://wallflixhub.github.io/",
-  "description": "4K mobile wallpapers and AMOLED backgrounds",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://wallflixhub.github.io/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-<!-- Schema.org Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "WallFlixHub",
-  "url": "https://wallflixhub.github.io/",
-  "logo": "https://wallflixhub.github.io/images/logo.png"
-}
-</script>
-
-<!-- Schema.org CollectionPage: clarify WallFlixHub is a website, not a Google Play app -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "WallFlixHub - 4K Mobile Wallpapers",
-  "url": "https://wallflixhub.github.io/",
-  "description": "WallFlixHub is a mobile-first wallpaper website for browsing and downloading clean 4K phone backgrounds. It is not a Google Play app and it does not provide live video backgrounds.",
-  "about": {
-    "@type": "Thing",
-    "name": "Mobile phone wallpapers"
-  },
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "WallFlixHub",
-    "url": "https://wallflixhub.github.io/"
-  }
-}
-</script>
-
-
-
-<!-- Schema.org FAQPage -->
-<!-- Schema.org FAQPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "How do I download a wallpaper?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Open any wallpaper in the WallFlixHub viewer and tap Download Wallpaper. Downloads are intended for personal device use only."
+      "@type": "Organization",
+      "@id": "https://wallflixhub.github.io/#organization",
+      "name": "WallFlixHub",
+      "url": "https://wallflixhub.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wallflixhub.github.io/images/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "email": "wallflixhub@gmail.com",
+      "sameAs": ["https://github.com/wallflixhub/wallflixhub.github.io"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wallflixhub.github.io/#website",
+      "name": "WallFlixHub",
+      "alternateName": "WallFlixHub Mobile Wallpapers",
+      "url": "https://wallflixhub.github.io/",
+      "publisher": {"@id": "https://wallflixhub.github.io/#organization"},
+      "inLanguage": "en",
+      "description": "WallFlixHub is a mobile-first wallpaper website for clean 4K phone backgrounds, AMOLED wallpapers, anime, gaming, cars, nature, space, abstract, sports and technology wallpapers.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://wallflixhub.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     },
     {
-      "@type": "Question",
-      "name": "Are the wallpapers free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most wallpapers can be browsed and downloaded for personal use. Some reward-based items may require points inside the website experience."
-      }
+      "@type": "WebPage",
+      "@id": "https://wallflixhub.github.io/#webpage",
+      "url": "https://wallflixhub.github.io/",
+      "name": "WallFlixHub - 4K Mobile Wallpapers for Phones",
+      "isPartOf": {"@id": "https://wallflixhub.github.io/#website"},
+      "about": {"@id": "https://wallflixhub.github.io/#imagegallery"},
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://wallflixhub.github.io/preview.jpg"
+      },
+      "dateModified": "2026-06-29",
+      "inLanguage": "en",
+      "description": "Browse curated 4K wallpapers for phone home screens, lock screens and AMOLED displays. WallFlixHub works directly in the browser with no app installation required."
     },
     {
-      "@type": "Question",
-      "name": "Who can publish wallpapers on WallFlixHub?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Only the site owner/admin can publish wallpapers on WallFlixHub. Regular users cannot upload, publish, or submit wallpapers through the website."
-      }
+      "@type": "CollectionPage",
+      "@id": "https://wallflixhub.github.io/#collection",
+      "name": "WallFlixHub 4K Mobile Wallpaper Library",
+      "url": "https://wallflixhub.github.io/",
+      "isPartOf": {"@id": "https://wallflixhub.github.io/#website"},
+      "description": "A categorized mobile wallpaper library for AMOLED, anime, gaming, cars, nature, cyberpunk, space, abstract, sports and technology phone backgrounds.",
+      "mainEntity": {"@id": "https://wallflixhub.github.io/#imagegallery"}
     },
     {
-      "@type": "Question",
-      "name": "How are wallpapers organized?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Wallpapers are grouped into categories such as AMOLED, Anime, Cars, Nature, Gaming, Cyberpunk, Space, Abstract, Sports, and Technology."
-      }
+      "@type": "ImageGallery",
+      "@id": "https://wallflixhub.github.io/#imagegallery",
+      "name": "WallFlixHub Mobile Wallpaper Categories",
+      "url": "https://wallflixhub.github.io/",
+      "description": "Curated static 4K phone wallpapers organized by aesthetic, color, theme and device-friendly categories.",
+      "genre": ["AMOLED wallpapers", "Anime wallpapers", "Gaming wallpapers", "Car wallpapers", "Nature wallpapers", "Space wallpapers", "Abstract wallpapers", "Technology wallpapers"],
+      "isAccessibleForFree": true
     },
     {
-      "@type": "Question",
-      "name": "Can I use wallpapers commercially?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Wallpapers are provided for personal, non-commercial use only unless you have permission from the rights holder."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://wallflixhub.github.io/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wallflixhub.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "Categories", "item": "https://wallflixhub.github.io/categories.html"},
+        {"@type": "ListItem", "position": 3, "name": "DMCA / Copyright", "item": "https://wallflixhub.github.io/dmca.html"}
+      ]
     },
     {
-      "@type": "Question",
-      "name": "How can I request copyright removal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Open the DMCA / Copyright page or contact wallflixhub@gmail.com with proof of ownership, the wallpaper URL, and a clear removal request."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why are ads not showing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ads may not appear while the site is under AdSense review, when no ad is available, or when a browser blocks ads."
-      }
+      "@type": "FAQPage",
+      "@id": "https://wallflixhub.github.io/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is WallFlixHub?", "acceptedAnswer": {"@type": "Answer", "text": "WallFlixHub is a mobile-first website for browsing and downloading curated 4K phone wallpapers. It works in the browser and does not require an app installation."}},
+        {"@type": "Question", "name": "How do I download a wallpaper?", "acceptedAnswer": {"@type": "Answer", "text": "Open any wallpaper in the WallFlixHub viewer and tap Download Wallpaper. Downloads are intended for personal device use only."}},
+        {"@type": "Question", "name": "Which categories are available?", "acceptedAnswer": {"@type": "Answer", "text": "Wallpapers are organized into categories including AMOLED, Anime, Gaming, Cars, Nature, Cyberpunk, Space, Abstract, Sports and Technology."}},
+        {"@type": "Question", "name": "Who can publish wallpapers on WallFlixHub?", "acceptedAnswer": {"@type": "Answer", "text": "Only the site owner or admin can publish wallpapers on WallFlixHub. Regular users cannot upload, publish or submit wallpapers through the website."}},
+        {"@type": "Question", "name": "How can I request copyright removal?", "acceptedAnswer": {"@type": "Answer", "text": "Open the DMCA / Copyright page or contact wallflixhub@gmail.com with proof of ownership, the wallpaper URL and a clear removal request."}}
+      ]
     }
   ]
 }
@@ -1361,15 +1339,23 @@ body[data-screen="faq"] .viewport{
 <div class="section"><h3>Featured by Admin</h3><a id="wfhHomeAdminLink" href="/admin.html" onclick="event.preventDefault();go('admin')" style="display:none">Admin</a></div><div class="wfh-row" id="featuredGrid"></div><div class="section"><h3>Trending Today</h3><a href="/trending.html" onclick="event.preventDefault();go('trending')">View all</a></div><div class="grid3" id="homeTrending"></div><div class="section"><h3 class="wfh-top-week-label">Top This Week</h3><a href="/trending.html" onclick="event.preventDefault();go('trending')">View all</a></div><div class="wfh-row" id="topWeekGrid"></div><div class="section"><h3>Popular Categories</h3><a href="/categories.html" onclick="event.preventDefault();go('categories')">View all</a></div><div class="grid3" id="homeCats"></div><div class="section"><h3>Recently Viewed</h3><button type="button" class="link-btn" onclick="clearRecent()">Clear</button></div><div class="wfh-row" id="recentGrid"></div><div class="section"><h3>New Arrivals</h3><a href="/new.html" onclick="event.preventDefault();go('new')">View all</a></div><div class="grid2" id="newArrivals"></div><div class="section"><h3>Top Downloads</h3><a href="/downloads.html" onclick="event.preventDefault();go('downloads')">View all</a></div><div class="wfh-row" id="topDownloadsGrid"></div><div class="section"><h3>Continue Viewing</h3><button type="button" class="link-btn" onclick="clearRecent()">Clear</button></div><div class="wfh-row" id="continueGrid"></div>
 <div class="wfh-seo-block" id="wfhHomeSeo">
   <span class="wfh-seo-kicker"><i class="fa-solid fa-circle-check"></i> Original mobile wallpaper guide</span>
-  <h2>WallFlixHub: curated 4K mobile wallpapers for every screen</h2>
-  <p>WallFlixHub is a mobile wallpaper library focused on clean browsing, fast loading, and carefully organized backgrounds for smartphones. The site is designed for users who want 4K wallpapers that look good on home screens, lock screens, AMOLED displays, and modern Android devices without installing an app.</p>
-  <p><b>WallFlixHub is a website, not a Google Play application.</b> It focuses on static mobile wallpapers and organized phone backgrounds, not live video backgrounds or an app-store download.</p>
-  <p>Every wallpaper is organized by style so visitors can quickly explore dark AMOLED backgrounds, anime art, sports car images, nature scenes, gaming designs, cyberpunk colors, space visuals, abstract art, sports themes, and technology wallpapers. The goal is not only to offer images, but also to make it easier to choose the right wallpaper for the screen type, icon layout, brightness level, and personal style.</p>
+  <h2>About WallFlixHub</h2>
+  <p>WallFlixHub is a mobile-first website that provides curated 4K backgrounds for smartphones. It works directly through mobile browsers, so visitors can browse wallpapers, preview images, save favorites and download phone backgrounds without installing an app.</p>
+  <p>The library focuses on static high-resolution phone wallpapers for home screens, lock screens and modern AMOLED displays. The design is touch-friendly, fast and organized for Android and mobile web users.</p>
+  <p><b>WallFlixHub is a website, not a Google Play application.</b> It does not require an app-store download and it does not promote live video backgrounds.</p>
   <div class="wfh-seo-grid">
-    <div class="wfh-seo-mini"><b>AMOLED friendly</b><p>Dark wallpapers help OLED screens look clean and reduce visual noise behind icons.</p></div>
-    <div class="wfh-seo-mini"><b>Mobile first</b><p>The layout, viewer, and download flow are built for phone screens and touch navigation.</p></div>
-    <div class="wfh-seo-mini"><b>Organized categories</b><p>Each category has its own browsing path so users and search engines can understand the content.</p></div>
+    <div class="wfh-seo-mini"><b>No app installation required</b><p>Use WallFlixHub from your phone browser and keep storage free on your device.</p></div>
+    <div class="wfh-seo-mini"><b>AMOLED friendly</b><p>Dark wallpapers and clean backgrounds help icons stay readable on OLED displays.</p></div>
+    <div class="wfh-seo-mini"><b>Quick downloads</b><p>The viewer is built for direct wallpaper previews and fast personal-use downloads.</p></div>
   </div>
+  <h3>Popular Wallpaper Categories</h3>
+  <p>You can explore distinct aesthetic styles on WallFlixHub, including:</p>
+  <ul>
+    <li><b>Anime & Gaming</b> wallpapers for colorful, energetic phone setups.</li>
+    <li><b>Cyberpunk & Technology</b> backgrounds with neon, futuristic and digital styles.</li>
+    <li><b>Cars & Sports</b> wallpapers for performance, speed and action themes.</li>
+    <li><b>Nature, Space & Abstract</b> images for calm, minimal or creative screens.</li>
+  </ul>
 </div>
 <div class="wfh-seo-block">
   <h2>How to choose the best wallpaper for your phone</h2>
@@ -1379,7 +1365,9 @@ body[data-screen="faq"] .viewport{
     <li><b>Use the right mood.</b> Calm nature images are good for daily use, gaming and cyberpunk designs feel energetic, and minimal abstract styles keep the screen clean.</li>
     <li><b>Preview before downloading.</b> Open the wallpaper in the viewer, check the crop, and then download the image for personal use.</li>
   </ul>
-</div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links"><a href="/contact.html" onclick="event.preventDefault();go('contact')">Contact</a><a href="/privacy.html" onclick="event.preventDefault();go('policy')">Privacy</a><a href="/terms.html" onclick="event.preventDefault();go('terms')">Terms</a><a href="/dmca.html" onclick="event.preventDefault();go('dmca')">DMCA / Copyright</a><a href="/faq.html" onclick="event.preventDefault();go('faq')">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
+</div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links" id="wfhSeoInternalLinks" aria-label="Wallpaper category links">
+<a href="#categories" data-go="categories" onclick="event.preventDefault();go('categories',null,false);location.hash='categories'">Wallpaper Categories</a><a href="#new" data-go="new" onclick="event.preventDefault();go('new',null,false);location.hash='new'">New Wallpapers</a><a href="#trending" data-go="trending" onclick="event.preventDefault();go('trending',null,false);location.hash='trending'">Trending Wallpapers</a><a href="#downloads" data-go="downloads" onclick="event.preventDefault();go('downloads',null,false);location.hash='downloads'">Top Downloads</a>
+</div><div class="wfh-footer-links"><a href="#contact" onclick="event.preventDefault();go('contact',null,false);location.hash='contact'">Contact</a><a href="#privacy" onclick="event.preventDefault();go('policy',null,false);location.hash='privacy'">Privacy</a><a href="#terms" onclick="event.preventDefault();go('terms',null,false);location.hash='terms'">Terms</a><a href="#dmca" onclick="event.preventDefault();go('dmca',null,false);location.hash='dmca'">DMCA / Copyright</a><a href="#faq" onclick="event.preventDefault();go('faq',null,false);location.hash='faq'">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
 <section class="screen" id="explore"><div class="section"><h3>Explore Wallpapers</h3><a href="/explore.html" onclick="event.preventDefault();activeExploreCategory=null;wfhExplorePage=1;go('explore')">Latest</a></div><div id="wfhExploreChips" class="wfh-chipbar"></div><div class="grid2" id="exploreGrid"></div><div class="wfh-loading-more" id="wfhExploreLoader"><span>Loading more</span><span class="spinner"></span></div><div id="wfhExploreSeo"></div></section>
 <section class="screen" id="categories"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Categories</h2><div></div></div><div class="grid2" id="catGrid"></div><div class="wfh-seo-block" id="wfhCategorySeo"></div></section>
 <section class="screen" id="trending"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>Trending Today</h2><div></div></div><div class="grid2" id="trendGrid"></div></section>
@@ -1391,7 +1379,7 @@ body[data-screen="faq"] .viewport{
 <section class="screen" id="upload"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Publish Wallpaper</h2><div></div></div><div class="form glass"><div class="upload-head"><i class="fa-solid fa-cloud-arrow-up"></i><h3>Add Wallpaper by Direct URL</h3></div><p style="font-size:12px;color:var(--muted);line-height:1.6;margin:6px 0 14px">Admin-only publishing. Only image wallpapers are supported. Do not upload copyrighted, adult, violent, misleading or unsafe content.</p><input id="quickTitle" placeholder="Wallpaper title"/><input id="quickUrl" placeholder="Direct image URL"/><textarea id="quickDescription" placeholder="Wallpaper description"></textarea><select id="quickCat"><option>Anime</option><option>Cars</option><option>Nature</option><option>Gaming</option><option>AMOLED</option><option>Cyberpunk</option><option>Space</option><option>Abstract</option><option>Sports</option><option>Technology</option></select><select id="quickQuality"><option>Editor Pick</option><option>Full HD</option><option>4K</option></select><button class="btn" onclick="publishItem()" style="width:100%"><i class="fa-solid fa-upload"></i> Publish Wallpaper</button></div></section>
 <section class="screen" id="admin"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Admin Dashboard</h2><div></div></div><div class="form glass" id="adminLock"><h3>Admin Secret</h3><input id="adminSecret" placeholder="Enter admin secret" type="password"/><button class="btn" onclick="verifyAdmin()" style="width:100%">Unlock Admin</button></div><div id="adminPanel" style="display:none"><div class="profile-card glass" style="text-align:left;margin-bottom:14px"><h3 style="margin-bottom:12px">Dashboard Overview</h3><div class="stats"><div class="stat"><b id="adminUploads">0</b><span>Uploads</span></div><div class="stat"><b id="adminFavs">0</b><span>Favorites</span></div><div class="stat"><b id="adminDowns">0</b><span>Downloads</span></div></div><button class="btn" onclick="go('upload')" style="width:100%;margin-top:12px">Add Wallpaper</button></div><div class="section"><h3>Uploaded Wallpapers</h3><a href="/publish.html" onclick="event.preventDefault();go('upload')">Add</a></div><div class="list" id="adminList"></div></div></section>
 <section class="screen" id="notifications"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Notifications</h2><button type="button" class="link-btn" onclick="markRead()" style="color:var(--glow)">Mark all as read</button></div><div class="list" id="notifList"></div></section>
-<section class="screen" id="contact"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Contact</h2><div></div></div><div class="legal-card glass"><h3>Contact WallFlixHub</h3><p>Need help with downloads, wallpaper requests, copyright questions, advertising concerns, or technical issues? Contact the WallFlixHub team using the email below.</p><p><b>Email:</b> wallflixhub@gmail.com</p><h3>What You Can Contact Us About</h3><ul><li>Wallpaper download problems or broken image links</li><li>Copyright, credit, or DMCA removal requests</li><li>Bug reports, loading issues, or mobile display problems</li><li>Suggestions for new wallpaper categories or features</li><li>Privacy, terms, or advertising-related questions</li></ul><h3>Response Time</h3><p>We try to review messages within 24-72 hours. Copyright or safety requests may be prioritized when enough information is provided.</p><h3>Helpful Details to Include</h3><p>Please include the wallpaper title, page URL, screenshot, device/browser name, and a short explanation of the issue so we can understand and fix it faster.</p></div><div class="legal-card glass"><h3>About WallFlixHub</h3><p>WallFlixHub is a mobile-first wallpaper website focused on curated 4K backgrounds for smartphones. The site organizes wallpapers into clear categories such as AMOLED, Anime, Cars, Nature, Gaming, Cyberpunk, Space, Abstract, Sports, and Technology.</p><p>Our goal is to make wallpaper browsing simple, fast, and useful on phones, with clean previews, direct downloads, favorites, categories, and clear legal pages for users and rights holders.</p></div></section>
+<section class="screen" id="contact"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Contact</h2><div></div></div><div class="legal-card glass"><h3>Support</h3><p>Need help with downloads, wallpaper requests, copyright questions, advertising concerns, or technical issues? Use the email below.</p><p><b>Email:</b> wallflixhub@gmail.com</p><h3>What You Can Contact Us About</h3><ul><li>Wallpaper download problems or broken image links</li><li>Copyright, credit, or DMCA removal requests</li><li>Bug reports, loading issues, or mobile display problems</li><li>Suggestions for new wallpaper categories or features</li><li>Privacy, terms, or advertising-related questions</li></ul><h3>Response Time</h3><p>We try to review messages within 24-72 hours. Copyright or safety requests may be prioritized when enough information is provided.</p><h3>Helpful Details to Include</h3><p>Please include the wallpaper title, page URL, screenshot, device/browser name, and a short explanation of the issue so we can understand and fix it faster.</p></div><div class="legal-card glass"><h3>About WallFlixHub</h3><p>WallFlixHub is a mobile-first wallpaper website focused on curated 4K backgrounds for smartphones. The site organizes wallpapers into clear categories such as AMOLED, Anime, Cars, Nature, Gaming, Cyberpunk, Space, Abstract, Sports, and Technology.</p><p>Our goal is to make wallpaper browsing simple, fast, and useful on phones, with clean previews, direct downloads, favorites, categories, and clear legal pages for users and rights holders.</p></div></section>
 
 <section class="screen" id="policy"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Privacy Policy</h2><div></div></div><div class="legal-card glass"><h3>Privacy Policy</h3>
 
@@ -1693,7 +1681,7 @@ function wfhRouteSeo(id){
     policy:{title:'Privacy Policy - WallFlixHub',desc:'Read the WallFlixHub privacy policy for cookies, analytics, advertising and mobile wallpaper browsing.',path:'/privacy.html'},
     terms:{title:'Terms of Service - WallFlixHub',desc:'Read the WallFlixHub terms of service for personal wallpaper use, downloads, copyright and site rules.',path:'/terms.html'},
     dmca:{title:'DMCA / Copyright Policy - WallFlixHub',desc:'Copyright and DMCA removal information for WallFlixHub mobile wallpapers and visual content.',path:'/dmca.html'},
-    contact:{title:'Contact - WallFlixHub',desc:'Contact WallFlixHub for wallpaper issues, copyright questions, broken links, privacy questions or technical support.',path:'/contact.html'},
+    contact:{title:'Contact - WallFlixHub',desc:'Contact us for wallpaper issues, copyright questions, broken links, privacy questions or technical support.',path:'/contact.html'},
     faq:{title:'FAQ - WallFlixHub',desc:'Frequently asked questions about downloading wallpapers, personal use, categories, ads and copyright on WallFlixHub.',path:'/faq.html'}
   };
   const seo=map[id]||map.home;
@@ -3083,6 +3071,32 @@ document.addEventListener('click', function(e){
     go('dmca');
   }
 });
+</script>
+
+<script id="wfh-footer-file-not-found-final-fix">
+(function(){
+  function openHashRoute(){
+    var h=(location.hash||'').replace('#','');
+    var map={categories:'categories',new:'new',trending:'trending',downloads:'downloads',contact:'contact',privacy:'policy',terms:'terms',dmca:'dmca',faq:'faq'};
+    if(map[h] && typeof window.go==='function'){
+      window.go(map[h],null,false);
+    }
+  }
+  window.addEventListener('hashchange',openHashRoute);
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('#wfhSeoInternalLinks a[data-go]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        var target=a.getAttribute('data-go');
+        if(target && typeof window.go==='function'){
+          window.go(target,null,false);
+          location.hash=target;
+        }
+      });
+    });
+    openHashRoute();
+  });
+})();
 </script>
 </body>
 </html>
