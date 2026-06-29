@@ -6,8 +6,8 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>WallFlixHub - 4K Mobile Wallpapers</title>
-<meta name="description" content="Download 4K mobile wallpapers including AMOLED, Anime, Cars, Nature, Gaming, Space, Sports and Technology backgrounds." />
+<title>WallFlixHub - 4K Mobile Wallpapers for Phones</title>
+<meta name="description" content="WallFlixHub is a mobile-first wallpaper website for clean 4K phone backgrounds, AMOLED wallpapers, anime, cars, nature, gaming, space, abstract, sports and technology wallpapers." />
 <link rel="icon" href="https://wallflixhub.github.io/images/logo.png" sizes="192x192">
 <link rel="apple-touch-icon" href="https://wallflixhub.github.io/images/logo.png">
 
@@ -1137,10 +1137,21 @@ gtag('config', 'G-QHWGTYQHGL');
 <meta name="author" content="WallFlixHub">
 <meta name="theme-color" content="#030305">
 <meta name="keywords" content="4K wallpapers, AMOLED wallpapers, anime wallpapers, gaming wallpapers, mobile backgrounds, cyberpunk wallpapers, nature wallpapers, phone wallpapers, WallFlixHub">
+<script id="wfh-early-route-robots">
+(function(){
+  var legal=/\/(privacy|terms|dmca|contact|faq|profile|more|notifications|publish|admin)\.html$/i.test(location.pathname||'');
+  if(legal){
+    var m=document.querySelector('meta[name="robots"]');
+    if(!m){m=document.createElement('meta');m.setAttribute('name','robots');document.head.appendChild(m);}
+    m.setAttribute('content','noindex, follow');
+  }
+})();
+</script>
+
 
 <!-- Open Graph -->
-<meta property="og:title" content="WallFlixHub - 4K Mobile Wallpapers">
-<meta property="og:description" content="Download 4K mobile wallpapers including AMOLED, Anime, Cars, Nature, Gaming, Space, Sports and Technology backgrounds.">
+<meta property="og:title" content="WallFlixHub - 4K Mobile Wallpapers for Phones">
+<meta property="og:description" content="Browse WallFlixHub, a mobile-first wallpaper website for clean 4K phone backgrounds organized by category.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wallflixhub.github.io/">
 <meta property="og:image" content="https://wallflixhub.github.io/preview.jpg">
@@ -1149,8 +1160,8 @@ gtag('config', 'G-QHWGTYQHGL');
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WallFlixHub - 4K Mobile Wallpapers">
-<meta name="twitter:description" content="Download 4K mobile wallpapers including AMOLED, Anime, Cars, Nature, Gaming, Space, Sports and Technology backgrounds.">
+<meta name="twitter:title" content="WallFlixHub - 4K Mobile Wallpapers for Phones">
+<meta name="twitter:description" content="Browse WallFlixHub, a mobile-first wallpaper website for clean 4K phone backgrounds organized by category.">
 <meta name="twitter:image" content="https://wallflixhub.github.io/preview.jpg">
 
 <!-- DNS Prefetch / Preconnect -->
@@ -1180,20 +1191,27 @@ gtag('config', 'G-QHWGTYQHGL');
   "@type": "Organization",
   "name": "WallFlixHub",
   "url": "https://wallflixhub.github.io/",
-  "logo": "https://wallflixhub.github.io/logo.png"
+  "logo": "https://wallflixhub.github.io/images/logo.png"
 }
 </script>
 
-<!-- Schema.org WebApplication -->
+<!-- Schema.org CollectionPage: clarify WallFlixHub is a website, not a Google Play app -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "WallFlixHub",
+  "@type": "CollectionPage",
+  "name": "WallFlixHub - 4K Mobile Wallpapers",
   "url": "https://wallflixhub.github.io/",
-  "applicationCategory": "MultimediaApplication",
-  "operatingSystem": "Android, iOS, Web",
-  "description": "Mobile wallpaper web app for 4K AMOLED wallpapers, categories, favorites and downloads."
+  "description": "WallFlixHub is a mobile-first wallpaper website for browsing and downloading clean 4K phone backgrounds. It is not a Google Play app and it does not provide live video backgrounds.",
+  "about": {
+    "@type": "Thing",
+    "name": "Mobile phone wallpapers"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "WallFlixHub",
+    "url": "https://wallflixhub.github.io/"
+  }
 }
 </script>
 
@@ -1345,6 +1363,7 @@ body[data-screen="faq"] .viewport{
   <span class="wfh-seo-kicker"><i class="fa-solid fa-circle-check"></i> Original mobile wallpaper guide</span>
   <h2>WallFlixHub: curated 4K mobile wallpapers for every screen</h2>
   <p>WallFlixHub is a mobile wallpaper library focused on clean browsing, fast loading, and carefully organized backgrounds for smartphones. The site is designed for users who want 4K wallpapers that look good on home screens, lock screens, AMOLED displays, and modern Android devices without installing an app.</p>
+  <p><b>WallFlixHub is a website, not a Google Play application.</b> It focuses on static mobile wallpapers and organized phone backgrounds, not live video backgrounds or an app-store download.</p>
   <p>Every wallpaper is organized by style so visitors can quickly explore dark AMOLED backgrounds, anime art, sports car images, nature scenes, gaming designs, cyberpunk colors, space visuals, abstract art, sports themes, and technology wallpapers. The goal is not only to offer images, but also to make it easier to choose the right wallpaper for the screen type, icon layout, brightness level, and personal style.</p>
   <div class="wfh-seo-grid">
     <div class="wfh-seo-mini"><b>AMOLED friendly</b><p>Dark wallpapers help OLED screens look clean and reduce visual noise behind icons.</p></div>
@@ -1591,7 +1610,7 @@ const badgeClass = w.featured ? 'tag-featured' : ((w.quality || w.topPick) ? 'ta
 const badgeHTML = badgeText ? `<span class="card-tag ${badgeClass}">${escapeHTML(badgeText)}</span>` : '';
 return `<div class="card ${small?'small':''}" onclick="openViewer('${String(w.id)}')" ondblclick="event.stopPropagation();quickLike('${String(w.id)}', this)">${mediaHTML(w)}<div class="wfh-heart-mini">♥</div>${badgeHTML}<div class="card-stats"><span><i class="${heartIcon}"></i> ${w.likes||0}</span><span><i class="fa-solid fa-download"></i> ${w.downloads||0}</span></div></div>`;
 }
-function cat(c){const count=all().filter(w=>w.cat===c[0]).length;return `<div class="cat" onclick="filterCat('${c[0]}')"><i class="fa-solid ${c[1]}" style="color:var(--glow)"></i><b>${c[0]}</b><span>${count} items</span></div>`}
+function cat(c){const count=all().filter(w=>wfhNormalizeCategory(w.cat,w)===c[0]).length;const countText=count?`${count} items`:'Explore';return `<div class="cat" onclick="filterCat('${c[0]}')"><i class="fa-solid ${c[1]}" style="color:var(--glow)"></i><b>${c[0]}</b><span>${countText}</span></div>`}
 function escapeHTML(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
 
 window.updateRatingStars = updateRatingStars;
@@ -1642,7 +1661,63 @@ function wfhShowHeart(){const p=$('wfhLikePop');if(!p)return;p.classList.add('sh
 function quickLike(id,el){const w=all().find(x=>String(x.id)===String(id));if(!w)return;if(!favs.includes(w.id)){favs.unshift(w.id);w.likes=(w.likes||0)+1}else{favs=favs.filter(x=>String(x)!==String(w.id));w.likes=Math.max(0,(w.likes||0)-1)}save('wfhFavs',favs);save('wfhUploads',uploads);const h=el?.querySelector('.wfh-heart-mini');if(h){h.classList.add('show');setTimeout(()=>h.classList.remove('show'),450)}
 const vh=$('viewerHeart');if(vh&&current&&String(current.id)===String(w.id)){vh.className=favs.includes(w.id)?'fa-solid fa-heart heart-red':'fa-regular fa-heart';}
 wfhShowHeart();render()}
-function wfhUpdateDynamicMeta(){const title=activeExploreCategory?`${activeExploreCategory} Wallpapers 4K - WallFlixHub`:document.title;const desc=activeExploreCategory?`Download ${activeExploreCategory} 4K mobile wallpapers on WallFlixHub.`:'Download 4K mobile wallpapers on WallFlixHub.';document.title=title;let md=document.querySelector('meta[name="description"]');if(md)md.setAttribute('content',desc)}
+function wfhEnsureMeta(selector, attrs){
+  let el=document.querySelector(selector);
+  if(!el){
+    el=document.createElement(attrs.tag||'meta');
+    Object.keys(attrs.create||{}).forEach(k=>el.setAttribute(k,attrs.create[k]));
+    document.head.appendChild(el);
+  }
+  return el;
+}
+function wfhSetMeta(name, content){
+  const el=wfhEnsureMeta(`meta[name="${name}"]`,{create:{name:name}});
+  el.setAttribute('content',content);
+}
+function wfhSetProp(prop, content){
+  const el=wfhEnsureMeta(`meta[property="${prop}"]`,{create:{property:prop}});
+  el.setAttribute('content',content);
+}
+function wfhRouteSeo(id){
+  const base='https://wallflixhub.github.io';
+  const cat=activeExploreCategory;
+  const legalNoIndex=['policy','terms','dmca','contact','faq','profile','menu','notifications','upload','admin'].includes(id);
+  const map={
+    home:{title:'WallFlixHub - 4K Mobile Wallpapers for Phones',desc:'WallFlixHub is a mobile-first wallpaper website for clean 4K phone backgrounds, AMOLED wallpapers, anime, cars, nature, gaming, space, abstract, sports and technology wallpapers.',path:'/'},
+    explore:{title:cat?`${cat} 4K Wallpapers for Phones - WallFlixHub`:'Explore 4K Mobile Wallpapers - WallFlixHub',desc:cat?`Browse ${cat} 4K mobile wallpapers for phone home screens, lock screens and clean mobile customization on WallFlixHub.`:'Explore clean 4K mobile wallpapers on WallFlixHub, organized for fast browsing on smartphones.',path:cat?`/${wfhSlug(cat)}.html`:'/explore.html'},
+    categories:{title:'Wallpaper Categories - WallFlixHub',desc:'Browse WallFlixHub wallpaper categories including AMOLED, Anime, Cars, Nature, Gaming, Space, Abstract, Sports, Technology and Cyberpunk.',path:'/categories.html'},
+    trending:{title:'Trending 4K Wallpapers - WallFlixHub',desc:'See trending 4K mobile wallpapers on WallFlixHub for phones and AMOLED screens.',path:'/trending.html'},
+    new:{title:'New 4K Mobile Wallpapers - WallFlixHub',desc:'Browse the newest mobile wallpapers added to WallFlixHub, including AMOLED, nature, anime, cars, gaming and abstract backgrounds.',path:'/new.html'},
+    favorites:{title:'Favorite Wallpapers - WallFlixHub',desc:'Your liked and saved WallFlixHub wallpapers.',path:'/favorites.html'},
+    downloads:{title:'Downloaded Wallpapers - WallFlixHub',desc:'Your recently downloaded WallFlixHub mobile wallpapers.',path:'/downloads.html'},
+    policy:{title:'Privacy Policy - WallFlixHub',desc:'Read the WallFlixHub privacy policy for cookies, analytics, advertising and mobile wallpaper browsing.',path:'/privacy.html'},
+    terms:{title:'Terms of Service - WallFlixHub',desc:'Read the WallFlixHub terms of service for personal wallpaper use, downloads, copyright and site rules.',path:'/terms.html'},
+    dmca:{title:'DMCA / Copyright Policy - WallFlixHub',desc:'Copyright and DMCA removal information for WallFlixHub mobile wallpapers and visual content.',path:'/dmca.html'},
+    contact:{title:'Contact - WallFlixHub',desc:'Contact WallFlixHub for wallpaper issues, copyright questions, broken links, privacy questions or technical support.',path:'/contact.html'},
+    faq:{title:'FAQ - WallFlixHub',desc:'Frequently asked questions about downloading wallpapers, personal use, categories, ads and copyright on WallFlixHub.',path:'/faq.html'}
+  };
+  const seo=map[id]||map.home;
+  seo.url=base+seo.path;
+  seo.robots=legalNoIndex?'noindex, follow':'index, follow, max-image-preview:large';
+  return seo;
+}
+function wfhUpdateDynamicMeta(){
+  const id=(document.body&&document.body.dataset&&document.body.dataset.screen)||wfhRouteFromPath(location.pathname)||'home';
+  const seo=wfhRouteSeo(id);
+  document.title=seo.title;
+  wfhSetMeta('description',seo.desc);
+  wfhSetMeta('robots',seo.robots);
+  wfhSetMeta('googlebot',seo.robots);
+  wfhSetMeta('author','WallFlixHub');
+  let canonical=document.querySelector('link[rel="canonical"]');
+  if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}
+  canonical.href=seo.url;
+  wfhSetProp('og:title',seo.title);
+  wfhSetProp('og:description',seo.desc);
+  wfhSetProp('og:url',seo.url);
+  wfhSetMeta('twitter:title',seo.title);
+  wfhSetMeta('twitter:description',seo.desc);
+}
 
 function wfhGetExploreItems(walls){
   const sorted=[...walls].sort((a,b)=>{
@@ -1665,7 +1740,7 @@ function wfhRenderExploreGrid(walls){
     wfhExplorePage=1;
   }
   const showCount=Math.min(items.length, wfhExplorePage*wfhExploreBatch);
-  grid.innerHTML=items.slice(0,showCount).map(w=>card(w)).join('')||'<div class="empty">No items in this category.</div>';
+  grid.innerHTML=items.slice(0,showCount).map(w=>card(w)).join('')||'<div class="empty">Wallpapers are loading. Try again in a moment or open another category.</div>';
   if(loader){
     loader.classList.remove('show');
     loader.style.display = '';
@@ -1777,7 +1852,7 @@ function wfhOpenCurrentRoute(){
   go(id,null,false);
 }
 window.addEventListener('popstate',wfhOpenCurrentRoute);
-function go(id,btn,push=true){document.body.dataset.screen=id;document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));($(id)||$('home')).classList.add('active');document.querySelector('.viewport').scrollTop=0;document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));if(btn)btn.classList.add('active');else document.querySelectorAll('.nav').forEach(n=>{if(n.getAttribute('onclick')?.includes(`'${id}'`))n.classList.add('active')});if(push)wfhUpdateUrl(id);else wfhSeoTitle(id);render();if(id==='notifications'&&typeof wfhSyncSwNotifications==='function'){wfhSyncSwNotifications().then(()=>window.wfhRenderNotifications&&window.wfhRenderNotifications()).catch(()=>{});}}
+function go(id,btn,push=true){document.body.dataset.screen=id;document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));($(id)||$('home')).classList.add('active');document.querySelector('.viewport').scrollTop=0;document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));if(btn)btn.classList.add('active');else document.querySelectorAll('.nav').forEach(n=>{if(n.getAttribute('onclick')?.includes(`'${id}'`))n.classList.add('active')});if(push)wfhUpdateUrl(id);else wfhSeoTitle(id);render();wfhUpdateDynamicMeta();if(id==='notifications'&&typeof wfhSyncSwNotifications==='function'){wfhSyncSwNotifications().then(()=>window.wfhRenderNotifications&&window.wfhRenderNotifications()).catch(()=>{});}}
 function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1800)}
 function toggleTheme(){document.body.classList.toggle('light-mode');localStorage.setItem('wfhTheme',document.body.classList.contains('light-mode')?'light':'dark');const sw=$('themeSwitch');if(sw)sw.checked=document.body.classList.contains('light-mode')}
 function filterCat(name){
@@ -2904,7 +2979,7 @@ window.wfhIsAdmin = isRealAdmin;
     var batch=window.wfhExploreBatch || 20;
     var page=window.wfhExplorePage || 1;
     var showCount=Math.min(items.length,page*batch);
-    grid.innerHTML=items.slice(0,showCount).map(function(w){return card(w)}).join('') || wfhEmptyHTML(activeExploreCategory?'No '+activeExploreCategory+' wallpapers yet':'No wallpapers found','Try another category, search word, or publish a new wallpaper.');
+    grid.innerHTML=items.slice(0,showCount).map(function(w){return card(w)}).join('') || wfhEmptyHTML(activeExploreCategory?activeExploreCategory+' wallpapers':'Wallpapers are loading','The live wallpaper library may still be loading from WallFlixHub. Try another category or refresh in a moment.');
     if(loader){loader.classList.remove('show');loader.style.display='';var label=loader.querySelector('span');if(label)label.textContent='Loading more';if(showCount<items.length)loader.classList.add('show');}
   };
   window.wfhRenderExploreGrid=wfhRenderExploreGridNew;
