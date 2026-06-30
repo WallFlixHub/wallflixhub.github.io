@@ -1144,7 +1144,7 @@ gtag('config', 'G-QHWGTYQHGL');
 <meta name="keywords" content="4K wallpapers, AMOLED wallpapers, anime wallpapers, gaming wallpapers, mobile backgrounds, cyberpunk wallpapers, nature wallpapers, phone wallpapers, WallFlixHub">
 <script id="wfh-early-route-robots">
 (function(){
-  var legal=/\/(privacy|terms|dmca|contact|faq|profile|more|notifications|publish|admin)\.html$/i.test(location.pathname||'');
+  var legal=/\/(profile|more|notifications|publish|admin|favorites|downloads)\.html$/i.test(location.pathname||'');
   if(legal){
     var m=document.querySelector('meta[name="robots"]');
     if(!m){m=document.createElement('meta');m.setAttribute('name','robots');document.head.appendChild(m);}
@@ -1223,7 +1223,7 @@ gtag('config', 'G-QHWGTYQHGL');
         "@type": "ImageObject",
         "url": "https://wallflixhub.github.io/preview.jpg"
       },
-      "dateModified": "2025-06-29",
+      "dateModified": "2026-06-30",
       "inLanguage": "en",
       "description": "Browse curated 4K wallpapers for phone home screens, lock screens and AMOLED displays. WallFlixHub works directly in the browser with no app installation required."
     },
@@ -1593,7 +1593,7 @@ function mediaHTML(w){
   wfhImgCounter++;
   const fast = wfhImgCounter <= 12;
   const loadAttr = fast ? 'loading="eager" fetchpriority="high"' : 'loading="lazy" fetchpriority="low"';
-  return `<img class="wfh-media" ${loadAttr} decoding="async" src="${optimizeCloudinary(w.url)}" alt="${escapeHTML(w.title)}" onerror="this.src='https://res.cloudinary.com/dvxrkvhzl/image/upload/v1780614018/anime_32_g9cwef.jpg'">`;
+  return `<img class="wfh-media" ${loadAttr} decoding="async" width="360" height="640" sizes="(max-width:700px) 33vw, 16vw" src="${optimizeCloudinary(w.url)}" alt="${escapeHTML(w.title)} - ${escapeHTML(w.cat||'Mobile')} 4K mobile wallpaper on WallFlixHub" title="${escapeHTML(w.title)} - ${escapeHTML(w.cat||'Mobile')} 4K mobile wallpaper" onerror="this.src='https://res.cloudinary.com/dvxrkvhzl/image/upload/v1780614018/anime_32_g9cwef.jpg'">`;
 }
 
 function card(w,small=false){
@@ -1675,7 +1675,7 @@ function wfhSetProp(prop, content){
 function wfhRouteSeo(id){
   const base='https://wallflixhub.github.io';
   const cat=activeExploreCategory;
-  const legalNoIndex=['policy','terms','dmca','contact','faq','profile','menu','notifications','upload','admin'].includes(id);
+  const legalNoIndex=['profile','menu','notifications','upload','admin','favorites','downloads'].includes(id);
   const map={
     home:{title:'WallFlixHub - 4K Mobile Wallpapers for Phones',desc:'WallFlixHub is a mobile-first wallpaper website for clean 4K phone backgrounds, AMOLED wallpapers, anime, cars, nature, gaming, space, abstract, sports and technology wallpapers.',path:'/'},
     explore:{title:cat?`${cat} 4K Wallpapers for Phones - WallFlixHub`:'Explore 4K Mobile Wallpapers - WallFlixHub',desc:cat?`Browse ${cat} 4K mobile wallpapers for phone home screens, lock screens and clean mobile customization on WallFlixHub.`:'Explore clean 4K mobile wallpapers on WallFlixHub, organized for fast browsing on smartphones.',path:cat?`/${wfhSlug(cat)}.html`:'/explore.html'},
@@ -1864,7 +1864,7 @@ function randomWallpaper(){
   openViewer(String(item.id));
 }
 function search(q){q=String(q||'').toLowerCase();activeExploreCategory=null;wfhExplorePage=1;wfhExploreLastKey='';const items=all().filter(w=>(String(w.title||'')+String(w.cat||'')+String(w.description||'')).toLowerCase().includes(q));$('exploreGrid').innerHTML=items.map(w=>card(w)).join('')||'<div class="empty">No wallpapers found.</div>';const loader=$('wfhExploreLoader');if(loader)loader.style.display='none';if(q)go('explore')}
-function openViewer(id){const w=all().find(x=>String(x.id)===String(id));if(!w)return;current=w;w.views=(w.views||0)+1;if(uploads.some(u=>String(u.id)===String(w.id)))save('wfhUploads',uploads);recent=[w.id,...recent.filter(x=>String(x)!==String(w.id))].slice(0,20);save('wfhRecent',recent);$('previewMedia').querySelectorAll('.wfh-media,img').forEach(x=>x.remove());$('previewMedia').insertAdjacentHTML('afterbegin',mediaHTML(w));$('vTitle').textContent=w.title;const descriptions={Anime:'Ultra HD anime wallpaper with vibrant neon colors optimized for mobile devices.',Nature:'Beautiful nature 4K wallpaper with relaxing landscapes and curated scenery.',Cars:'Luxury sports car wallpaper in ultra HD quality for car lovers.',Cyberpunk:'Futuristic cyberpunk wallpaper with neon lights and sci-fi atmosphere.',AMOLED:'Dark AMOLED wallpaper optimized for OLED smartphone displays.',Gaming:'Epic gaming wallpaper with immersive ultra HD graphics.',Space:'Amazing outer space wallpaper with galaxies and stars in 4K.',Abstract:'Creative abstract wallpaper with modern colorful curated design.',Sports:'Dynamic sports wallpaper with energetic action visuals.',Technology:'Modern technology wallpaper with futuristic digital style.'};if($('vDescription')){$('vDescription').textContent=w.description||descriptions[w.cat]||'Featured 4K mobile wallpaper optimized for smartphones.';}if($('vCategory')){$('vCategory').textContent=w.cat||'Wallpaper';}if($('vQuality')){$('vQuality').textContent=w.quality||((w.topPick||w.featured)?'Editor Pick':'4K');}wfhRenderViewerInfo(w);$('vLikes').textContent=Math.max(0,Number(w.likes||0));$('vDown').textContent=w.downloads||0;$('vViews').textContent=w.views||0;$('viewerHeart').className=favs.includes(w.id)?'fa-solid fa-heart heart-red':'fa-regular fa-heart';$('ratingValue').textContent=ratings[w.id]||0;updateRatingStars(ratings[w.id]||0);renderComments();$('related').innerHTML=all().filter(x=>x.cat===w.cat&&String(x.id)!==String(w.id)).sort((a,b)=>((b.likes||0)+(b.downloads||0)+(b.views||0))-((a.likes||0)+(a.downloads||0)+(a.views||0))).slice(0,8).map(x=>`<img src="${optimizeCloudinary(x.url)}" loading="lazy" decoding="async" onclick="openViewer('${String(x.id)}')"/>`).join('');$('viewer').classList.add('show')}
+function openViewer(id){const w=all().find(x=>String(x.id)===String(id));if(!w)return;current=w;w.views=(w.views||0)+1;if(uploads.some(u=>String(u.id)===String(w.id)))save('wfhUploads',uploads);recent=[w.id,...recent.filter(x=>String(x)!==String(w.id))].slice(0,20);save('wfhRecent',recent);$('previewMedia').querySelectorAll('.wfh-media,img').forEach(x=>x.remove());$('previewMedia').insertAdjacentHTML('afterbegin',mediaHTML(w));$('vTitle').textContent=w.title;const descriptions={Anime:'Ultra HD anime wallpaper with vibrant neon colors optimized for mobile devices.',Nature:'Beautiful nature 4K wallpaper with relaxing landscapes and curated scenery.',Cars:'Luxury sports car wallpaper in ultra HD quality for car lovers.',Cyberpunk:'Futuristic cyberpunk wallpaper with neon lights and sci-fi atmosphere.',AMOLED:'Dark AMOLED wallpaper optimized for OLED smartphone displays.',Gaming:'Epic gaming wallpaper with immersive ultra HD graphics.',Space:'Amazing outer space wallpaper with galaxies and stars in 4K.',Abstract:'Creative abstract wallpaper with modern colorful curated design.',Sports:'Dynamic sports wallpaper with energetic action visuals.',Technology:'Modern technology wallpaper with futuristic digital style.'};if($('vDescription')){$('vDescription').textContent=w.description||descriptions[w.cat]||'Featured 4K mobile wallpaper optimized for smartphones.';}if($('vCategory')){$('vCategory').textContent=w.cat||'Wallpaper';}if($('vQuality')){$('vQuality').textContent=w.quality||((w.topPick||w.featured)?'Editor Pick':'4K');}wfhRenderViewerInfo(w);$('vLikes').textContent=Math.max(0,Number(w.likes||0));$('vDown').textContent=w.downloads||0;$('vViews').textContent=w.views||0;$('viewerHeart').className=favs.includes(w.id)?'fa-solid fa-heart heart-red':'fa-regular fa-heart';$('ratingValue').textContent=ratings[w.id]||0;updateRatingStars(ratings[w.id]||0);renderComments();$('related').innerHTML=all().filter(x=>x.cat===w.cat&&String(x.id)!==String(w.id)).sort((a,b)=>((b.likes||0)+(b.downloads||0)+(b.views||0))-((a.likes||0)+(a.downloads||0)+(a.views||0))).slice(0,8).map(x=>{const alt=escapeHTML(`${x.title||'Wallpaper'} - ${x.cat||'Mobile'} 4K mobile wallpaper on WallFlixHub`);return `<img src="${optimizeCloudinary(x.url)}" loading="lazy" decoding="async" width="110" height="145" alt="${alt}" title="${alt}" onclick="openViewer('${String(x.id)}')"/>`;}).join('');$('viewer').classList.add('show')}
 function closeViewer(){$('viewer').classList.remove('show');render()}
 
 function safeFileName(name){
@@ -2935,7 +2935,7 @@ window.wfhIsAdmin = isRealAdmin;
       var title = escapeHTML((w && w.title) ? w.title : 'WallFlixHub wallpaper');
       var cat = escapeHTML((w && w.cat) ? w.cat : 'Mobile');
       var alt = title + ' - ' + cat + ' 4K mobile wallpaper on WallFlixHub';
-      return '<img class="wfh-media" '+loadAttr+' decoding="async" src="'+optimizeCloudinary(w.url)+'" alt="'+alt+'" title="'+alt+'" onload="wfhImageLoaded(this)" onerror="wfhImageError(this)">';
+      return '<img class="wfh-media" '+loadAttr+' decoding="async" width="360" height="640" sizes="(max-width:700px) 33vw, 16vw" src="'+optimizeCloudinary(w.url)+'" alt="'+alt+'" title="'+alt+'" onload="wfhImageLoaded(this)" onerror="wfhImageError(this)">';
     };
   }
 
@@ -3104,5 +3104,70 @@ document.addEventListener('click', function(e){
   });
 })();
 </script>
+
+
+<style id="wfh-light-seo-trust-upgrades">
+.wfh-breadcrumb{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 12px;color:var(--muted);font-size:11px;font-weight:800}
+.wfh-breadcrumb a,.wfh-breadcrumb button{border:0;background:transparent;color:var(--glow);font:inherit;font-weight:900;padding:0;cursor:pointer;text-decoration:none}
+.wfh-related-cats{display:flex;gap:8px;overflow-x:auto;margin:12px 0 2px;padding-bottom:2px}
+.wfh-related-cats::-webkit-scrollbar{display:none}
+.wfh-related-cats button{flex:0 0 auto;border:1px solid var(--border);background:var(--glass2);color:var(--text);border-radius:999px;padding:8px 12px;font-size:11px;font-weight:900;cursor:pointer}
+.wfh-related-cats button:active{transform:scale(.98)}
+.wfh-last-updated{display:block;margin-top:12px;color:var(--muted);font-size:11px;font-weight:800;opacity:.9}
+.wfh-footer-links a[aria-label="About WallFlixHub"]{background:rgba(191,85,236,.13);border-color:rgba(191,85,236,.22)}
+</style>
+<script id="wfh-light-seo-trust-upgrades-js">
+(function(){
+  if(window.__wfhLightSeoTrustUpgrades) return;
+  window.__wfhLightSeoTrustUpgrades = true;
+  var RELATED={AMOLED:['Cyberpunk','Abstract','Technology'],Anime:['Gaming','Cyberpunk','AMOLED'],Cars:['Sports','Technology','AMOLED'],Nature:['Space','Abstract','AMOLED'],Gaming:['Anime','Cyberpunk','Technology'],Space:['AMOLED','Abstract','Nature'],Abstract:['AMOLED','Space','Technology'],Sports:['Cars','Gaming','Nature'],Technology:['Cyberpunk','AMOLED','Abstract'],Cyberpunk:['AMOLED','Gaming','Technology']};
+  function esc(s){return String(s||'').replace(/[&<>\"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[m]||m;});}
+  function relatedHTML(cat){
+    var list=RELATED[cat]||['AMOLED','Anime','Nature'];
+    return '<div class="wfh-related-cats" aria-label="Related wallpaper categories"><span style="color:var(--muted);font-size:11px;font-weight:900;align-self:center;white-space:nowrap">Related:</span>'+list.map(function(c){return '<button type="button" onclick="filterCat(\''+esc(c)+'\')">'+esc(c)+'</button>';}).join('')+'</div>';
+  }
+  function breadcrumb(cat){
+    return '<nav class="wfh-breadcrumb" aria-label="Breadcrumb"><button type="button" onclick="go(\'home\')">Home</button><span>›</span><button type="button" onclick="go(\'categories\')">Categories</button>'+(cat?'<span>›</span><span>'+esc(cat)+'</span>':'')+'</nav>';
+  }
+  function enhanceSeoBlocks(){
+    var explore=document.getElementById('wfhExploreSeo');
+    if(explore && !explore.dataset.wfhRelatedEnhanced){
+      var cat=window.activeExploreCategory || null;
+      if(cat){ explore.insertAdjacentHTML('afterbegin', breadcrumb(cat)); explore.insertAdjacentHTML('beforeend', relatedHTML(cat)); }
+      explore.dataset.wfhRelatedEnhanced='1';
+    }
+    var catSeo=document.getElementById('wfhCategorySeo');
+    if(catSeo && !catSeo.dataset.wfhRelatedEnhanced){
+      catSeo.insertAdjacentHTML('afterbegin', breadcrumb(null));
+      catSeo.insertAdjacentHTML('beforeend', relatedHTML('AMOLED'));
+      catSeo.dataset.wfhRelatedEnhanced='1';
+    }
+  }
+  function addFooterAboutAndDates(){
+    document.querySelectorAll('.wfh-footer-links').forEach(function(box){
+      if(!box.querySelector('[aria-label="About WallFlixHub"]') && document.getElementById('wfhHomeSeo')){
+        box.insertAdjacentHTML('afterbegin','<a href="#about" aria-label="About WallFlixHub" onclick="event.preventDefault();go(\'home\',null,false);setTimeout(function(){document.getElementById(\'wfhHomeSeo\')?.scrollIntoView({behavior:\'smooth\',block:\'start\'});},80)">About</a>');
+      }
+    });
+    ['policy','terms','dmca','contact','faq'].forEach(function(id){
+      var sec=document.getElementById(id), card=sec && sec.querySelector('.legal-card');
+      if(card && !card.querySelector('.wfh-last-updated')) card.insertAdjacentHTML('beforeend','<small class="wfh-last-updated">Last updated: June 30, 2026</small>');
+    });
+  }
+  var oldRender=window.render;
+  if(typeof oldRender==='function' && !oldRender.wfhLightSeoWrapped){
+    window.render=function(){
+      var r=oldRender.apply(this,arguments);
+      document.querySelectorAll('#wfhExploreSeo,#wfhCategorySeo').forEach(function(el){delete el.dataset.wfhRelatedEnhanced;});
+      setTimeout(function(){enhanceSeoBlocks();addFooterAboutAndDates();},0);
+      return r;
+    };
+    window.render.wfhLightSeoWrapped=true;
+  }
+  document.addEventListener('DOMContentLoaded',function(){setTimeout(function(){enhanceSeoBlocks();addFooterAboutAndDates();},120);});
+  setTimeout(function(){enhanceSeoBlocks();addFooterAboutAndDates();},400);
+})();
+</script>
+
 </body>
 </html>
