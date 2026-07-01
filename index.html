@@ -1353,6 +1353,7 @@ body[data-screen="faq"] .viewport{
   "url": "https://wallflixhub.github.io/",
   "creator": {"@type":"Organization","name":"WallFlixHub"},
   "creditText": "WallFlixHub",
+  "copyrightNotice": "© 2026 WallFlixHub. All rights reserved.",
   "license": "https://wallflixhub.github.io/terms.html",
   "acquireLicensePage": "https://wallflixhub.github.io/dmca.html",
   "representativeOfPage": true
@@ -1395,7 +1396,7 @@ body[data-screen="faq"] .viewport{
   </ul>
 </div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links" id="wfhSeoInternalLinks" aria-label="Wallpaper category links">
 <a href="#categories" data-go="categories" onclick="event.preventDefault();go('categories',null,false);location.hash='categories'">Wallpaper Categories</a><a href="#new" data-go="new" onclick="event.preventDefault();go('new',null,false);location.hash='new'">New Wallpapers</a><a href="#trending" data-go="trending" onclick="event.preventDefault();go('trending',null,false);location.hash='trending'">Trending Wallpapers</a><a href="#downloads" data-go="downloads" onclick="event.preventDefault();go('downloads',null,false);location.hash='downloads'">Top Downloads</a>
-</div><div class="wfh-footer-links"><a href="#contact" onclick="event.preventDefault();go('contact',null,false);location.hash='contact'">Contact</a><a href="#privacy" onclick="event.preventDefault();go('policy',null,false);location.hash='privacy'">Privacy</a><a href="#terms" onclick="event.preventDefault();go('terms',null,false);location.hash='terms'">Terms</a><a href="#dmca" onclick="event.preventDefault();go('dmca',null,false);location.hash='dmca'">DMCA / Copyright</a><a href="#faq" onclick="event.preventDefault();go('faq',null,false);location.hash='faq'">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
+</div><div class="wfh-footer-links" data-nosnippet><a href="#contact" onclick="event.preventDefault();go('contact',null,false);location.hash='contact'">Contact</a><a href="#privacy" onclick="event.preventDefault();go('policy',null,false);location.hash='privacy'">Privacy</a><a href="#terms" onclick="event.preventDefault();go('terms',null,false);location.hash='terms'">Terms</a><a href="#dmca" onclick="event.preventDefault();go('dmca',null,false);location.hash='dmca'">DMCA / Copyright</a><a href="#faq" onclick="event.preventDefault();go('faq',null,false);location.hash='faq'">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
 <section class="screen" id="explore"><div class="section"><h3>Explore Wallpapers</h3><a href="/explore.html" onclick="event.preventDefault();activeExploreCategory=null;wfhExplorePage=1;go('explore')">Latest</a></div><div id="wfhExploreChips" class="wfh-chipbar"></div><div class="grid2" id="exploreGrid"></div><div class="wfh-loading-more" id="wfhExploreLoader"><span>Loading more</span><span class="spinner"></span></div><div id="wfhExploreSeo"></div></section>
 <section class="screen" id="categories"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Categories</h2><div></div></div><div class="grid2" id="catGrid"></div><div class="wfh-seo-block" id="wfhCategorySeo"></div></section>
 <section class="screen" id="trending"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>Trending Today</h2><div></div></div><div class="grid2" id="trendGrid"></div></section>
@@ -1541,7 +1542,7 @@ body[data-screen="faq"] .viewport{
 </main>
 <div class="viewer" id="viewer"><div class="preview" id="previewMedia"><div class="viewer-top"><button aria-label="Close wallpaper viewer" onclick="closeViewer()"><i class="fa-solid fa-chevron-left"></i></button><div class="wfh-viewer-actions"><button aria-label="Like wallpaper" class="wfh-action-btn" onclick="likeCurrent()"><i class="fa-regular fa-heart" id="viewerHeart"></i></button><button aria-label="Share wallpaper" class="wfh-action-btn" onclick="shareCurrent()"><i class="fa-solid fa-share-nodes"></i></button><button aria-label="Fullscreen wallpaper" class="wfh-action-btn" onclick="fullscreenCurrent()"><i class="fa-solid fa-expand"></i></button></div></div></div><div class="viewer-card glass"><h2 id="vTitle">Wallpaper</h2><p id="vDescription">4K mobile wallpaper optimized for AMOLED smartphones.</p><div class="wfh-viewer-tags"><span class="wfh-viewer-pill gold" id="vQuality">4K</span><span class="wfh-viewer-pill" id="vCategory">AMOLED</span></div><div class="wfh-palette" id="wfhPalette" style="display:none"></div><div class="wfh-info-grid" id="wfhInfoGrid"></div><small style="color:var(--muted)">By WallFlixHub Team <i class="fa-solid fa-circle-check" style="color:var(--glow)"></i></small><div class="metrics"><div class="metric"><i class="fa-regular fa-heart"></i> <b id="vLikes">0</b><span>Likes</span></div><div class="metric"><i class="fa-solid fa-download"></i> <b id="vDown">0</b><span>Downloads</span></div><div class="metric"><i class="fa-regular fa-eye"></i> <b id="vViews">0</b><span>Views</span></div></div><button class="full-btn" onclick="downloadCurrent()">Download Wallpaper</button>
 </div><div class="comments glass"><h3>Comments & Ratings</h3><div style="margin:10px 0"><b id="ratingValue">0</b> / 5 <span class="stars" id="ratingStars"><button class="star" onclick="rate(1)">★</button><button class="star" onclick="rate(2)">★</button><button class="star" onclick="rate(3)">★</button><button class="star" onclick="rate(4)">★</button><button class="star" onclick="rate(5)">★</button></span></div><input id="commentInput" placeholder="Write comment..." style="width:100%;background:var(--glass2);border:1px solid var(--border);color:var(--text);border-radius:12px;padding:11px"/><button class="btn" onclick="addComment()" style="width:100%;margin-top:9px">Add Comment</button><div id="commentList" style="margin-top:8px;color:var(--muted);font-size:12px">No comments yet.</div></div><div class="section" style="padding:0 16px"><h3>More Like This</h3><a href="/explore.html" onclick="event.preventDefault();activeExploreCategory=current?.cat||null;go('explore')">View all</a></div><div class="related" id="related"></div></div>
-<nav class="bottom-nav"><button class="nav active" aria-label="Home" onclick="go('home',this)"><i class="fa-solid fa-house"></i><span>Home</span></button><button class="nav" aria-label="Explore" onclick="activeExploreCategory=null;wfhExplorePage=1;wfhExploreLastKey='';go('explore',this)"><i class="fa-solid fa-compass"></i><span>Explore</span></button><button class="nav" aria-label="Categories" onclick="go('categories',this)"><i class="fa-solid fa-layer-group"></i><span>Categories</span></button><button class="nav" aria-label="Favorites" onclick="go('favorites',this)"><i class="fa-regular fa-heart"></i><span>Likes</span></button><button class="nav" aria-label="More menu" onclick="go('menu',this)"><i class="fa-solid fa-bars"></i><span>More</span></button></nav>
+<nav class="bottom-nav" data-nosnippet><button class="nav active" aria-label="Home" onclick="go('home',this)"><i class="fa-solid fa-house"></i><span>Home</span></button><button class="nav" aria-label="Explore" onclick="activeExploreCategory=null;wfhExplorePage=1;wfhExploreLastKey='';go('explore',this)"><i class="fa-solid fa-compass"></i><span>Explore</span></button><button class="nav" aria-label="Categories" onclick="go('categories',this)"><i class="fa-solid fa-layer-group"></i><span>Categories</span></button><button class="nav" aria-label="Favorites" onclick="go('favorites',this)"><i class="fa-regular fa-heart"></i><span>Likes</span></button><button class="nav" aria-label="More menu" onclick="go('menu',this)"><i class="fa-solid fa-bars"></i><span>More</span></button></nav>
 <div class="toast" id="toast">Done</div><div class="wfh-like-pop" id="wfhLikePop">♥</div>
 </div>
 <script>
@@ -1696,10 +1697,22 @@ function wfhSetProp(prop, content){
 function wfhRouteSeo(id){
   const base='https://wallflixhub.github.io';
   const cat=activeExploreCategory;
+  const catDesc={
+    AMOLED:'Download dark AMOLED 4K mobile wallpapers with deep black backgrounds, high contrast colors and clean phone-friendly designs.',
+    Anime:'Download anime 4K mobile wallpapers with colorful artwork, clean character framing and phone-ready vertical compositions.',
+    Cars:'Download luxury car and sports car 4K mobile wallpapers with clean automotive shots made for phone screens.',
+    Nature:'Download nature 4K mobile wallpapers featuring forests, mountains, rivers, oceans, flowers and calm outdoor phone backgrounds.',
+    Gaming:'Download gaming 4K mobile wallpapers with RGB lighting, fantasy scenes, action artwork and bold phone backgrounds.',
+    Space:'Download space 4K mobile wallpapers with galaxies, stars, planets, nebula colors and dark cosmic phone backgrounds.',
+    Abstract:'Download abstract 4K mobile wallpapers with gradients, shapes, soft light, patterns and modern clean phone designs.',
+    Sports:'Download sports 4K mobile wallpapers with action shots, fitness themes, stadium energy and motivational phone backgrounds.',
+    Technology:'Download technology 4K mobile wallpapers with circuits, digital patterns, AI-style visuals and futuristic phone themes.',
+    Cyberpunk:'Download cyberpunk 4K mobile wallpapers with neon cities, futuristic streets, purple lights and sci-fi phone backgrounds.'
+  };
   const legalNoIndex=['profile','menu','notifications','upload','admin','favorites','downloads'].includes(id);
   const map={
     home:{title:'WallFlixHub - 4K Mobile Wallpapers for Phones',desc:'WallFlixHub is a mobile-first wallpaper website for clean 4K phone backgrounds, AMOLED wallpapers, anime, cars, nature, gaming, space, abstract, sports and technology wallpapers.',path:'/'},
-    explore:{title:cat?`${cat} 4K Wallpapers for Phones - WallFlixHub`:'Explore 4K Mobile Wallpapers - WallFlixHub',desc:cat?`Browse ${cat} 4K mobile wallpapers for phone home screens, lock screens and clean mobile customization on WallFlixHub.`:'Explore clean 4K mobile wallpapers on WallFlixHub, organized for fast browsing on smartphones.',path:cat?`/${wfhSlug(cat)}.html`:'/explore.html'},
+    explore:{title:cat?`${cat} Wallpapers 4K - WallFlixHub`:'Explore 4K Mobile Wallpapers - WallFlixHub',desc:cat?(catDesc[cat]||`Download ${cat} 4K mobile wallpapers with clean phone-ready backgrounds on WallFlixHub.`):'Explore clean 4K mobile wallpapers on WallFlixHub, organized for fast browsing on smartphones.',path:cat?`/${wfhSlug(cat)}.html`:'/explore.html'},
     categories:{title:'Wallpaper Categories - WallFlixHub',desc:'Browse WallFlixHub wallpaper categories including AMOLED, Anime, Cars, Nature, Gaming, Space, Abstract, Sports, Technology and Cyberpunk.',path:'/categories.html'},
     trending:{title:'Trending 4K Wallpapers - WallFlixHub',desc:'See trending 4K mobile wallpapers on WallFlixHub for phones and AMOLED screens.',path:'/trending.html'},
     new:{title:'New 4K Mobile Wallpapers - WallFlixHub',desc:'Browse the newest mobile wallpapers added to WallFlixHub, including AMOLED, nature, anime, cars, gaming and abstract backgrounds.',path:'/new.html'},
@@ -3148,7 +3161,7 @@ document.addEventListener('click', function(e){
     return '<div class="wfh-related-cats" aria-label="Related wallpaper categories"><span style="color:var(--muted);font-size:11px;font-weight:900;align-self:center;white-space:nowrap">Related:</span>'+list.map(function(c){return '<button type="button" onclick="filterCat(\''+esc(c)+'\')">'+esc(c)+'</button>';}).join('')+'</div>';
   }
   function breadcrumb(cat){
-    return '<nav class="wfh-breadcrumb" aria-label="Breadcrumb"><button type="button" onclick="go(\'home\')">Home</button><span>›</span><button type="button" onclick="go(\'categories\')">Categories</button>'+(cat?'<span>›</span><span>'+esc(cat)+'</span>':'')+'</nav>';
+    return '<nav class="wfh-breadcrumb" aria-label="Breadcrumb" data-nosnippet><button type="button" onclick="go(\'home\')">Home</button><span>›</span><button type="button" onclick="go(\'categories\')">Categories</button>'+(cat?'<span>›</span><span>'+esc(cat)+'</span>':'')+'</nav>';
   }
   function enhanceSeoBlocks(){
     var explore=document.getElementById('wfhExploreSeo');
@@ -3237,6 +3250,32 @@ document.addEventListener('click', function(e){
   wrapRender();
   document.addEventListener('DOMContentLoaded',function(){wrapRender();setTimeout(updateImageSchema,250);setTimeout(updateImageSchema,1500);});
   setTimeout(function(){wrapRender();updateImageSchema();},900);
+})();
+</script>
+
+
+<script id="wfh-google-snippet-cleanup">
+(function(){
+  if(window.__wfhGoogleSnippetCleanup) return;
+  window.__wfhGoogleSnippetCleanup = true;
+  function cleanSnippetText(){
+    document.querySelectorAll('.bottom-nav,.icons,.wfh-footer-links,.wfh-breadcrumb,.back,.search-floating').forEach(function(el){
+      el.setAttribute('data-nosnippet','');
+    });
+    document.querySelectorAll('.wfh-footer-links a,.bottom-nav button,.wfh-breadcrumb button').forEach(function(el){
+      el.setAttribute('data-nosnippet','');
+    });
+  }
+  cleanSnippetText();
+  document.addEventListener('DOMContentLoaded', cleanSnippetText);
+  var oldRender = window.render;
+  if(typeof oldRender === 'function'){
+    window.render = function(){
+      var out = oldRender.apply(this, arguments);
+      cleanSnippetText();
+      return out;
+    };
+  }
 })();
 </script>
 
