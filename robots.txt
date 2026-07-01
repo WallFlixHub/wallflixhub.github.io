@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wallflixhub.github.io/sitemap.xml
+Sitemap: https://wallflixhub.github.io/image-sitemap.xml
