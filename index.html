@@ -6,8 +6,8 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<title>4K Mobile Wallpapers: Free HD Download - WallFlixHub</title>
-<meta name="description" content="Download free 4K mobile wallpapers for Android and iPhone. Browse AMOLED, anime, cars, nature, gaming, space, abstract, sports and dark phone backgrounds on WallFlixHub." />
+<title>WallFlixHub - 4K Mobile Wallpapers for Phones</title>
+<meta name="description" content="Download clean 4K mobile wallpapers for Android and iPhone, including AMOLED, anime, cars, nature, gaming, space, abstract, sports, technology and cyberpunk phone backgrounds." />
 <!-- WallFlixHub Logo / Icons -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="512x512" href="/images/logo.png">
@@ -1157,9 +1157,52 @@ gtag('config', 'G-QHWGTYQHGL');
 })();
 </script>
 
+<script id="wfh-pro-snippet-head-router">
+(function(){
+  var BASE='https://wallflixhub.github.io';
+  var CAT={
+    'amoled': ['AMOLED Wallpapers 4K for Phones - WallFlixHub','Download dark AMOLED 4K mobile wallpapers with deep black backgrounds, high contrast colors and clean phone-ready designs.'],
+    'anime': ['Anime Wallpapers 4K for Phones - WallFlixHub','Download anime 4K mobile wallpapers with colorful artwork, clean character framing and phone-ready vertical compositions.'],
+    'cars': ['Cars Wallpapers 4K for Phones - WallFlixHub','Download luxury car and sports car 4K mobile wallpapers for Android and iPhone, including supercars, racing cars and dark car backgrounds.'],
+    'nature': ['Nature Wallpapers 4K for Phones - WallFlixHub','Download nature 4K mobile wallpapers with forests, mountains, rivers, oceans, flowers and calm outdoor phone backgrounds.'],
+    'gaming': ['Gaming Wallpapers 4K for Phones - WallFlixHub','Download gaming 4K mobile wallpapers with RGB lighting, fantasy scenes, action artwork and bold phone backgrounds.'],
+    'space': ['Space Wallpapers 4K for Phones - WallFlixHub','Download space 4K mobile wallpapers with galaxies, stars, planets, nebula colors and dark cosmic phone backgrounds.'],
+    'abstract': ['Abstract Wallpapers 4K for Phones - WallFlixHub','Download abstract 4K mobile wallpapers with gradients, shapes, soft light, patterns and modern clean phone designs.'],
+    'sports': ['Sports Wallpapers 4K for Phones - WallFlixHub','Download dynamic sports 4K mobile wallpapers for phones, including football, basketball, fitness, racing and action backgrounds.'],
+    'technology': ['Technology Wallpapers 4K for Phones - WallFlixHub','Download technology 4K mobile wallpapers with circuits, digital patterns, AI-style visuals and futuristic phone themes.'],
+    'cyberpunk': ['Cyberpunk Wallpapers 4K for Phones - WallFlixHub','Download futuristic cyberpunk neon 4K mobile wallpapers with neon cities, dark tech, samurai, robots and AMOLED phone backgrounds.']
+  };
+  var PAGES={
+    '/':['WallFlixHub - 4K Mobile Wallpapers for Phones','Download clean 4K mobile wallpapers for Android and iPhone, including AMOLED, anime, cars, nature, gaming, space, abstract, sports, technology and cyberpunk phone backgrounds.'],
+    '/explore.html':['Explore 4K Mobile Wallpapers - WallFlixHub','Explore clean 4K mobile wallpapers on WallFlixHub, organized for fast browsing on smartphones.'],
+    '/categories.html':['Wallpaper Categories - WallFlixHub','Browse AMOLED, Anime, Cars, Nature, Gaming, Space, Abstract, Sports, Technology and Cyberpunk wallpaper categories on WallFlixHub.'],
+    '/trending.html':['Trending 4K Wallpapers - WallFlixHub','See trending 4K mobile wallpapers on WallFlixHub for phone lock screens, home screens and AMOLED displays.'],
+    '/new.html':['New 4K Mobile Wallpapers - WallFlixHub','Browse the newest mobile wallpapers added to WallFlixHub, including AMOLED, nature, anime, cars, gaming and abstract backgrounds.'],
+    '/privacy.html':['Privacy Policy - WallFlixHub','Read the WallFlixHub privacy policy for cookies, analytics, advertising and mobile wallpaper browsing.'],
+    '/terms.html':['Terms of Service - WallFlixHub','Read the WallFlixHub terms of service for personal wallpaper use, downloads, copyright and site rules.'],
+    '/dmca.html':['DMCA / Copyright Policy - WallFlixHub','Copyright and DMCA removal information for WallFlixHub mobile wallpapers and visual content.'],
+    '/faq.html':['FAQ - WallFlixHub','Frequently asked questions about downloading wallpapers, personal use, categories, ads and copyright on WallFlixHub.'],
+    '/contact.html':['Contact - WallFlixHub','Contact WallFlixHub for wallpaper issues, copyright questions, broken links, privacy questions or technical support.']
+  };
+  function setMeta(sel,attrName,attrVal,content){var el=document.querySelector(sel); if(!el){el=document.createElement('meta'); el.setAttribute(attrName,attrVal); document.head.appendChild(el);} el.setAttribute('content',content);}
+  function setProp(p,c){setMeta('meta[property="'+p+'"]','property',p,c)}
+  function setName(n,c){setMeta('meta[name="'+n+'"]','name',n,c)}
+  function setCan(url){var l=document.querySelector('link[rel="canonical"]'); if(!l){l=document.createElement('link'); l.rel='canonical'; document.head.appendChild(l);} l.href=url;}
+  var path=(location.pathname||'/').replace(/\/+$/,'')||'/';
+  var slug=path.replace(/^\//,'').replace(/\.html$/,'').toLowerCase();
+  var data=CAT[slug]||PAGES[path]||PAGES['/'];
+  var indexable=!!(CAT[slug]||PAGES[path]);
+  document.title=data[0];
+  setName('description',data[1]);
+  setProp('og:title',data[0]); setProp('og:description',data[1]); setName('twitter:title',data[0]); setName('twitter:description',data[1]);
+  setCan(CAT[slug]?BASE+'/'+slug+'.html':(PAGES[path]?BASE+path:BASE+'/'));
+  var robots=indexable?'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1':'noindex, follow';
+  setName('robots',robots); setName('googlebot',robots);
+})();
+</script>
 
 <!-- Open Graph -->
-<meta property="og:title" content="4K Mobile Wallpapers: Free HD Download - WallFlixHub">
+<meta property="og:title" content="WallFlixHub - 4K Mobile Wallpapers for Phones">
 <meta property="og:description" content="Download free 4K mobile wallpapers for Android and iPhone. AMOLED, anime, cars, nature, gaming, space and dark phone backgrounds.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wallflixhub.github.io/">
@@ -1173,7 +1216,7 @@ gtag('config', 'G-QHWGTYQHGL');
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="4K Mobile Wallpapers: Free HD Download - WallFlixHub">
+<meta name="twitter:title" content="WallFlixHub - 4K Mobile Wallpapers for Phones">
 <meta name="twitter:description" content="Download free 4K mobile wallpapers for Android and iPhone. AMOLED, anime, cars, nature, gaming, space and dark phone backgrounds.">
 <meta name="twitter:image" content="https://wallflixhub.github.io/preview.jpg">
 <meta name="twitter:site" content="@WallFlixHub">
@@ -1359,12 +1402,16 @@ body[data-screen="faq"] .viewport{
   "representativeOfPage": true
 }
 </script>
+
+<style id="wfh-pro-snippet-intro-style">
+.wfh-snippet-intro{font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 12px;padding:12px;border:1px solid var(--border);border-radius:16px;background:var(--glass2)}
+</style>
 </head>
 <body>
 <div class="phone" id="app">
-<header><div class="brand" onclick="go('home')"><div class="logo">W</div><div><h1>Wall<span>Flix</span>Hub</h1><small class="brand-subtitle">Mobile Wallpapers</small></div></div><div class="icons"><button class="icon" aria-label="Open notifications" onclick="go('notifications')"><i class="fa-regular fa-bell"></i><span class="badge" id="notifBadge"></span></button><button class="icon" aria-label="Toggle theme" onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke"></i></button></div></header>
+<header data-nosnippet><div class="brand" onclick="go('home')"><div class="logo">W</div><div><h1>Wall<span>Flix</span>Hub</h1><small class="brand-subtitle">Mobile Wallpapers</small></div></div><div class="icons"><button class="icon" aria-label="Open notifications" onclick="go('notifications')"><i class="fa-regular fa-bell"></i><span class="badge" id="notifBadge"></span></button><button class="icon" aria-label="Toggle theme" onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke"></i></button></div></header>
 <main class="viewport" id="mainContent">
-<section class="screen active" id="home"><div class="search-floating"><div class="search"><i class="fa-solid fa-magnifying-glass" style="color:var(--muted)"></i><input id="searchInput" placeholder="Search wallpapers..." oninput="search(this.value);wfhSuggest(this.value)" /></div><button class="filter" aria-label="Open categories filters" onclick="go('categories')"><i class="fa-solid fa-sliders"></i></button><div class="wfh-suggest" id="wfhSuggest"></div></div><div id="wfhHomeChips" class="wfh-chipbar"></div><div class="slider-wrap"><div class="slider" id="slider"></div><div class="dots" id="dots"></div></div>
+<section class="screen active" id="home"><div class="search-floating" data-nosnippet><div class="search"><i class="fa-solid fa-magnifying-glass" style="color:var(--muted)"></i><input id="searchInput" placeholder="Search wallpapers..." oninput="search(this.value);wfhSuggest(this.value)" /></div><button class="filter" aria-label="Open categories filters" onclick="go('categories')"><i class="fa-solid fa-sliders"></i></button><div class="wfh-suggest" id="wfhSuggest"></div></div><div id="wfhHomeChips" class="wfh-chipbar" data-nosnippet></div><div class="slider-wrap"><div class="slider" id="slider"></div><div class="dots" id="dots"></div></div>
 <div class="section"><h3>Featured by Admin</h3><a id="wfhHomeAdminLink" href="/admin.html" onclick="event.preventDefault();go('admin')" style="display:none">Admin</a></div><div class="wfh-row" id="featuredGrid"></div><div class="section"><h3>Trending Today</h3><a href="/trending.html" onclick="event.preventDefault();go('trending')">View all</a></div><div class="grid3" id="homeTrending"></div><div class="section"><h3 class="wfh-top-week-label">Top This Week</h3><a href="/trending.html" onclick="event.preventDefault();go('trending')">View all</a></div><div class="wfh-row" id="topWeekGrid"></div><div class="section"><h3>Popular Categories</h3><a href="/categories.html" onclick="event.preventDefault();go('categories')">View all</a></div><div class="grid3" id="homeCats"></div><div class="section"><h3>Recently Viewed</h3><button type="button" class="link-btn" onclick="clearRecent()">Clear</button></div><div class="wfh-row" id="recentGrid"></div><div class="section"><h3>New Arrivals</h3><a href="/new.html" onclick="event.preventDefault();go('new')">View all</a></div><div class="grid2" id="newArrivals"></div><div class="section"><h3>Top Downloads</h3><a href="/downloads.html" onclick="event.preventDefault();go('downloads')">View all</a></div><div class="wfh-row" id="topDownloadsGrid"></div><div class="section"><h3>Continue Viewing</h3><button type="button" class="link-btn" onclick="clearRecent()">Clear</button></div><div class="wfh-row" id="continueGrid"></div>
 <div class="wfh-seo-block" id="wfhHomeSeo">
   <span class="wfh-seo-kicker"><i class="fa-solid fa-circle-check"></i> Original mobile wallpaper guide</span>
@@ -1394,17 +1441,17 @@ body[data-screen="faq"] .viewport{
     <li><b>Use the right mood.</b> Calm nature images are good for daily use, gaming and cyberpunk designs feel energetic, and minimal abstract styles keep the screen clean.</li>
     <li><b>Preview before downloading.</b> Open the wallpaper in the viewer, check the crop, and then download the image for personal use.</li>
   </ul>
-</div><div class="wfh-footer"><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links" id="wfhSeoInternalLinks" aria-label="Wallpaper category links">
+</div><div class="wfh-footer" data-nosnippet><h3>WallFlixHub</h3><p>Fresh mobile wallpapers, 4K backgrounds and daily collections.</p><div class="wfh-footer-links" id="wfhSeoInternalLinks" data-nosnippet aria-label="Wallpaper category links">
 <a href="#categories" data-go="categories" onclick="event.preventDefault();go('categories',null,false);location.hash='categories'">Wallpaper Categories</a><a href="#new" data-go="new" onclick="event.preventDefault();go('new',null,false);location.hash='new'">New Wallpapers</a><a href="#trending" data-go="trending" onclick="event.preventDefault();go('trending',null,false);location.hash='trending'">Trending Wallpapers</a><a href="#downloads" data-go="downloads" onclick="event.preventDefault();go('downloads',null,false);location.hash='downloads'">Top Downloads</a>
 </div><div class="wfh-footer-links" data-nosnippet><a href="#contact" onclick="event.preventDefault();go('contact',null,false);location.hash='contact'">Contact</a><a href="#privacy" onclick="event.preventDefault();go('policy',null,false);location.hash='privacy'">Privacy</a><a href="#terms" onclick="event.preventDefault();go('terms',null,false);location.hash='terms'">Terms</a><a href="#dmca" onclick="event.preventDefault();go('dmca',null,false);location.hash='dmca'">DMCA / Copyright</a><a href="#faq" onclick="event.preventDefault();go('faq',null,false);location.hash='faq'">FAQ</a></div><p>© 2026 WallFlixHub. All rights reserved.</p></div></section>
-<section class="screen" id="explore"><div class="section"><h3>Explore Wallpapers</h3><a href="/explore.html" onclick="event.preventDefault();activeExploreCategory=null;wfhExplorePage=1;go('explore')">Latest</a></div><div id="wfhExploreChips" class="wfh-chipbar"></div><div class="grid2" id="exploreGrid"></div><div class="wfh-loading-more" id="wfhExploreLoader"><span>Loading more</span><span class="spinner"></span></div><div id="wfhExploreSeo"></div></section>
+<section class="screen" id="explore"><div class="section"><h3>Explore Wallpapers</h3><a href="/explore.html" onclick="event.preventDefault();activeExploreCategory=null;wfhExplorePage=1;go('explore')">Latest</a></div><div id="wfhExploreChips" class="wfh-chipbar" data-nosnippet></div><div class="grid2" id="exploreGrid"></div><div class="wfh-loading-more" id="wfhExploreLoader"><span>Loading more</span><span class="spinner"></span></div><div id="wfhExploreSeo"></div></section>
 <section class="screen" id="categories"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Categories</h2><div></div></div><div class="grid2" id="catGrid"></div><div class="wfh-seo-block" id="wfhCategorySeo"></div></section>
 <section class="screen" id="trending"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>Trending Today</h2><div></div></div><div class="grid2" id="trendGrid"></div></section>
 <section class="screen" id="new"><div class="back"><button onclick="go('home')"><i class="fa-solid fa-chevron-left"></i></button><h2>New Arrivals</h2><div></div></div><div class="grid2" id="newGrid"></div></section>
 <section class="screen" id="favorites"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Favorites</h2><div></div></div><div class="grid2" id="favGrid"></div></section>
 <section class="screen" id="downloads"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Downloads</h2><button type="button" id="downloadsClearBtn" class="link-btn" onclick="clearDownloads()" style="color:var(--glow)">Clear</button></div><div class="list" id="downloadList"></div></section>
 <section class="screen" id="profile"><div class="profile-card glass"><div class="avatar"><div>W</div></div><h2 id="profileName">WallFlixHub</h2><small class="profile-subtitle">Mobile Wallpapers</small><div class="stats"><div class="stat"><b id="statUpload">0</b><span>Uploads</span></div><div class="stat"><b id="statFav">0</b><span>Favorites</span></div><div class="stat"><b id="statDown">0</b><span>Downloads</span></div></div><div id="wfhLoginBox" class="form glass" style="margin-top:14px;text-align:left"><h3 style="margin-bottom:8px">Login</h3><input id="loginEmail" type="email" placeholder="Email"/><input id="loginPassword" type="password" placeholder="Password"/><div class="wfh-auth-actions"><button class="btn" onclick="login()">Login</button><button class="btn" onclick="createAccount()">Create</button></div></div><div class="wfh-auth-actions"><button id="profileGoogleLoginBtn" class="btn" onclick="googleLogin()">✅ Sign in with Google</button><button id="profileLogoutBtn" class="btn" onclick="logout()" style="display:none;background:#20222b">Logout</button></div></div></section>
-<section class="screen" id="menu"><div class="menu-profile glass" onclick="go('profile')"><div class="logo">W</div><div><b>WallFlixHub</b><br/><small class="menu-subtitle">Mobile Wallpapers</small></div><i class="fa-solid fa-chevron-right" style="margin-left:auto"></i></div><div class="menu-box glass"><div class="menu-row" onclick="go('profile')"><i class="fa-regular fa-user"></i><span>Profile</span></div><div class="menu-row" id="logoutBtn" onclick="logout()" style="display:none"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></div><div class="menu-row" onclick="go('favorites')"><i class="fa-regular fa-heart"></i><span>Favorites</span><b class="pill" id="favPill">0</b></div><div class="menu-row" onclick="go('downloads')"><i class="fa-solid fa-download"></i><span>Downloads</span></div><div class="menu-row" onclick="go('trending')"><i class="fa-solid fa-fire"></i><span>Trending Today</span></div><div class="menu-row" onclick="go('new')"><i class="fa-solid fa-sparkles"></i><span>New Arrivals</span></div><div class="menu-row" onclick="go('categories')"><i class="fa-solid fa-layer-group"></i><span>Popular Categories</span></div></div><div class="menu-box glass"><div class="menu-row" id="wfhPublishMenuRow" onclick="go('upload')" style="display:none"><i class="fa-solid fa-upload"></i><span>Publish Wallpaper <small style="color:var(--muted);font-weight:800">(Admin only)</small></span></div><div class="menu-row" id="wfhAdminMenuRow" onclick="go('admin')" style="display:none"><i class="fa-solid fa-user-shield"></i><span>Admin Dashboard <small style="color:var(--muted);font-weight:800">(Owner)</small></span></div><div class="menu-row"><i class="fa-solid fa-circle-half-stroke"></i><span>Theme</span><label class="switch"><input id="themeSwitch" onchange="toggleTheme()" type="checkbox"/><span></span></label></div><div class="menu-row" onclick="go('contact')"><i class="fa-solid fa-envelope"></i><span>Contact</span></div><div class="menu-row" onclick="go('policy')"><i class="fa-solid fa-shield-halved"></i><span>Privacy Policy</span></div><div class="menu-row" onclick="go('terms')"><i class="fa-solid fa-file-contract"></i><span>Terms of Service</span></div><div class="menu-row" onclick="go('dmca')"><i class="fa-solid fa-scale-balanced"></i><span>DMCA / Copyright</span></div><div class="menu-row" onclick="go('faq')"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></div></div></section>
+<section class="screen" id="menu"><div class="menu-profile glass" data-nosnippet onclick="go('profile')"><div class="logo">W</div><div><b>WallFlixHub</b><br/><small class="menu-subtitle">Mobile Wallpapers</small></div><i class="fa-solid fa-chevron-right" style="margin-left:auto"></i></div><div class="menu-box glass" data-nosnippet><div class="menu-row" onclick="go('profile')"><i class="fa-regular fa-user"></i><span>Profile</span></div><div class="menu-row" id="logoutBtn" onclick="logout()" style="display:none"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></div><div class="menu-row" onclick="go('favorites')"><i class="fa-regular fa-heart"></i><span>Favorites</span><b class="pill" id="favPill">0</b></div><div class="menu-row" onclick="go('downloads')"><i class="fa-solid fa-download"></i><span>Downloads</span></div><div class="menu-row" onclick="go('trending')"><i class="fa-solid fa-fire"></i><span>Trending Today</span></div><div class="menu-row" onclick="go('new')"><i class="fa-solid fa-sparkles"></i><span>New Arrivals</span></div><div class="menu-row" onclick="go('categories')"><i class="fa-solid fa-layer-group"></i><span>Popular Categories</span></div></div><div class="menu-box glass" data-nosnippet><div class="menu-row" id="wfhPublishMenuRow" onclick="go('upload')" style="display:none"><i class="fa-solid fa-upload"></i><span>Publish Wallpaper <small style="color:var(--muted);font-weight:800">(Admin only)</small></span></div><div class="menu-row" id="wfhAdminMenuRow" onclick="go('admin')" style="display:none"><i class="fa-solid fa-user-shield"></i><span>Admin Dashboard <small style="color:var(--muted);font-weight:800">(Owner)</small></span></div><div class="menu-row"><i class="fa-solid fa-circle-half-stroke"></i><span>Theme</span><label class="switch"><input id="themeSwitch" onchange="toggleTheme()" type="checkbox"/><span></span></label></div><div class="menu-row" onclick="go('contact')"><i class="fa-solid fa-envelope"></i><span>Contact</span></div><div class="menu-row" onclick="go('policy')"><i class="fa-solid fa-shield-halved"></i><span>Privacy Policy</span></div><div class="menu-row" onclick="go('terms')"><i class="fa-solid fa-file-contract"></i><span>Terms of Service</span></div><div class="menu-row" onclick="go('dmca')"><i class="fa-solid fa-scale-balanced"></i><span>DMCA / Copyright</span></div><div class="menu-row" onclick="go('faq')"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></div></div></section>
 <section class="screen" id="upload"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Publish Wallpaper</h2><div></div></div><div class="form glass"><div class="upload-head"><i class="fa-solid fa-cloud-arrow-up"></i><h3>Add Wallpaper by Direct URL</h3></div><p style="font-size:12px;color:var(--muted);line-height:1.6;margin:6px 0 14px">Admin-only publishing. Only image wallpapers are supported. Do not upload copyrighted, adult, violent, misleading or unsafe content.</p><input id="quickTitle" placeholder="Wallpaper title"/><input id="quickUrl" placeholder="Direct image URL"/><textarea id="quickDescription" placeholder="Wallpaper description"></textarea><select id="quickCat"><option>Anime</option><option>Cars</option><option>Nature</option><option>Gaming</option><option>AMOLED</option><option>Cyberpunk</option><option>Space</option><option>Abstract</option><option>Sports</option><option>Technology</option></select><select id="quickQuality"><option>Editor Pick</option><option>Full HD</option><option>4K</option></select><button class="btn" onclick="publishItem()" style="width:100%"><i class="fa-solid fa-upload"></i> Publish Wallpaper</button></div></section>
 <section class="screen" id="admin"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Admin Dashboard</h2><div></div></div><div class="form glass" id="adminLock"><h3>Admin Secret</h3><input id="adminSecret" placeholder="Enter admin secret" type="password"/><button class="btn" onclick="verifyAdmin()" style="width:100%">Unlock Admin</button></div><div id="adminPanel" style="display:none"><div class="profile-card glass" style="text-align:left;margin-bottom:14px"><h3 style="margin-bottom:12px">Dashboard Overview</h3><div class="stats"><div class="stat"><b id="adminUploads">0</b><span>Uploads</span></div><div class="stat"><b id="adminFavs">0</b><span>Favorites</span></div><div class="stat"><b id="adminDowns">0</b><span>Downloads</span></div></div><button class="btn" onclick="go('upload')" style="width:100%;margin-top:12px">Add Wallpaper</button></div><div class="section"><h3>Uploaded Wallpapers</h3><a href="/publish.html" onclick="event.preventDefault();go('upload')">Add</a></div><div class="list" id="adminList"></div></div></section>
 <section class="screen" id="notifications"><div class="back"><button onclick="go('menu')"><i class="fa-solid fa-chevron-left"></i></button><h2>Notifications</h2><button type="button" class="link-btn" onclick="markRead()" style="color:var(--glow)">Mark all as read</button></div><div class="list" id="notifList"></div></section>
@@ -3275,6 +3322,61 @@ document.addEventListener('click', function(e){
       cleanSnippetText();
       return out;
     };
+  }
+})();
+</script>
+
+
+
+<script id="wfh-pro-snippet-final-cleanup">
+(function(){
+  if(window.__wfhProSnippetFinalCleanup) return;
+  window.__wfhProSnippetFinalCleanup=true;
+  var CAT_TEXT={
+    AMOLED:'Dark AMOLED 4K phone wallpapers with deep black backgrounds, clean contrast and OLED-friendly styling.',
+    Anime:'Anime 4K phone wallpapers with colorful artwork, clean character framing and mobile-ready composition.',
+    Cars:'Luxury car and sports car 4K phone wallpapers with clean automotive shots for Android and iPhone.',
+    Nature:'Nature 4K phone wallpapers with forests, mountains, oceans, rivers, flowers and calm outdoor backgrounds.',
+    Gaming:'Gaming 4K phone wallpapers with RGB lighting, fantasy scenes, action artwork and bold mobile backgrounds.',
+    Space:'Space 4K phone wallpapers with galaxies, stars, planets, nebula colors and dark cosmic backgrounds.',
+    Abstract:'Abstract 4K phone wallpapers with gradients, shapes, patterns, soft light and modern clean designs.',
+    Sports:'Sports 4K phone wallpapers with action shots, fitness themes, stadium energy and motivational backgrounds.',
+    Technology:'Technology 4K phone wallpapers with circuits, AI-style visuals, digital patterns and futuristic themes.',
+    Cyberpunk:'Cyberpunk 4K phone wallpapers with neon cities, dark tech, samurai, robots and AMOLED sci-fi backgrounds.'
+  };
+  function noSnippet(){
+    document.querySelectorAll('header,.icons,.bottom-nav,.wfh-footer,.wfh-footer-links,.wfh-breadcrumb,.back,.search-floating,.wfh-chipbar,.menu-box,.menu-profile,.viewer-top,.viewer-card .metrics,.toast').forEach(function(el){el.setAttribute('data-nosnippet','');});
+    document.querySelectorAll('button,.nav,.filter,.icon,.switch,label.switch,.wfh-footer a,.wfh-footer button,.wfh-chip,.wfh-suggest').forEach(function(el){el.setAttribute('data-nosnippet','');});
+  }
+  function ensureCategoryIntro(){
+    var box=document.getElementById('wfhExploreSeo');
+    if(!box) return;
+    var cat=window.activeExploreCategory;
+    if(!cat || !CAT_TEXT[cat]) return;
+    if(!box.querySelector('.wfh-snippet-intro')){
+      box.insertAdjacentHTML('afterbegin','<p class="wfh-snippet-intro">'+CAT_TEXT[cat]+'</p>');
+    }else{
+      box.querySelector('.wfh-snippet-intro').textContent=CAT_TEXT[cat];
+    }
+  }
+  function fixMeta(){
+    if(typeof window.wfhUpdateDynamicMeta==='function') window.wfhUpdateDynamicMeta();
+    var desc=document.querySelector('meta[name="description"]');
+    if(desc) desc.setAttribute('content',String(desc.getAttribute('content')||'').replace(/HomeCategoriesSitemap|Home Categories Sitemap|Open [A-Za-z]+ Wallpapers\.\s*HomeCategoriesSitemap\.?/g,'').trim());
+  }
+  function run(){noSnippet();ensureCategoryIntro();fixMeta();}
+  document.addEventListener('DOMContentLoaded',run);
+  window.addEventListener('load',run);
+  setTimeout(run,100); setTimeout(run,800); setTimeout(run,1800);
+  var oldGo=window.go;
+  if(typeof oldGo==='function' && !oldGo.wfhProSnippetWrapped){
+    window.go=function(){var r=oldGo.apply(this,arguments);setTimeout(run,0);setTimeout(run,250);return r;};
+    window.go.wfhProSnippetWrapped=true;
+  }
+  var oldRender=window.render;
+  if(typeof oldRender==='function' && !oldRender.wfhProSnippetWrapped){
+    window.render=function(){var r=oldRender.apply(this,arguments);setTimeout(run,0);return r;};
+    window.render.wfhProSnippetWrapped=true;
   }
 })();
 </script>
