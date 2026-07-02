@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://wallflixhub.github.io/</loc>
     <image:image>
@@ -7,90 +8,10 @@
       <image:title>WallFlixHub 4K Mobile Wallpapers Preview</image:title>
       <image:caption>Preview image for WallFlixHub free 4K mobile wallpapers for Android and iPhone.</image:caption>
     </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/amoled.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>AMOLED 4K Mobile Wallpapers</image:title>
-      <image:caption>Dark AMOLED 4K phone wallpapers with deep black backgrounds.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/anime.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Anime 4K Mobile Wallpapers</image:title>
-      <image:caption>Anime 4K phone wallpapers and colorful mobile backgrounds.</image:caption>
-    </image:image>
     <image:image>
       <image:loc>https://res.cloudinary.com/dvxrkvhzl/image/upload/v1780614018/anime_32_g9cwef.jpg</image:loc>
       <image:title>Anime 4K Mobile Wallpaper - WallFlixHub</image:title>
       <image:caption>Anime 4K mobile wallpaper for phones on WallFlixHub.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/cars.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Cars 4K Mobile Wallpapers</image:title>
-      <image:caption>Luxury cars and sports cars 4K phone wallpapers.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/nature.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Nature 4K Mobile Wallpapers</image:title>
-      <image:caption>Nature 4K phone wallpapers with forests, mountains, rivers and flowers.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/gaming.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Gaming 4K Mobile Wallpapers</image:title>
-      <image:caption>Gaming 4K phone wallpapers with action, RGB and fantasy visuals.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/space.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Space 4K Mobile Wallpapers</image:title>
-      <image:caption>Space 4K phone wallpapers with galaxies, stars and planets.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/abstract.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Abstract 4K Mobile Wallpapers</image:title>
-      <image:caption>Abstract 4K phone wallpapers with gradients, shapes and clean designs.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/sports.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Sports 4K Mobile Wallpapers</image:title>
-      <image:caption>Sports 4K phone wallpapers with football, racing and action backgrounds.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/technology.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Technology 4K Mobile Wallpapers</image:title>
-      <image:caption>Technology 4K phone wallpapers with circuits, AI style and digital themes.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://wallflixhub.github.io/cyberpunk.html</loc>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>Cyberpunk 4K Mobile Wallpapers</image:title>
-      <image:caption>Cyberpunk 4K phone wallpapers with neon cities, samurai and dark AMOLED tech.</image:caption>
     </image:image>
   </url>
 </urlset>
