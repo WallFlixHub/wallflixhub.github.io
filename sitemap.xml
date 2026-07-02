@@ -1,20 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wallflixhub.github.io/</loc>
     <lastmod>2026-07-02</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://wallflixhub.github.io/preview.jpg</image:loc>
-      <image:title>WallFlixHub 4K Mobile Wallpapers</image:title>
-      <image:caption>Free 4K mobile wallpapers for Android and iPhone on WallFlixHub.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://res.cloudinary.com/dvxrkvhzl/image/upload/v1780614018/anime_32_g9cwef.jpg</image:loc>
-      <image:title>Anime 4K Mobile Wallpaper</image:title>
-      <image:caption>Anime 4K mobile wallpaper for Android and iPhone on WallFlixHub.</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/privacy.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/terms.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/dmca.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/contact.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/faq.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/about.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wallflixhub.github.io/image-sitemap.xml</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
