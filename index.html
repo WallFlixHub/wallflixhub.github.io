@@ -3381,5 +3381,80 @@ document.addEventListener('click', function(e){
 })();
 </script>
 
+
+
+<!-- ===== WallFlixHub Cloudinary Links Export Button ===== -->
+<style>
+  #wfhExportLinksBtn{
+    position:fixed;
+    right:14px;
+    bottom:96px;
+    z-index:999999;
+    border:0;
+    border-radius:18px;
+    padding:12px 14px;
+    background:linear-gradient(135deg,#d72bd6,#7a22ff);
+    color:#fff;
+    font-family:Inter,Arial,sans-serif;
+    font-size:12px;
+    font-weight:900;
+    box-shadow:0 10px 26px rgba(0,0,0,.35);
+    cursor:pointer;
+  }
+  #wfhExportLinksBtn:active{transform:scale(.96)}
+</style>
+<button id="wfhExportLinksBtn" type="button">Export Links</button>
+<script>
+(function(){
+  function safeJson(value, fallback){
+    try{return JSON.parse(value) ?? fallback}catch(e){return fallback}
+  }
+  function collectUrlsFrom(value, set){
+    if(!value) return;
+    if(typeof value === 'string'){
+      var matches=value.match(/https?:\/\/[^\s"'<>\\)]+/g) || [];
+      matches.forEach(function(u){
+        u=u.replace(/&amp;/g,'&').replace(/[),.;]+$/,'');
+        if(/res\.cloudinary\.com/i.test(u) && /\.(jpg|jpeg|png|webp)(\?|$)/i.test(u)) set.add(u);
+      });
+      return;
+    }
+    if(Array.isArray(value)){ value.forEach(function(v){collectUrlsFrom(v,set)}); return; }
+    if(typeof value === 'object'){
+      Object.keys(value).forEach(function(k){ collectUrlsFrom(value[k],set); });
+    }
+  }
+  function exportCloudinaryLinks(){
+    var links=new Set();
+    // Collect from all localStorage keys, especially wfhUploads where user wallpapers are saved.
+    for(var i=0;i<localStorage.length;i++){
+      var key=localStorage.key(i);
+      var raw=localStorage.getItem(key);
+      collectUrlsFrom(raw, links);
+      collectUrlsFrom(safeJson(raw,null), links);
+    }
+    // Also collect URLs directly present in current HTML/JS.
+    collectUrlsFrom(document.documentElement.innerHTML, links);
+    var list=Array.from(links).sort();
+    if(!list.length){
+      alert('No Cloudinary wallpaper links found. Open the same browser/profile where your wallpapers are saved, then try again.');
+      return;
+    }
+    var text=list.join('\n');
+    var blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='cloudinary-links-'+list.length+'.txt';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+    alert('Exported '+list.length+' Cloudinary links. Send me the downloaded TXT file.');
+  }
+  var btn=document.getElementById('wfhExportLinksBtn');
+  if(btn) btn.addEventListener('click', exportCloudinaryLinks);
+})();
+</script>
+<!-- ===== /WallFlixHub Cloudinary Links Export Button ===== -->
+
 </body>
 </html>
