@@ -22,6 +22,7 @@
 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="bingbot" content="index, follow, max-image-preview:large" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+<link rel="sitemap" type="application/xml" title="Image Sitemap" href="/image-sitemap.xml" />
 <meta property="og:locale" content="en_US" />
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5441356604998904"
@@ -3378,6 +3379,233 @@ document.addEventListener('click', function(e){
     window.render=function(){var r=oldRender.apply(this,arguments);setTimeout(run,0);return r;};
     window.render.wfhProSnippetWrapped=true;
   }
+})();
+</script>
+
+
+
+<!-- WFH Per-Wallpaper SEO URLs: each wallpaper gets its own Google-indexable link -->
+<script id="wfh-per-wallpaper-links-seo">
+(function(){
+  if(window.__wfhPerWallpaperLinksSeo) return;
+  window.__wfhPerWallpaperLinksSeo = true;
+  var BASE = 'https://wallflixhub.github.io';
+  var pendingSlug = null;
+  var silentRoute = false;
+
+  function slugify(input){
+    return String(input || 'wallpaper')
+      .toLowerCase()
+      .trim()
+      .replace(/&/g, ' and ')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'wallpaper';
+  }
+
+  function imageFileSlug(url){
+    try{
+      var path = new URL(String(url || ''), location.href).pathname;
+      var name = path.split('/').pop() || '';
+      return slugify(name.replace(/\.[a-z0-9]{2,5}$/i, ''));
+    }catch(e){ return ''; }
+  }
+
+  function wallpaperSlug(w){
+    if(!w) return 'wallpaper';
+    var custom = w.slug || w.seoSlug || w.permalink;
+    if(custom) return slugify(custom);
+    var title = slugify(w.title || 'wallpaper');
+    var file = imageFileSlug(w.url || w.image || w.imageUrl || '');
+    var id = slugify(w.id || w.firestoreId || '');
+    if(file && title && title.indexOf(file) === -1) return (title + '-' + file).replace(/^-+|-+$/g,'');
+    return title || file || id || 'wallpaper';
+  }
+
+  function wallpaperUrl(w){
+    return BASE + '/?wallpaper=' + encodeURIComponent(wallpaperSlug(w));
+  }
+
+  function currentWallpaperParam(){
+    var p = new URLSearchParams(location.search).get('wallpaper');
+    if(p) return slugify(decodeURIComponent(p));
+    var m = String(location.pathname || '').match(/\/wallpaper\/([^/?#]+)/i);
+    return m ? slugify(decodeURIComponent(m[1])) : '';
+  }
+
+  function candidates(w){
+    if(!w) return [];
+    var title = slugify(w.title || '');
+    var cat = slugify(w.cat || w.category || '');
+    var id = slugify(w.id || '');
+    var firestore = slugify(w.firestoreId || '');
+    var file = imageFileSlug(w.url || w.image || w.imageUrl || '');
+    var slug = slugify(w.slug || w.seoSlug || w.permalink || '');
+    var list = [slug, id, firestore, title, file, title && file ? title+'-'+file : '', cat && title ? cat+'-'+title : '', title && id ? title+'-'+id : '', cat && file ? cat+'-'+file : ''];
+    return list.filter(Boolean);
+  }
+
+  function findWallpaper(slug){
+    slug = slugify(slug);
+    var list = [];
+    try{ list = (typeof all === 'function' ? all() : []).filter(function(w){return w && (w.url || w.image || w.imageUrl);}); }catch(e){}
+    return list.find(function(w){ return candidates(w).indexOf(slug) !== -1; }) || null;
+  }
+
+  function setMeta(selector, attr, key, value){
+    var el = document.querySelector(selector);
+    if(!el){ el = document.createElement('meta'); el.setAttribute(attr, key); document.head.appendChild(el); }
+    el.setAttribute('content', value);
+  }
+  function setName(name,value){ setMeta('meta[name="'+name+'"]','name',name,value); }
+  function setProp(prop,value){ setMeta('meta[property="'+prop+'"]','property',prop,value); }
+  function setCanonical(url){
+    var el = document.querySelector('link[rel="canonical"]');
+    if(!el){ el = document.createElement('link'); el.rel='canonical'; document.head.appendChild(el); }
+    el.href = url;
+  }
+
+  function descriptionFor(w){
+    var cat = w && (w.cat || w.category) || 'Mobile';
+    return String((w && (w.description || w.desc)) || ('Download free ' + cat + ' 4K phone wallpaper for Android and iPhone on WallFlixHub.'));
+  }
+
+  function updateWallpaperMeta(w){
+    if(!w) return;
+    var cat = w.cat || w.category || 'Mobile';
+    var title = (w.title || cat + ' 4K Wallpaper') + ' - WallFlixHub';
+    var desc = descriptionFor(w);
+    var url = wallpaperUrl(w);
+    var img = w.url || w.image || w.imageUrl || BASE + '/preview.jpg';
+    document.title = title;
+    setName('description', desc);
+    setName('robots','index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    setName('googlebot','index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    setCanonical(url);
+    setProp('og:type','article');
+    setProp('og:title', title);
+    setProp('og:description', desc);
+    setProp('og:url', url);
+    setProp('og:image', img);
+    setProp('og:image:secure_url', img);
+    setName('twitter:card','summary_large_image');
+    setName('twitter:title', title);
+    setName('twitter:description', desc);
+    setName('twitter:image', img);
+    var schema = document.getElementById('wfh-wallpaper-page-schema');
+    if(!schema){ schema=document.createElement('script'); schema.type='application/ld+json'; schema.id='wfh-wallpaper-page-schema'; document.head.appendChild(schema); }
+    schema.textContent = JSON.stringify({
+      '@context':'https://schema.org',
+      '@type':'ImageObject',
+      '@id': url + '#image',
+      name: w.title || title,
+      description: desc,
+      url: url,
+      contentUrl: img,
+      thumbnailUrl: img,
+      representativeOfPage: true,
+      creator: {'@type':'Organization', name:'WallFlixHub'},
+      creditText: 'WallFlixHub',
+      license: BASE + '/terms.html',
+      acquireLicensePage: BASE + '/dmca.html'
+    });
+  }
+
+  function pushWallpaperUrl(w, replace){
+    if(!w || silentRoute) return;
+    var next = '/?wallpaper=' + encodeURIComponent(wallpaperSlug(w));
+    if(location.pathname + location.search !== next){
+      try{ (replace ? history.replaceState : history.pushState).call(history, {wallpaper: wallpaperSlug(w)}, '', next); }catch(e){}
+    }
+  }
+
+  function openFromUrl(replace){
+    var slug = currentWallpaperParam();
+    if(!slug) return false;
+    pendingSlug = slug;
+    var w = findWallpaper(slug);
+    if(!w) return false;
+    pendingSlug = null;
+    silentRoute = true;
+    try{ if(typeof openViewer === 'function') openViewer(w.id); }
+    finally{ silentRoute = false; }
+    updateWallpaperMeta(w);
+    if(replace) pushWallpaperUrl(w, true);
+    return true;
+  }
+
+  function install(){
+    if(typeof window.openViewer === 'function' && !window.openViewer.wfhPerWallpaperUrlWrapped){
+      var oldOpen = window.openViewer;
+      window.openViewer = function(id){
+        var result = oldOpen.apply(this, arguments);
+        try{
+          var w = window.current || (typeof current !== 'undefined' ? current : null);
+          if(w){ pushWallpaperUrl(w, false); updateWallpaperMeta(w); }
+        }catch(e){}
+        return result;
+      };
+      window.openViewer.wfhPerWallpaperUrlWrapped = true;
+    }
+    if(typeof window.closeViewer === 'function' && !window.closeViewer.wfhPerWallpaperUrlWrapped){
+      var oldClose = window.closeViewer;
+      window.closeViewer = function(){
+        var r = oldClose.apply(this, arguments);
+        if(new URLSearchParams(location.search).has('wallpaper')){
+          try{ history.pushState({}, '', '/'); }catch(e){}
+          if(typeof wfhUpdateDynamicMeta === 'function') setTimeout(wfhUpdateDynamicMeta, 30);
+        }
+        return r;
+      };
+      window.closeViewer.wfhPerWallpaperUrlWrapped = true;
+    }
+    window.wfhWallpaperUrl = wallpaperUrl;
+    window.wfhWallpaperSlug = wallpaperSlug;
+    window.copyCurrentLink = function(){
+      var w = window.current || (typeof current !== 'undefined' ? current : null);
+      if(!w) return typeof toast==='function' && toast('No wallpaper selected');
+      var link = wallpaperUrl(w);
+      if(navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(link).then(function(){toast('Wallpaper link copied')}).catch(function(){fallbackCopy(link);toast('Wallpaper link copied')});
+      else { fallbackCopy(link); toast('Wallpaper link copied'); }
+    };
+    window.shareCurrent = function(){
+      var w = window.current || (typeof current !== 'undefined' ? current : null);
+      if(!w) return;
+      var link = wallpaperUrl(w);
+      var data = {title: w.title || 'WallFlixHub wallpaper', text: (w.title || 'WallFlixHub wallpaper') + ' - WallFlixHub', url: link};
+      if(navigator.share) navigator.share(data).then(function(){toast('Shared!')}).catch(function(){toast('Share cancelled')});
+      else if(navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(link).then(function(){toast('Wallpaper link copied')});
+      else { fallbackCopy(link); toast('Wallpaper link copied'); }
+    };
+  }
+
+  function retryOpen(){
+    install();
+    if(openFromUrl(true)) return;
+    var tries = 0;
+    var timer = setInterval(function(){
+      install();
+      if(openFromUrl(true) || ++tries > 40) clearInterval(timer);
+    }, 350);
+  }
+
+  document.addEventListener('DOMContentLoaded', retryOpen);
+  window.addEventListener('load', retryOpen);
+  window.addEventListener('popstate', function(){
+    if(currentWallpaperParam()) openFromUrl(true);
+    else if(document.getElementById('viewer') && document.getElementById('viewer').classList.contains('show') && typeof closeViewer === 'function') closeViewer();
+  });
+
+  var oldRender = window.render;
+  if(typeof oldRender === 'function' && !oldRender.wfhPerWallpaperUrlWrapped){
+    window.render = function(){
+      var r = oldRender.apply(this, arguments);
+      setTimeout(function(){ install(); if(pendingSlug) openFromUrl(true); var v=document.getElementById('viewer'); if(v&&v.classList.contains('show')){var w=window.current || (typeof current!=='undefined'?current:null); if(w) updateWallpaperMeta(w);} }, 50);
+      return r;
+    };
+    window.render.wfhPerWallpaperUrlWrapped = true;
+  }
+  setTimeout(retryOpen, 100);
+  setTimeout(retryOpen, 1400);
 })();
 </script>
 
